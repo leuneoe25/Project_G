@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Factory
 {
-    public class MonsterFac : MonoBehaviour
+    public abstract class MonsterFac : MonoBehaviour
     {
         public Monster OrderMonster(bool IsBoss)
         {
