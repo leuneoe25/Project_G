@@ -34,7 +34,7 @@ public class Presenter : MonoBehaviour
 
     void Start()
     {
-        store = GameObject.Find("Canvases").transform.FindChild("Store").gameObject;
+        store = GameObject.Find("Canvases").transform.Find("Store").gameObject;
     }
 
     public void OpenMenu()
