@@ -18,6 +18,10 @@ public class ButtonSaver : MonoBehaviour
             buttonList.Add(buttons[i]);
             int a = i;
             buttonList.buttons[i].onClick.AddListener(() => ButtonFunc(a));
+            if(i != 0)
+            {
+                buttonList.buttons[i].gameObject.SetActive(false);
+            }
         }
 
     }
@@ -27,5 +31,9 @@ public class ButtonSaver : MonoBehaviour
         buttonAnimation.UnlockNextStage(num);
     }
 
-    
+    public void LockOn(int num)
+    {
+        buttonList.buttons[num].gameObject.SetActive(true);
+    }
+
 }

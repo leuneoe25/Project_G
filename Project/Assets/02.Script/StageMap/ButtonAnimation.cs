@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonAnimation : MonoBehaviour
 {
     [SerializeField] ButtonList buttonList;
+    [SerializeField] ButtonSaver buttonSaver;
     [SerializeField] GameObject particle;
+    [SerializeField] GameObject InvSquare;
     public int speed = 5;
 
     void Start()
     {
         particle.SetActive(false);
+        InvSquare.SetActive(false);
         buttonList = GetComponent<ButtonList>();
     }
 
@@ -32,12 +36,13 @@ public class ButtonAnimation : MonoBehaviour
             particle.gameObject.transform.position = stage1;
             Debug.Log("#####");
             particle.SetActive(true);
+            InvSquare.SetActive(true);
 
-            StartCoroutine(ZoomOut(stage1, stage2));
+            StartCoroutine(ZoomOut(NumberOfStage, stage2));
         }
     }
 
-    IEnumerator ZoomOut(Vector3 stage1, Vector3 stage2)
+    IEnumerator ZoomOut(int num, Vector3 stage2)
     {
         WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
         while (true)
@@ -45,8 +50,20 @@ public class ButtonAnimation : MonoBehaviour
             particle.transform.position = Vector3.MoveTowards(particle.transform.position, stage2, speed * Time.deltaTime);
             if (Vector3.Distance(particle.transform.position, stage2) <= 0.01f)
             {
-                Debug.Log("99");
-                particle.SetActive(false);
+                if(buttonList.buttons[num + 1].gameObject.active)
+                {
+                    buttonSaver.LockOn(num + 1);
+                    particle.SetActive(false);
+                    InvSquare.SetActive(false);
+                }
+                else
+                {
+                    yield return new WaitForSeconds(1f);
+                    buttonSaver.LockOn(num + 1);
+                    yield return new WaitForSeconds(0.5f);
+                    particle.SetActive(false);
+                    InvSquare.SetActive(false);
+                }
                 yield break;
             }
             Debug.Log(particle.active);
