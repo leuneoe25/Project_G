@@ -34,7 +34,6 @@ public class ButtonAnimation : MonoBehaviour
             Vector3 stage1 = new Vector3(buttonList.GetButtonInfo(NumberOfStage).transform.position.x, buttonList.GetButtonInfo(NumberOfStage).transform.position.y, 0);
             Vector3 stage2 = new Vector3(buttonList.GetButtonInfo(NumberOfStage + 1).transform.position.x, buttonList.GetButtonInfo(NumberOfStage + 1).transform.position.y, 0);
             particle.gameObject.transform.position = stage1;
-            Debug.Log("#####");
             particle.SetActive(true);
             InvSquare.SetActive(true);
 
