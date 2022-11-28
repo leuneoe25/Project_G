@@ -20,7 +20,7 @@ class Data
 {
     int money;
     int NumberOfLockedCharacter = 0;
-
+    
     string[,] character = new string[4, 20];
     
     
