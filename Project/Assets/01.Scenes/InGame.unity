@@ -3130,6 +3130,7 @@ GameObject:
   - component: {fileID: 1726099106}
   - component: {fileID: 1726099105}
   - component: {fileID: 1726099104}
+  - component: {fileID: 1726099107}
   m_Layer: 0
   m_Name: ButtonManager
   m_TagString: Untagged
@@ -3158,6 +3159,7 @@ MonoBehaviour:
   - {fileID: 2043718576}
   - {fileID: 779162321}
   buttonList: {fileID: 1726099105}
+  buttonAnimation: {fileID: 1726099107}
 --- !u!114 &1726099105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3170,6 +3172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb778907ec3d8bb4ca3c955109f0c688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
 --- !u!4 &1726099106
 Transform:
   m_ObjectHideFlags: 0
@@ -3184,6 +3187,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1726099107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726099103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83812c7a3a59853488eec0ee4917c390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonList: {fileID: 1726099105}
+  particle: {fileID: 1880830685}
+  speed: 5
 --- !u!1 &1865058321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,14 +3295,13 @@ GameObject:
   - component: {fileID: 1880830688}
   - component: {fileID: 1880830687}
   - component: {fileID: 1880830686}
-  - component: {fileID: 1880830689}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &1880830686
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -8071,20 +8088,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1880830689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880830685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83812c7a3a59853488eec0ee4917c390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonList: {fileID: 1726099105}
-  speed: 5
 --- !u!1 &1890654164
 GameObject:
   m_ObjectHideFlags: 0

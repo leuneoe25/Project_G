@@ -5,10 +5,12 @@ using UnityEngine;
 public class ButtonAnimation : MonoBehaviour
 {
     [SerializeField] ButtonList buttonList;
+    [SerializeField] GameObject particle;
     public int speed = 5;
 
     void Start()
     {
+        particle.SetActive(false);
         buttonList = GetComponent<ButtonList>();
     }
 
@@ -18,22 +20,20 @@ public class ButtonAnimation : MonoBehaviour
     }
     public void UnlockNextStage(int NumberOfStage)
     {
-        if(NumberOfStage == 6)
+        Debug.Log(NumberOfStage);
+        if (NumberOfStage == 6)
         {
-            
+
         }
         else
         {
-            Vector3 stage1 = new Vector3();
-            Vector3 stage2 = new Vector3();
-            stage1 = buttonList.GetButtonInfo(NumberOfStage).transform.position;
-            stage2 = buttonList.GetButtonInfo(NumberOfStage + 1).transform.position;
-            gameObject.transform.position = stage1;
-            gameObject.SetActive(true);
+            Vector3 stage1 = new Vector3(buttonList.GetButtonInfo(NumberOfStage).transform.position.x, buttonList.GetButtonInfo(NumberOfStage).transform.position.y, 0);
+            Vector3 stage2 = new Vector3(buttonList.GetButtonInfo(NumberOfStage + 1).transform.position.x, buttonList.GetButtonInfo(NumberOfStage + 1).transform.position.y, 0);
+            particle.gameObject.transform.position = stage1;
+            Debug.Log("#####");
+            particle.SetActive(true);
 
             StartCoroutine(ZoomOut(stage1, stage2));
-
-            gameObject.SetActive(false);
         }
     }
 
@@ -42,16 +42,16 @@ public class ButtonAnimation : MonoBehaviour
         WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
         while (true)
         {
-            while (true)
+            particle.transform.position = Vector3.MoveTowards(particle.transform.position, stage2, speed * Time.deltaTime);
+            if (Vector3.Distance(particle.transform.position, stage2) <= 0.01f)
             {
-                gameObject.transform.position = Vector3.Lerp(stage1, stage2, speed * Time.deltaTime);
-                if (Vector3.Distance(stage1, stage2) <= 1f)
-                {
-                    yield break;
-                }
+                Debug.Log("99");
+                particle.SetActive(false);
+                yield break;
             }
+            Debug.Log(particle.active);
             yield return waitForEndOfFrame;
-
         }
+
     }
 }
