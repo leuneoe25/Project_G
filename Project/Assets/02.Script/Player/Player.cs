@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
             Physics2D.IgnoreLayerCollision(6, 7, true);
         }
     }
-    // Update is called once per frame
+
     void Update()
     {
         machine.Update();
