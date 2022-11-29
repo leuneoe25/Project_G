@@ -15,23 +15,9 @@ public class PlayerIdle : State<Player>
     }
     public override void Update(Player target)
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            target.gameObject.transform.localScale = new Vector3(-1, 1, 1);
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            target.gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            //target.animator.SetInteger("State", (int)PlayerState.Move);
-            target.ChangeState(PlayerState.Move);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            //target.animator.SetInteger("State", (int)PlayerState.Move);
-            target.ChangeState(PlayerState.Move);
+            target.ChangeState(PlayerState.Run);
         }
     }
 }
