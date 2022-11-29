@@ -21,7 +21,7 @@ public class FloorManagement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(6, 9, false);
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W)&&player.transform.position.y < downFloor.transform.position.y + 1f)
         {
             Physics2D.IgnoreLayerCollision(6, 7, false);
             Physics2D.IgnoreLayerCollision(6, 8, false);

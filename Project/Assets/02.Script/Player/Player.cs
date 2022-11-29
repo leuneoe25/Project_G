@@ -41,11 +41,11 @@ public class Player : MonoBehaviour
         {
             rigid.velocity = Vector2.zero;
         }
-        if (collision.gameObject.layer == (1 << 7))
+        if (Input.GetKeyUp(KeyCode.W) && Physics2D.Raycast(transform.position, Vector2.down, 0.8f, (1 << 7)) == true)
         {
             Physics2D.IgnoreLayerCollision(6, 8, true);
         }
-        else if (collision.gameObject.layer == (1 << 8))
+        else if (Input.GetKeyUp(KeyCode.W) && Physics2D.Raycast(transform.position, Vector2.down, 0.8f, (1 << 8)) == true)
         {
             Physics2D.IgnoreLayerCollision(6, 7, true);
         }
