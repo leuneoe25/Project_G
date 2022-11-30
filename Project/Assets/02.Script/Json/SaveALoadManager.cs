@@ -88,6 +88,11 @@ public class SaveALoadManager : MonoBehaviour
         File.WriteAllText(path, jsonData);
     }
 
+    public void GetChar()
+    {
+
+    }
+
     void Update()
     {
         
