@@ -4,10 +4,8 @@ using UnityEngine;
 
 namespace Factory
 {
-    public abstract class Monster : MonoBehaviour
+    public class Monster : MonoBehaviour
     {
-
-
         [SerializeField] MonsterStat data;
         float HP;
         float Speed;
@@ -17,6 +15,10 @@ namespace Factory
         public void SetHP(float _hp)
         {
             HP -= _hp;
+            if(HP <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
         public float GetHP()
         {
@@ -28,10 +30,6 @@ namespace Factory
             ATKSpeed = data.atkSpeed;
             Speed = data.moveSpeed;
             HP = data.hp;
-        }
-
-        public void SetMoveSys()
-        {
         }
 
         void Start()
