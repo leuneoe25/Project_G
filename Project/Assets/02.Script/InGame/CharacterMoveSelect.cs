@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.EventSystems;
 
 public class CharacterMoveSelect : MonoBehaviour
 {
@@ -10,19 +11,29 @@ public class CharacterMoveSelect : MonoBehaviour
     [SerializeField] private CinemachineClearShot clearShot;
     [SerializeField] private GameObject CharacterSelectUI;
     RaycastHit2D raycast;
+    bool isEnterPointerUI = false;
     void Start()
     {
-        
+
+    }
+
+    public void SetEnterPointerTrue()
+    {
+        isEnterPointerUI = true;
+    }
+    public void SetEnterPointerFalse()
+    {
+        isEnterPointerUI = false;
     }
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)/* && !CharacterSelectUI.activeSelf*/)
+        if (Input.GetMouseButtonDown(0)/* && !CharacterSelectUI.activeSelf*/)
         {
-            raycast = Physics2D.Raycast(mainCamera.ScreenToWorldPoint(Input.mousePosition), Vector2.down, 0.1f,LayerMask.GetMask("Character"));
-            if(raycast.collider != null)
+            raycast = Physics2D.Raycast(mainCamera.ScreenToWorldPoint(Input.mousePosition), Vector2.down, 0.1f, LayerMask.GetMask("Character"));
+            if (raycast.collider != null)
             {
-                if(SelectCharacter == null)
+                if (SelectCharacter == null)
                 {
                     Debug.Log(raycast.collider.name);
                     SelectCharacter = raycast.collider.gameObject;
@@ -34,6 +45,11 @@ public class CharacterMoveSelect : MonoBehaviour
                     SelectCharacter = raycast.collider.gameObject;
                     ZoomIn(SelectCharacter);
                 }
+            }
+            else if (isEnterPointerUI)
+            {
+                ZoomOut(SelectCharacter);
+                isEnterPointerUI = false;
             }
             else
             {
@@ -57,18 +73,31 @@ public class CharacterMoveSelect : MonoBehaviour
     {
         int index = FindCharacter(ZoomCharacter);
         clearShot.ChildCameras[index].Priority = 9;
+        Invoke("lateSetActive", 0.1f);
+    }
+
+    public void lateSetActive()
+    {
         CharacterSelectUI.SetActive(false);
     }
+
+
     private int FindCharacter(GameObject ZoomCharacter)
     {
         int index;
-        for(index = 1; index < clearShot.ChildCameras.Length;index++)
+        for (index = 1; index < clearShot.ChildCameras.Length; index++)
         {
-            if(clearShot.ChildCameras[index].name == ZoomCharacter.name)
+            if (clearShot.ChildCameras[index].name == ZoomCharacter.name)
             {
                 return index;
             }
         }
         return 0;
+    }
+
+    public GameObject GetCharacter()
+    {
+        Debug.Log("a");
+        return SelectCharacter;
     }
 }
