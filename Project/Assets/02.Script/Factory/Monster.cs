@@ -8,26 +8,30 @@ namespace Factory
     {
 
 
-        //[SerializeField] MonsterData data;
+        [SerializeField] MonsterStat data;
         float HP;
         float Speed;
         float ATK;
         float ATKSpeed;
 
-        public void SetHP()
+        public void SetHP(float _hp)
         {
-            //HP = data.hp;
+            HP -= _hp;
         }
-
-        public void SetATKSYS()
+        public float GetHP()
         {
-            //ATK = data.ATK;
-            //ATKSpeed = data.ATKSpeed;
+            return HP;
+        }
+        public void SetStat()
+        {
+            ATK = data.atk;
+            ATKSpeed = data.atkSpeed;
+            Speed = data.moveSpeed;
+            HP = data.hp;
         }
 
         public void SetMoveSys()
         {
-            //Speed = data.Speed;
         }
 
         void Start()

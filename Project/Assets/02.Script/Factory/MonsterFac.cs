@@ -9,11 +9,7 @@ namespace Factory
         public Monster OrderMonster(bool IsBoss)
         {
             Monster monster = CreateMonster(IsBoss);
-            //몬스터 스텟 및 여러 상태 결정
-            monster.SetHP();
-            monster.SetATKSYS();
-            monster.SetMoveSys();
-
+            monster.SetStat();
             return monster;
         }
 

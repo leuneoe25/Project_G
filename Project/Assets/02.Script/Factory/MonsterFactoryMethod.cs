@@ -12,11 +12,11 @@ namespace Factory
             Monster monster = null;
             if(!IsBoss)
             {
-                //monster = new CreateMonster();
+                //monster = new CreateCommonMonster();
             }
             else
             {
-                //monster = new CreateBoss();
+                //monster = new CreateCommonBoss();
             }
 
             return monster;
