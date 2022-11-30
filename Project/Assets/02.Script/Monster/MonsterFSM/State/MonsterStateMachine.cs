@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateMachine<T>
+public class MonsterStateMachine<T>
 {
     private T _target;
-    private State<T> _nowState;
-    private State<T> _prevState;
+    private MonsterState<T> _nowState;
+    private MonsterState<T> _prevState;
 
-    public void Init(T target, State<T> state)
+    public void Init(T target, MonsterState<T> state)
     {
         _target = target;
         _nowState = state;
+        _nowState.Enter(_target);
     }
-    public void ChangeState(State<T> state)
+    public void ChangeState(MonsterState<T> state)
     {
         _nowState.Exit(_target);
         _prevState = _nowState;
@@ -27,7 +28,7 @@ public class StateMachine<T>
         _nowState.Exit(_target);
         _prevState.Enter(_target);
         //swap
-        State<T> temp = _nowState;
+        MonsterState<T> temp = _nowState;
         _nowState = _prevState;
         _prevState = temp;
     }

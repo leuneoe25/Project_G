@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,11 +12,11 @@ namespace Factory
             Monster monster = null;
             if(!IsBoss)
             {
-                //monster = new CreateMonster();
+                //monster = new CreateCommonMonster();
             }
             else
             {
-                //monster = new CreateBoss();
+                //monster = new CreateCommonBoss();
             }
 
             return monster;
@@ -24,3 +24,4 @@ namespace Factory
     }
 }
 
+*/

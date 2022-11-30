@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
+using System.IO;
 
 public enum characterClass
 {
@@ -16,6 +17,7 @@ public enum characterClass
     Library
 }
 
+[System.Serializable]
 class Data
 {
     public int stage;
@@ -69,9 +71,26 @@ public class SaveALoadManager : MonoBehaviour
 
     }
 
-    void LoadJson(string data)
+    public void LoadJson(string data)
     {
         player = JsonUtility.FromJson<Data>(data);
+    }
+
+    public void StageClear()
+    {
+        player.stage++;
+    }
+
+    public void SavePlayerData()
+    {
+        string jsonData = JsonUtility.ToJson(player);
+        string path = Application.dataPath + "/player.json";
+        File.WriteAllText(path, jsonData);
+    }
+
+    public void GetChar()
+    {
+
     }
 
     void Update()
