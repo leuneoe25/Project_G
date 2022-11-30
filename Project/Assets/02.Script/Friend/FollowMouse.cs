@@ -16,7 +16,7 @@ public class FollowMouse : MonoBehaviour
             pos.y = -3.5f;
         else
             pos.y = 1.7f;
-        transform.position = new Vector3(Mathf.Clamp(pos.x, -5f, 5f), pos.y, 0f);
+        transform.position = new Vector3(Mathf.Clamp(pos.x, -6f, 6f), pos.y, 0f);
     }
 }
     
