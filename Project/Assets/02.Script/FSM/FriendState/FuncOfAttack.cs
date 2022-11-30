@@ -25,11 +25,11 @@ public class FuncOfAttack : MonoBehaviour
     #region Kendo
     public void AttackWithSword(float Damage, float time, GameObject TargetObject)
     {
-        Factory.Monster monster = TargetObject.GetComponent<Factory.Monster>();
+        Monster monster = TargetObject.GetComponent<Monster>();
         StartCoroutine(KendoAttack(Damage, time, monster));
     }
 
-    IEnumerator KendoAttack(float Daamge, float time, Factory.Monster monster)
+    IEnumerator KendoAttack(float Daamge, float time, Monster monster)
     {
         WaitForSeconds wait = new WaitForSeconds(time);
         monster.SetHP(Daamge);
@@ -41,11 +41,11 @@ public class FuncOfAttack : MonoBehaviour
     #region Boxer
     public void Punch(float Damage, float time, GameObject TargetObject)
     {
-        Factory.Monster monster = TargetObject.GetComponent<Factory.Monster>();
+        Monster monster = TargetObject.GetComponent<Monster>();
         StartCoroutine(BoxerAttack(Damage, time, monster));
     }
 
-    IEnumerator BoxerAttack(float Damage, float time, Factory.Monster monster)
+    IEnumerator BoxerAttack(float Damage, float time, Monster monster)
     {
         WaitForSeconds wait = new WaitForSeconds(time);
 

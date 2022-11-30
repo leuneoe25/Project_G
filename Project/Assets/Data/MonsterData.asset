@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd422470e1676ed4cb9e1b51d3ff4490, type: 3}
   m_Name: MonsterData
   m_EditorClassIdentifier: 
-  _hp: 0
+  _hp: 100
   _apk: 0
-  _moveSpeed: 0
+  _moveSpeed: 1
+  _atkSpeed: 0

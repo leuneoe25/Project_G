@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ namespace Factory
     {
         public Monster OrderMonster(bool IsBoss)
         {
-            Monster monster = CreateMonster(IsBoss);
+            PlayMonster.Monster monster = CreateMonster(IsBoss);
             monster.SetStat();
             return monster;
         }
@@ -16,3 +16,4 @@ namespace Factory
         public abstract Monster CreateMonster(bool IsBoss);
     }
 }
+*/
