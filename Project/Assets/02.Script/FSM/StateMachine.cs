@@ -8,7 +8,7 @@ public class StateMachine<T>
     private State<T> _nowState;
     private State<T> _prevState;
 
-    public void Init(T target,State<T> state)
+    public void Init(T target, State<T> state)
     {
         _target = target;
         _nowState = state;
@@ -35,6 +35,6 @@ public class StateMachine<T>
     {
         if (_nowState == null)
             Debug.Log("null");
-        _nowState?. Update(_target);
+        _nowState?.Update(_target);
     }
 }
