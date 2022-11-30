@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     public Rigidbody2D rigid;
     public Animator animator;
 
-
     public float moveSpeed = 3f;
     void Start()
     {

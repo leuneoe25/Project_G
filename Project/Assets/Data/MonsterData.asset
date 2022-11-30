@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hp: 100
   _apk: 0
-  _moveSpeed: 1
+  _moveSpeed: 0.1
   _atkSpeed: 0

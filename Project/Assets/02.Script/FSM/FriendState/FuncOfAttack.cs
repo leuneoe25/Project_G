@@ -4,54 +4,42 @@ using UnityEngine;
 
 public class FuncOfAttack : MonoBehaviour
 {
+
     #region Arrow
     [SerializeField] GameObject Arrow;
 
-    public void fireArrow(Transform pointA, Transform pointB, float time)
+    public void Attack(Transform pointA, Transform pointB)
     {
-        StartCoroutine(ArcherAttack(pointA, time));
+        StartCoroutine(ArcherAttack(pointA, pointB));
     }
 
 
-    IEnumerator ArcherAttack(Transform pointA, float time)
+    IEnumerator ArcherAttack(Transform pointA, Transform pointB)
     {
-        WaitForSeconds wait = new WaitForSeconds(time);
-        Instantiate(Arrow, pointA.position, Quaternion.identity);
+        Vector3 dir = pointB.position - pointA.position;
+        GameObject NewArrow;
 
-        yield return wait;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        NewArrow = Instantiate(Arrow, pointA.position, Quaternion.identity);
+        NewArrow.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        yield return null;
     }
     #endregion
 
     #region Kendo
-    public void AttackWithSword(float Damage, float time, GameObject TargetObject)
+    public void Attack(float Damage, GameObject TargetObject)
     {
         Monster monster = TargetObject.GetComponent<Monster>();
-        StartCoroutine(KendoAttack(Damage, time, monster));
+        StartCoroutine(MeleeWeaponAttack(Damage, monster));
     }
 
-    IEnumerator KendoAttack(float Daamge, float time, Monster monster)
+    IEnumerator MeleeWeaponAttack(float Daamge, Monster monster)
     {
-        WaitForSeconds wait = new WaitForSeconds(time);
         monster.SetHP(Daamge);
 
-        yield return wait;
+        yield return null;
     }
     #endregion
 
-    #region Boxer
-    public void Punch(float Damage, float time, GameObject TargetObject)
-    {
-        Monster monster = TargetObject.GetComponent<Monster>();
-        StartCoroutine(BoxerAttack(Damage, time, monster));
-    }
-
-    IEnumerator BoxerAttack(float Damage, float time, Monster monster)
-    {
-        WaitForSeconds wait = new WaitForSeconds(time);
-
-        monster.SetHP(Damage);
-
-        yield return wait;
-    }
-    #endregion
+    
 }

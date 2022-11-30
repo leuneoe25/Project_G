@@ -12,16 +12,21 @@ public enum FriendState
 
 public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
 {
+    [SerializeField] public DetectInRange detect;
+
+    public float AttackSpeed = 2f;
+    public Rigidbody2D rigid;
+    public Animator animator;
+    public FuncOfAttack attackFunc;
+    public string FriendRoll;
+    public int skillOn = 0;
+    public int atk { get; set; }
+
     private State<Friend>[] states = new State<Friend>[]
     {
        new FriendIdle(), new FriendRun(), new FriendAttack()
     };
     private StateMachine<Friend> machine = new StateMachine<Friend>();
-
-    public Rigidbody2D rigid;
-    public Animator animator;
-
-    public int atk { get; set; }
 
     void IGetDamagedAble.GetDamaged(int value)
     {
@@ -33,6 +38,7 @@ public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         machine.Init(this.GetComponent<Friend>(), states[(Int32)FriendState.Idle]);
+        attackFunc = gameObject.GetComponent<FuncOfAttack>();
     }
     public void ChangeState(FriendState state)
     {
