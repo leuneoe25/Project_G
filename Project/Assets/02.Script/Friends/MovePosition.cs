@@ -112,7 +112,6 @@ public class MovePosition : MonoBehaviour
 
     void Update()
     {
-        /*Debugging
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             GetRoot(0);
@@ -132,6 +131,6 @@ public class MovePosition : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Alpha5))
         {
             PrintMove();
-        }*/
+        }
     }
 }
