@@ -398,18 +398,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8541933083225398504, guid: ed3f7682be5787b469ab6f65eec4310e, type: 3}
   m_PrefabInstance: {fileID: 1488769219}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1488769221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488769220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dd08a97c861ea14ca2d8348edb76fa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1488769222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -497,12 +485,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detect: {fileID: 366318695}
+  friendData: {fileID: 11400000, guid: e356651a80dbbd64587059c978a9fc14, type: 2}
   AttackSpeed: 2
   rigid: {fileID: 1623645894}
   animator: {fileID: 1623645895}
   attackFunc: {fileID: 1623645897}
   FriendRoll: LongRange
   skillOn: 0
+  HP: 0
+  ATK: 0
+  MoveSpeed: 0
+  ATKSpeeed: 0
 --- !u!50 &1623645894 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1842362261659223232, guid: 27547762796adf145a6b1803a07849ee, type: 3}
