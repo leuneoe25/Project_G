@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: -3154553861435313893}
   - component: {fileID: -5582491282530513138}
   - component: {fileID: 8904859126844456357}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boxing
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -615,6 +615,7 @@ MonoBehaviour:
   HP: 0
   ATK: 0
   MoveSpeed: 0
+  overlap: 0
 --- !u!95 &-5582491282530513138
 Animator:
   serializedVersion: 3
@@ -625,7 +626,7 @@ Animator:
   m_GameObject: {fileID: 4476395718142741309}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf3bd650a84ad4047b3d258e177481c8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 1893488815982751651}
   - component: {fileID: -1640842278597713231}
   - component: {fileID: -7160437792993059027}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bow
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1017,6 +1017,7 @@ MonoBehaviour:
   HP: 0
   ATK: 0
   MoveSpeed: 0
+  overlap: 0
 --- !u!114 &-7160437792993059027
 MonoBehaviour:
   m_ObjectHideFlags: 0
