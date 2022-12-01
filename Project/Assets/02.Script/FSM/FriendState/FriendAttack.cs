@@ -47,10 +47,5 @@ public class FriendAttack : State<Friend>
             Debug.Log("2222");
             target.ChangeState(FriendState.Idle);
         }
-        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-        {
-            Debug.Log("1111");
-            target.ChangeState(FriendState.Idle);
-        }
     }
 }

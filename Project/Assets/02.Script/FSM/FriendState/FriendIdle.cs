@@ -14,11 +14,7 @@ public class FriendIdle:State<Friend>
     }
     public override void Update(Friend target)
     {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-        {
-            target.ChangeState(FriendState.Run);
-        }
-        else if(target.detect.IsInRange)
+        if(target.detect.IsInRange)
         {
             Debug.Log("gotoAttack");
             target.ChangeState(FriendState.Attack);

@@ -10,20 +10,15 @@ public class FuncOfAttack : MonoBehaviour
 
     public void Attack(Transform pointA, Transform pointB)
     {
-        StartCoroutine(ArcherAttack(pointA, pointB));
-    }
-
-
-    IEnumerator ArcherAttack(Transform pointA, Transform pointB)
-    {
         Vector3 dir = pointB.position - pointA.position;
         GameObject NewArrow;
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         NewArrow = Instantiate(Arrow, pointA.position, Quaternion.identity);
         NewArrow.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-        yield return null;
     }
+
+
     #endregion
 
     #region Kendo
