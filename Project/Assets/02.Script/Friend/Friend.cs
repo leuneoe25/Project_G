@@ -64,7 +64,7 @@ public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
 
     void Update()
     {
-        if(AttackSpeed - skillOn <= 0)
+        if (AttackSpeed - skillOn <= 0)
         {
             AttackSpeed = skillOn + 0.1f;
         }
@@ -75,15 +75,13 @@ public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
     {
         if (collision.gameObject.layer == gameObject.layer)
         {
-            overlap = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == gameObject.layer)
-        {
-            overlap=false;
+            float x = collision.transform.position.x - transform.position.x;
+            float y = collision.transform.position.y - transform.position.y;
+            Debug.Log(Mathf.Sqrt(x * x + y * y));
+            if (Mathf.Sqrt(x * x + y * y) < 1.1f)
+                overlap = true;
+            else
+                overlap = false;
         }
     }
 }
