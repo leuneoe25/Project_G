@@ -13,9 +13,6 @@ public class Arrow : MonoBehaviour
     {
         if(collision.CompareTag("Monster"))
         {
-            GameObject monster = collision.gameObject;
-            Monster getmon = monster.GetComponent<Monster>();
-            getmon.SetHP(15);
             Debug.Log("pew!");
             Destroy(gameObject);
         }
@@ -24,7 +21,7 @@ public class Arrow : MonoBehaviour
     void Update()
     {
         time -= Time.deltaTime;
-        transform.Translate(Vector2.up * 20 * Time.deltaTime);
+        transform.Translate(Vector2.up * 40 * Time.deltaTime);
         if(time <= 0 )
         {
             Destroy(gameObject);
