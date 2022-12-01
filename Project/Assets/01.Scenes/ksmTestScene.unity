@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3106878281601738573, guid: 053826d3691851b4ebfc106af284c6d3, type: 3}
+      propertyPath: Data
+      value: 
+      objectReference: {fileID: 11400000, guid: d9e4ffea15004d949aa5f077a232be2d, type: 2}
     - target: {fileID: 3461489867522878585, guid: 053826d3691851b4ebfc106af284c6d3, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -192,11 +196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7485869948812100173, guid: 053826d3691851b4ebfc106af284c6d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.01
+      value: 5.98
       objectReference: {fileID: 0}
     - target: {fileID: 7485869948812100173, guid: 053826d3691851b4ebfc106af284c6d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.97
+      value: -3.54
       objectReference: {fileID: 0}
     - target: {fileID: 7485869948812100173, guid: 053826d3691851b4ebfc106af284c6d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7152,7 +7156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923436930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.01, y: 7.97, z: -10}
+  m_LocalPosition: {x: 5.98, y: -3.54, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 487377174}
@@ -8216,6 +8220,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4286154829788786614, guid: 27547762796adf145a6b1803a07849ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4573596469508517258, guid: 27547762796adf145a6b1803a07849ee, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.093085766
@@ -8381,6 +8389,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5582491282530513138, guid: 9e4f291cd3585914f80eadfcfd2cd442, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a46eeadbe2dd590439da771365a2493d, type: 2}
     - target: {fileID: -3154553861435313893, guid: 9e4f291cd3585914f80eadfcfd2cd442, type: 3}
       propertyPath: detect
       value: 
