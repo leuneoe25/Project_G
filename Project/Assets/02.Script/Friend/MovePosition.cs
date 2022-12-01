@@ -5,20 +5,23 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UIElements;
 
-enum pos
-{
-    DL, DR, UL, UR
-}
-
 public class MovePosition : MonoBehaviour
 {
-    private GameObject selected;
+    public GameObject selected;
     [SerializeField] private GameObject characterSelect;
     [SerializeField] private Camera mainCam;
+    bool drow = false;
 
     public void ChangePosition()
     {
         selected = characterSelect.GetComponent<CharacterMoveSelect>().GetCharacter();
+        selected.GetComponent<Friend>().animator.SetBool("IsMoving", true);
+    }
+
+    public void SetPosition(GameObject obj)
+    {
+        drow = true;
+        selected = obj;
         selected.GetComponent<Friend>().animator.SetBool("IsMoving", true);
     }
 
@@ -30,11 +33,12 @@ public class MovePosition : MonoBehaviour
             if (pos.y < -1.8f) pos.y = -3.5f;
             else pos.y = 1.7f;
             selected.transform.position = new Vector3(Mathf.Clamp(pos.x, -6f, 6f), pos.y, 0f);
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !drow && !selected.GetComponent<Friend>().overlap)
             {
                 selected.GetComponent<Friend>().animator.SetBool("IsMoving", false);
                 selected = null;
             }
+            else if (drow) { drow = false; }
         }
     }
 }

@@ -10,7 +10,7 @@ public class CharacterArrangement : MonoBehaviour
     [SerializeField] private GameObject[] CharacterCardList;
     [SerializeField] private List<GameObject> objects;
     [SerializeField] private Camera mainCamera;
-    private GameObject CreateCharacterObject;
+    [SerializeField] private GameObject moveManager;
     void Start()
     {
         SetCard();
@@ -19,12 +19,7 @@ public class CharacterArrangement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CreateCharacterObject!=null)
-        {
-            
-            CreateCharacterObject.transform.position = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            CreateCharacterObject.transform.position = new Vector3(CreateCharacterObject.transform.position.x, CreateCharacterObject.transform.position.y, 0);
-        }
+
     }
     private void SetCard()
     {
@@ -33,9 +28,9 @@ public class CharacterArrangement : MonoBehaviour
             Debug.Log("현재 배치 인원이 많습니다");
             DeployPeople = CharacterCardList.Length;
         }
-        else if(DeployPeople != CharacterCardList.Length)
+        else if (DeployPeople != CharacterCardList.Length)
         {
-            for(int i = DeployPeople; i< CharacterCardList.Length;i++)
+            for (int i = DeployPeople; i < CharacterCardList.Length; i++)
             {
                 CharacterCardList[i].SetActive(false);
             }
@@ -79,6 +74,7 @@ public class CharacterArrangement : MonoBehaviour
 
     private void CreateCharacter(int index)
     {
-        CreateCharacterObject = Instantiate(objects[0], mainCamera.ScreenToWorldPoint(Input.mousePosition),Quaternion.identity);
+        if (null == moveManager.GetComponent<MovePosition>().selected)
+            moveManager.GetComponent<MovePosition>().SetPosition(Instantiate(objects[0], mainCamera.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity));
     }
 }

@@ -27,6 +27,8 @@ public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
     public float MoveSpeed;
     public int atk { get; set; }
 
+    public bool overlap = false;
+
     private State<Friend>[] states = new State<Friend>[]
     {
        new FriendIdle(), new FriendRun(), new FriendAttack()
@@ -67,5 +69,21 @@ public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
             AttackSpeed = skillOn + 0.1f;
         }
         machine.Update();
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == gameObject.layer)
+        {
+            overlap = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == gameObject.layer)
+        {
+            overlap=false;
+        }
     }
 }
