@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3365697817780277515
@@ -183,7 +183,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8530444137949395502
@@ -286,7 +286,7 @@ SpriteRenderer:
   m_Size: {x: 0.14, y: 0.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &100430619333730227
@@ -390,7 +390,7 @@ SpriteRenderer:
   m_Size: {x: 0.39, y: 0.47}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6171060526746772871
@@ -524,7 +524,7 @@ SpriteRenderer:
   m_Size: {x: 0.27, y: 0.26}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1136601922651588805
@@ -627,7 +627,7 @@ SpriteRenderer:
   m_Size: {x: 0.12, y: 0.18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4573596469508517258
@@ -730,7 +730,7 @@ SpriteRenderer:
   m_Size: {x: 0.11, y: 0.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1033647610400427483
@@ -831,6 +831,8 @@ GameObject:
   - component: {fileID: 510522638867168601}
   - component: {fileID: 1842362261659223232}
   - component: {fileID: 1893488815982751651}
+  - component: {fileID: 4259661792392411988}
+  - component: {fileID: 463743635968960508}
   m_Layer: 0
   m_Name: Bow
   m_TagString: Untagged
@@ -913,7 +915,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008330524, y: 0.029361486}
@@ -929,6 +931,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48350668, y: 1.2586555}
   m_EdgeRadius: 0
+--- !u!114 &4259661792392411988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286154829788786614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f5bcee7b72ef84695378305811aa41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detect: {fileID: 0}
+  AttackSpeed: 2
+  rigid: {fileID: 1842362261659223232}
+  animator: {fileID: 510522638867168601}
+  attackFunc: {fileID: 0}
+  FriendRoll: LongRange
+  skillOn: 0
+--- !u!114 &463743635968960508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286154829788786614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ae9f251c4c7914fbc63c21ba5b501e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arrow: {fileID: 6334771661567540469, guid: ba6500e238ef6914cb42cc3832bd9a74, type: 3}
 --- !u!1 &5454488679150136876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1194,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &519354324445564053
@@ -1386,7 +1420,7 @@ SpriteRenderer:
   m_Size: {x: 0.12, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7284746132700251894
