@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class MonsterSpawner : MonoBehaviour
 {
+    [SerializeField] private GameObject _Target;
     [SerializeField] private GameObject enemy;
     [SerializeField] private Transform left;
     [SerializeField] private Transform right;
@@ -20,8 +21,11 @@ public class MonsterSpawner : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (spawnLeft) Instantiate(enemy, left.position, Quaternion.Euler(0, 0, 0));
-            else Instantiate(enemy, right.position, Quaternion.Euler(0, 180f, 0));
+            GameObject obj;
+            if (spawnLeft) obj = Instantiate(enemy, left.position, Quaternion.Euler(0, 0, 0));
+            else obj = Instantiate(enemy, right.position, Quaternion.Euler(0, 180f, 0));
+            Monster monster = obj.GetComponent<Monster>();
+            monster.targetPoint = _Target;
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
