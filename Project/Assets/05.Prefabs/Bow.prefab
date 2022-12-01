@@ -650,6 +650,68 @@ MonoBehaviour:
     m_Extent: {x: 0.060000025, y: 0.09000003, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
+--- !u!1 &3691090770679705880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 218966227941150040}
+  - component: {fileID: 3668162085673796686}
+  - component: {fileID: 2559715989968273028}
+  m_Layer: 0
+  m_Name: Range
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &218966227941150040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3691090770679705880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 752962302136807023}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3668162085673796686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3691090770679705880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 900381f36ac81cf4da49a6e2ab6543f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsInRange: 0
+  DetectiveObj: {fileID: 0}
+--- !u!58 &2559715989968273028
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3691090770679705880}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 7
 --- !u!1 &3715962480395983244
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,11 +893,11 @@ GameObject:
   - component: {fileID: 510522638867168601}
   - component: {fileID: 1842362261659223232}
   - component: {fileID: 1893488815982751651}
-  - component: {fileID: 4259661792392411988}
-  - component: {fileID: 463743635968960508}
+  - component: {fileID: -1640842278597713231}
+  - component: {fileID: -7160437792993059027}
   m_Layer: 0
   m_Name: Bow
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -862,6 +924,7 @@ Transform:
   - {fileID: 5714151292207613793}
   - {fileID: 6305822747338011783}
   - {fileID: 1948565288738076718}
+  - {fileID: 218966227941150040}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -931,7 +994,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48350668, y: 1.2586555}
   m_EdgeRadius: 0
---- !u!114 &4259661792392411988
+--- !u!114 &-1640842278597713231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -943,14 +1006,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f5bcee7b72ef84695378305811aa41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detect: {fileID: 0}
+  detect: {fileID: 3668162085673796686}
   AttackSpeed: 2
   rigid: {fileID: 1842362261659223232}
   animator: {fileID: 510522638867168601}
-  attackFunc: {fileID: 0}
+  attackFunc: {fileID: -7160437792993059027}
   FriendRoll: LongRange
   skillOn: 0
---- !u!114 &463743635968960508
+--- !u!114 &-7160437792993059027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

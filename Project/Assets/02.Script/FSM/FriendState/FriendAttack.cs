@@ -22,6 +22,8 @@ public class FriendAttack : State<Friend>
             if(target.detect.DetectiveObj != null)
             {
                 target.attackFunc.Attack(target.detect.gameObject.transform, target.detect.DetectiveObj.transform);
+                Monster getmon = target.detect.DetectiveObj.GetComponent<Monster>();
+                getmon.SetHP(target.ATK);
             }
         }
     }
