@@ -32,6 +32,24 @@ public class Presenter : MonoBehaviour
     #endregion
     public GameObject store;
 
+    int sp = 0, wood = 0, glass = 0, iron = 0;
+
+    public void ChangeSP(int value)
+    {
+        sp += value;
+
+        //saveJson
+    }
+    public void ChangeResource(int v1, int v2, int v3)
+    {
+        wood += v1;
+        glass += v2;
+        iron += v3;
+
+        //saveJson
+    }
+
+
     void Start()
     {
         store = GameObject.Find("Canvases").transform.Find("Store").gameObject;
@@ -56,11 +74,11 @@ public class Presenter : MonoBehaviour
 
     public void OpenStore()
     {
-        
-       // Go to 'Store Model'
+
+        // Go to 'Store Model'
 
         //store.SetActive(true);
-        
+
     }
 
     public void OpenProtect()
