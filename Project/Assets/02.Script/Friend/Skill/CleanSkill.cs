@@ -4,15 +4,48 @@ using UnityEngine;
 
 public class CleanSkill : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] Friend friend;
+    [SerializeField] GameObject clean;
+    private float Spawntime = 0.1f;
+    public float time = 4;
+    public float cost = 3;
+    float tempTime;
+    bool SkillOn = false;
+
+    void Skill()
+    {
+        SkillOn = true;
+        friend.ChangeState(FriendState.Run);
+    }
     void Start()
     {
-        
+        tempTime = time;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Skill();
+        }
+
+        if (SkillOn)
+        {
+            time -= Time.deltaTime;
+            Spawntime -= Time.deltaTime;
+            if(Spawntime < 0)
+            {
+                Spawntime = 0.1f;
+                Instantiate(clean, friend.transform.position, Quaternion.identity);
+            }
+        }
+        if (time <= 0)
+        {
+            SkillOn = false;
+            time = tempTime;
+            Spawntime = 0.1f;
+            friend.ChangeState(FriendState.Idle);
+
+        }
+
     }
 }

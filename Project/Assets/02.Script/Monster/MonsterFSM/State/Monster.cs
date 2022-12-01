@@ -43,6 +43,10 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.CompareTag("CleanSkill"))
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+        }
         if (collision.gameObject.CompareTag("Player"))
         {
             CollideCharacter = true;
@@ -70,6 +74,10 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.CompareTag("CleanSkill"))
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
+        }
         if (collision.CompareTag("Player"))
         {
             CollideCharacter = false;

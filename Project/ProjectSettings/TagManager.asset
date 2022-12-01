@@ -9,6 +9,7 @@ TagManager:
   - Poundation
   - BoxerSkill
   - RangeAttack
+  - CleanSkill
   layers:
   - Default
   - TransparentFX
