@@ -12,7 +12,7 @@ public enum MonsterState
 public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
 {
     [SerializeField] MonsterStat data;
-    [SerializeField] GameObject targetPoint;
+    public GameObject targetPoint;
     //Friend friend = new Friend();
     public float HP;
     public float Speed;
