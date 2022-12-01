@@ -62,6 +62,10 @@ public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
 
     void Update()
     {
+        if(AttackSpeed - skillOn <= 0)
+        {
+            AttackSpeed = skillOn + 0.3f;
+        }
         machine.Update();
     }
 }
