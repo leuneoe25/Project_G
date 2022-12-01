@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FriendAttack : State<Friend>
-{//after
+{
     float time;
     public override void Enter(Friend target)
     {
+        if(target.detect.DetectiveObj == null)
+        {
+            target.ChangeState(FriendState.Idle);
+        }
         if(target.detect.DetectiveObj.transform.position.x > target.transform.position.x)
         {
             target.transform.localScale = new Vector3(1, 1, 1);

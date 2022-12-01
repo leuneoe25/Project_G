@@ -390,6 +390,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &81461559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4476395718142741309, guid: 9e4f291cd3585914f80eadfcfd2cd442, type: 3}
+  m_PrefabInstance: {fileID: 7750073099764329455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &81461560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81461559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a899b01941aa224a8486a2b5c30b129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxer: {fileID: 81461562}
+  FlyingBody: {fileID: 8541933083225398504, guid: db6636108b057aa4791810c2c9cc4440, type: 3}
+  cost: 0
+--- !u!114 &81461562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -3154553861435313893, guid: 9e4f291cd3585914f80eadfcfd2cd442, type: 3}
+  m_PrefabInstance: {fileID: 7750073099764329455}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81461559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f5bcee7b72ef84695378305811aa41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &87668069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,6 +1887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6656cf14b3f3bde408f290c16cd38006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selected: {fileID: 0}
   characterSelect: {fileID: 23974230}
   mainCam: {fileID: 1895914608}
 --- !u!1 &487377173
@@ -4131,6 +4163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   friend: {fileID: 1268231756}
   time: 3
+  cost: 3
 --- !u!1 &1284859975
 GameObject:
   m_ObjectHideFlags: 0

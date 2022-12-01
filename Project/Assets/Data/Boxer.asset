@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Boxer
   m_EditorClassIdentifier: 
   _hp: 200
-  _apk: 20
+  _apk: 30
   _moveSpeed: 0
   _atkSpeed: 0.3
