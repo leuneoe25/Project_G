@@ -19,6 +19,7 @@ public class MovePosition : MonoBehaviour
     public void ChangePosition()
     {
         selected = characterSelect.GetComponent<CharacterMoveSelect>().GetCharacter();
+        selected.GetComponent<Friend>().animator.SetBool("IsMoving", true);
     }
 
     void Update()
@@ -31,6 +32,7 @@ public class MovePosition : MonoBehaviour
             selected.transform.position = new Vector3(Mathf.Clamp(pos.x, -6f, 6f), pos.y, 0f);
             if (Input.GetMouseButtonDown(0))
             {
+                selected.GetComponent<Friend>().animator.SetBool("IsMoving", false);
                 selected = null;
             }
         }
