@@ -7,6 +7,7 @@ public class FuncOfAttack : MonoBehaviour
 
     #region Arrow
     [SerializeField] GameObject Arrow;
+    [SerializeField] GameObject Range;
 
     public void Attack(Transform pointA, Transform pointB)
     {
@@ -18,6 +19,10 @@ public class FuncOfAttack : MonoBehaviour
         NewArrow.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
     }
 
+    public void Attack(float Damage, Transform FriendPos)
+    {
+        Instantiate(Range, FriendPos.position, Quaternion.identity);
+    }
 
     #endregion
 

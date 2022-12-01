@@ -19,11 +19,10 @@ public class FriendAttack : State<Friend>
         {
             target.transform.localScale = new Vector3(-1, 1, 1);
         }
-        Debug.Log("Iam Attack");
         time = target.AttackSpeed - target.skillOn;
-        if (target.FriendRoll == "throw")
+        if (target.FriendRoll == "RangeAttack")
         {
-            //target.attackFunc.Attack()
+            target.attackFunc.Attack(target.ATK, target.transform);
         }
         else if (target.FriendRoll == "Melee")
         {
@@ -48,7 +47,6 @@ public class FriendAttack : State<Friend>
         time -= Time.deltaTime;
         if(time <= 0)
         {
-            Debug.Log("2222");
             target.ChangeState(FriendState.Idle);
         }
     }

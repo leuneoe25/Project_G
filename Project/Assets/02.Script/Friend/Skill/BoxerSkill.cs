@@ -18,11 +18,11 @@ public class BoxerSkill : MonoBehaviour
             Body body = monster.GetComponent<Body>();
             if (boxer.transform.position.x > position.x)
             {
-                body.Right();
-            }
-            else
-            {
                 body.left();
+            }
+            else if(boxer.transform.position.x < position.x)
+            {
+                body.Right();
             }
         }
         else

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Body : MonoBehaviour
+public class Kenki : MonoBehaviour
 {
+    [SerializeField] FriendStat Data;
     private float time = 2;
     bool IsLeft;
 
@@ -31,19 +32,19 @@ public class Body : MonoBehaviour
         if (collision.CompareTag("Monster"))
         {
             Monster monster = collision.GetComponent<Monster>();
-            
-            monster.SetHP(monster.HP / 4);
+
+            monster.SetHP(Data.atk * 2);
         }
-        
+
     }
 
     void Update()
     {
-        if(IsLeft)
+        if (IsLeft)
         {
             transform.Translate(Vector3.left * 10 * Time.deltaTime);
             time -= Time.deltaTime;
-            if(time < 0)
+            if (time < 0)
             {
                 Destroy(gameObject);
             }

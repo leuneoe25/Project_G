@@ -38,21 +38,40 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
     }
     #endregion
 
+
     #region Collide Event
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("collide");
             CollideCharacter = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("BoxerSkill"))
+        {
+            Body body = collision.GetComponent<Body>();
+
+            if (body.GetBool())
+            {
+                Debug.Log("Left");
+                transform.Translate(Vector3.left * 5 * Time.deltaTime);
+            }
+            else
+            {
+                Debug.Log("right");
+                transform.Translate(Vector3.left * 5 * Time.deltaTime);
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Uncollide");
             CollideCharacter = false;
         }
     }
