@@ -7,6 +7,14 @@ public class FriendAttack : State<Friend>
     float time;
     public override void Enter(Friend target)
     {
+        if(target.detect.DetectiveObj.transform.position.x > target.transform.position.x)
+        {
+            target.transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            target.transform.localScale = new Vector3(-1, 1, 1);
+        }
         Debug.Log("Iam Attack");
         time = target.AttackSpeed - target.skillOn;
         if (target.FriendRoll == "throw")

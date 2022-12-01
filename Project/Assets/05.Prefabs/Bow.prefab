@@ -938,7 +938,7 @@ Animator:
   m_GameObject: {fileID: 4286154829788786614}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 90e5434520b92e04f902e98c43921c90, type: 2}
+  m_Controller: {fileID: 9100000, guid: fe028b7f36449de48be9b84f13cee7b0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1007,12 +1007,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detect: {fileID: 3668162085673796686}
+  Data: {fileID: 0}
   AttackSpeed: 2
   rigid: {fileID: 1842362261659223232}
   animator: {fileID: 510522638867168601}
   attackFunc: {fileID: -7160437792993059027}
   FriendRoll: LongRange
   skillOn: 0
+  HP: 0
+  ATK: 0
+  MoveSpeed: 0
 --- !u!114 &-7160437792993059027
 MonoBehaviour:
   m_ObjectHideFlags: 0
