@@ -11,7 +11,7 @@ public class Arrow : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Monster"))
+        if(collision.CompareTag("Monster") || collision.CompareTag("Poundation"))
         {
             Debug.Log("pew!");
             Destroy(gameObject);

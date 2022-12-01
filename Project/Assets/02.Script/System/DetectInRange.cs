@@ -8,7 +8,6 @@ public class DetectInRange : MonoBehaviour
     public GameObject DetectiveObj;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("SomeThing is in range it is");
         if(collision.CompareTag("Monster"))
         {
             Debug.Log("Monster");
