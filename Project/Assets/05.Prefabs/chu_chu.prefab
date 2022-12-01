@@ -1248,6 +1248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5733153849202412760}
   - component: {fileID: 2927025886451864192}
+  - component: {fileID: 6423768344979164987}
   m_Layer: 0
   m_Name: chu_chu
   m_TagString: Untagged
@@ -1298,6 +1299,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6423768344979164987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541933083225398504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab39ada4f96b824e952d513fdba25a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 5400c49b82737954c9878e9884b43fef, type: 2}
+  targetPoint: {fileID: 0}
+  HP: 0
+  Speed: 0
+  ATK: 0
+  ATKSpeed: 0
+  CollideCharacter: 0
+  Target: {x: 0, y: 0, z: 0}
+  rigid: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &8815338043528780039
 GameObject:
   m_ObjectHideFlags: 0

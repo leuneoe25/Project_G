@@ -14,8 +14,8 @@ public class MonsterMove : MonsterState<Monster>
     }
     public override void Update(Monster target)
     {
-        if(target.transform.position.x > target.Target.x)
-        target.transform.Translate(target.Target * target.Speed * Time.deltaTime);
+        if(target.transform.position.x != target.Target.x)
+        target.transform.Translate((target.Target - target.transform.position) * target.Speed * Time.deltaTime, Space.World);
         if(target.CollideCharacter)
         {
             target.ChangeState(MonsterState.Attack);
