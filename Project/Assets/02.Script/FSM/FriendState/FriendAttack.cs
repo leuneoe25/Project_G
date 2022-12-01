@@ -23,7 +23,7 @@ public class FriendAttack : State<Friend>
         }
         else if (target.FriendRoll == "Melee")
         {
-            target.attackFunc.Attack(2/*target.damage)*/, target.detect.DetectiveObj);
+            target.attackFunc.Attack(target.ATK, target.detect.DetectiveObj);
         }
         else if (target.FriendRoll == "LongRange")
         {
