@@ -6,7 +6,6 @@ public class FriendIdle:State<Friend>
 {//after
     public override void Enter(Friend target)
     {
-        Debug.Log("iam idle");
     }
     public override void Exit(Friend target)
     {
@@ -16,7 +15,6 @@ public class FriendIdle:State<Friend>
     {
         if(target.detect.IsInRange)
         {
-            Debug.Log("gotoAttack");
             target.ChangeState(FriendState.Attack);
         }
     }

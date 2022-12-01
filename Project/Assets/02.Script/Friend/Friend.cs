@@ -77,7 +77,6 @@ public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
         {
             float x = collision.transform.position.x - transform.position.x;
             float y = collision.transform.position.y - transform.position.y;
-            Debug.Log(Mathf.Sqrt(x * x + y * y));
             if (Mathf.Sqrt(x * x + y * y) < 1.1f)
                 overlap = true;
             else

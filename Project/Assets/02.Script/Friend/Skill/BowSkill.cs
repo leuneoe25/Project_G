@@ -6,6 +6,7 @@ public class BowSkill : MonoBehaviour
 {
     [SerializeField] Friend friend;
     public float time = 5;
+    public float cost = 3;
     float tempTime;
     float tempSpeed;
     bool SkillOn = false;

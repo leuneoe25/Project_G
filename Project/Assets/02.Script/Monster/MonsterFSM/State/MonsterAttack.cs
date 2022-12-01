@@ -7,7 +7,6 @@ public class MonsterAttack : MonsterState<Monster>
     float time = 3;
     public override void Enter(Monster target)
     {
-        Debug.Log("Attack!");
         time = 3;
         //target.friend.SetHP(ATK);
     }
