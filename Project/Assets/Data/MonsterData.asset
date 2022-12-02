@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MonsterData
   m_EditorClassIdentifier: 
   _hp: 100
-  _apk: 0
+  _apk: 10
   _moveSpeed: 0.05
   _atkSpeed: 0

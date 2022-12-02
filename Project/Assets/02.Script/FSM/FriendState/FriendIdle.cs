@@ -13,6 +13,10 @@ public class FriendIdle:State<Friend>
     }
     public override void Update(Friend target)
     {
+        if(target.IsDead())
+        {
+            target.ChangeState(FriendState.Sturn);
+        }
         if(target.detect.IsInRange)
         {
             target.ChangeState(FriendState.Attack);

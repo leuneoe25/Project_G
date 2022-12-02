@@ -8,7 +8,16 @@ public class MonsterAttack : MonsterState<Monster>
     public override void Enter(Monster target)
     {
         time = 3;
-        //target.friend.SetHP(ATK);
+        Friend friend = target.DetectPlayer.GetComponent<Friend>();
+        Player player;
+        if(friend == null)
+        {
+            player = target.DetectPlayer.GetComponent<Player>();
+        }
+        else
+        {
+            friend.SetHP(target.ATK);
+        }
     }
     public override void Exit(Monster target)
     {

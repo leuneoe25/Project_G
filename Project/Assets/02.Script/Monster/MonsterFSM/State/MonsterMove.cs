@@ -20,7 +20,17 @@ public class MonsterMove : MonsterState<Monster>
         target.transform.Translate(TargetPos * target.Speed * Time.deltaTime, Space.World);
         if(target.CollideCharacter)
         {
-            target.ChangeState(MonsterState.Attack);
+            Player player;
+            Friend friend = target.DetectPlayer.GetComponent<Friend>();
+            if (friend == null)
+            {
+                player = target.DetectPlayer.GetComponent<Player>();
+                //player.SetHP();
+            }
+            else if (!friend.IsDead())
+            {
+                target.ChangeState(MonsterState.Attack);
+            }
         }
     }
 }
