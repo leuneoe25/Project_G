@@ -9,13 +9,20 @@ public class MovePosition : MonoBehaviour
 {
     public GameObject selected;
     [SerializeField] private GameObject characterSelect;
+    [SerializeField] private CharacterArrangement arrangement;
     [SerializeField] private Camera mainCam;
     bool drow = false;
 
     public void ChangePosition()
     {
+        arrangement.isArrangement = true;
         selected = characterSelect.GetComponent<CharacterMoveSelect>().GetCharacter();
+        characterSelect.GetComponent<CharacterMoveSelect>().SetCharacter(null);
         selected.GetComponent<Friend>().animator.SetBool("IsMoving", true);
+    }
+    public void CharacterInfo()
+    {
+        characterSelect.GetComponent<CharacterMoveSelect>().SetCharacter(null);
     }
 
     public void SetPosition(GameObject obj)
@@ -33,9 +40,10 @@ public class MovePosition : MonoBehaviour
             if (pos.y < -1.8f) pos.y = -3.5f;
             else pos.y = 1.7f;
             selected.transform.position = new Vector3(Mathf.Clamp(pos.x, -6f, 6f), pos.y, 0f);
-            if (Input.GetMouseButtonDown(0) && !drow && !selected.GetComponent<Friend>().overlap)
+            if (Input.GetMouseButtonDown(0) && !drow /*&& !selected.GetComponent<Friend>().overlap*/)
             {
                 selected.GetComponent<Friend>().animator.SetBool("IsMoving", false);
+                arrangement.isArrangement = false;
                 selected = null;
             }
             else if (drow) { drow = false; }
