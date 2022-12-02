@@ -507,6 +507,7 @@ MonoBehaviour:
   HP: 0
   ATK: 0
   MoveSpeed: 0
+  overlap: 0
 --- !u!1 &5552671975697792165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1056,7 @@ GameObject:
   - component: {fileID: 8601428424909614397}
   - component: {fileID: 7563757014965310403}
   - component: {fileID: 4104625418953874356}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
