@@ -5,6 +5,7 @@ using UnityEngine;
 public class Body : MonoBehaviour
 {
     private float time = 2;
+    public float Speed = 10f;
     bool IsLeft;
     public bool GetBool()
     {
@@ -30,8 +31,6 @@ public class Body : MonoBehaviour
         if (collision.CompareTag("Monster"))
         {
             Monster monster = collision.GetComponent<Monster>();
-            
-            monster.SetHP(monster.HP / 4);
         }
         
     }
@@ -40,7 +39,7 @@ public class Body : MonoBehaviour
     {
         if(IsLeft)
         {
-            transform.Translate(Vector3.left * 10 * Time.deltaTime);
+            transform.Translate(Vector3.left * Speed * Time.deltaTime);
             time -= Time.deltaTime;
             if(time < 0)
             {
@@ -49,7 +48,7 @@ public class Body : MonoBehaviour
         }
         else
         {
-            transform.Translate(Vector3.right * 10 * Time.deltaTime);
+            transform.Translate(Vector3.right * Speed * Time.deltaTime);
             time -= Time.deltaTime;
             if (time < 0)
             {

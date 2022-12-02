@@ -78,7 +78,14 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
     {
         if (collision.CompareTag("CleanSkill"))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
+            if(transform.position.x > targetPoint.transform.position.x)
+            {
+                transform.position = new Vector3(transform.position.x + 0.05f, transform.position.y - 0.1f, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x - 0.05f, transform.position.y - 0.1f, transform.position.z);
+            }
         }
         if (collision.CompareTag("Player"))
         {
