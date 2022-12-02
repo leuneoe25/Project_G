@@ -8,9 +8,6 @@ public class SetGameMenuUI : MonoBehaviour
     [Header("Goods Text")]
     [SerializeField] private Text SP_text;
     [SerializeField] private Text[] Buildingtext;
-    [Header("EnterStore")]
-    [SerializeField] private Button EnterStoreButton;
-    [SerializeField] private SceneManagement scene;
     void Start()
     {
         //GoodsSystem.Instance.SetBuildingGoods(101, 101, 101);
@@ -21,12 +18,8 @@ public class SetGameMenuUI : MonoBehaviour
         {
             Buildingtext[i].text = GoodsSystem.Instance.GetBuildingGoods(i).ToString();
         }
-        EnterStoreButton.onClick.AddListener(EnterButtonFunc);
     }
-    private void EnterButtonFunc()
-    {
-        scene.LoadStore();
-    }
+
     // Update is called once per frame
     void Update()
     {

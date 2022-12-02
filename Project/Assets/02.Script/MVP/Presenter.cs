@@ -30,11 +30,11 @@ public class Presenter : MonoBehaviour
         }
     }
     #endregion
-    //public GameObject store;
+    public GameObject store;
 
     void Start()
     {
-        //store = GameObject.Find("Canvases").transform.Find("Store").gameObject;
+        store = GameObject.Find("Canvases").transform.Find("Store").gameObject;
     }
 
     public void OpenMenu()

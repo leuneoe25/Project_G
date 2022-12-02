@@ -17,10 +17,7 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene("TestAnimationScene");
     }
-    public void LoadStore()
-    {
-        SceneManager.LoadScene("Store");
-    }
+
     public void ExitGame()
     {
         Application.Quit();
