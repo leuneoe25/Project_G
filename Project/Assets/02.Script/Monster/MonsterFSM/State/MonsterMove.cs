@@ -7,7 +7,6 @@ public class MonsterMove : MonsterState<Monster>
     Vector3 TargetPos;
     public override void Enter(Monster target)
     {
-        Debug.Log("Run");
         target.animator.SetInteger("State", (int)MonsterState.Run);
         TargetPos = new Vector3(target.Target.x - target.transform.position.x, 0f, 0f);
     }

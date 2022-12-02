@@ -10,7 +10,6 @@ public class DetectInRange : MonoBehaviour
     {
         if(collision.CompareTag("Monster"))
         {
-            Debug.Log("Monster");
             DetectiveObj = collision.gameObject;
             IsInRange = true;
         }

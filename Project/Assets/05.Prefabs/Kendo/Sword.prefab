@@ -132,7 +132,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8820490906018872495}
   m_Bounds:
-    m_Center: {x: 1.3864108, y: -3.200131, z: 0}
+    m_Center: {x: 1.3864112, y: -3.200131, z: 0}
     m_Extent: {x: 0.060000062, y: 0.089999914, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -328,7 +328,7 @@ MonoBehaviour:
   - {fileID: 6097404718500035986}
   m_Bounds:
     m_Center: {x: 1.5012627, y: -3.39497, z: 0}
-    m_Extent: {x: 0.06999993, y: 0.20707512, z: 0}
+    m_Extent: {x: 0.06999999, y: 0.20707512, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5175729074199218915
@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 5990893527168733177}
   - component: {fileID: 4073976601723017816}
   - component: {fileID: 3106878281601738573}
+  - component: {fileID: 7669428009596461930}
   m_Layer: 10
   m_Name: Sword
   m_TagString: Player
@@ -497,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detect: {fileID: 4104625418953874356}
-  Data: {fileID: 11400000, guid: 3e1abc9ef7eda12489b4fcdd1756628e, type: 2}
+  Data: {fileID: 11400000, guid: d9e4ffea15004d949aa5f077a232be2d, type: 2}
   AttackSpeed: 0
   rigid: {fileID: 3815762165057024403}
   animator: {fileID: 3776787338446820999}
@@ -508,6 +509,23 @@ MonoBehaviour:
   ATK: 0
   MoveSpeed: 0
   overlap: 0
+<<<<<<< HEAD:Project/Assets/05.Prefabs/Sword.prefab
+=======
+--- !u!114 &7669428009596461930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5455077987748070370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b0e76c7f4b9594ebb142632557cb2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kenki: {fileID: 3716168268829375011, guid: 79dfd8a0b4f13ee4d9a7f78bbf726352, type: 3}
+  kendo: {fileID: 3106878281601738573}
+>>>>>>> 0b2070ba4145aa77e957f6bc59098c57f9508875:Project/Assets/05.Prefabs/Kendo/Sword.prefab
 --- !u!1 &5552671975697792165
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +625,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6828719830200690994}
   m_Bounds:
-    m_Center: {x: 1.3413156, y: -3.3354158, z: 0}
+    m_Center: {x: 1.3413157, y: -3.3354158, z: 0}
     m_Extent: {x: 0.19500005, y: 0.23500013, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -711,8 +729,8 @@ MonoBehaviour:
   - {fileID: 2469316424900216329}
   - {fileID: 7185104763111083076}
   m_Bounds:
-    m_Center: {x: 1.1329855, y: -3.4385257, z: 0}
-    m_Extent: {x: 0.055000067, y: 0.19499981, z: 0}
+    m_Center: {x: 1.1329854, y: -3.4385254, z: 0}
+    m_Extent: {x: 0.055000305, y: 0.19499993, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &6928642384411827011
@@ -814,7 +832,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1390748363215448087}
   m_Bounds:
-    m_Center: {x: 1.3307484, y: -3.4579961, z: 0}
+    m_Center: {x: 1.3307486, y: -3.4579961, z: 0}
     m_Extent: {x: 0.13499999, y: 0.12999988, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1206,7 +1224,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4557206381092009967}
   m_Bounds:
-    m_Center: {x: 1.3079115, y: -3.1917796, z: 0}
+    m_Center: {x: 1.3079119, y: -3.1917796, z: 0}
     m_Extent: {x: 0.060000062, y: 0.09500003, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

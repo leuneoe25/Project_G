@@ -7,6 +7,9 @@ TagManager:
   - Floor
   - Monster
   - Poundation
+  - BoxerSkill
+  - RangeAttack
+  - CleanSkill
   layers:
   - Default
   - TransparentFX

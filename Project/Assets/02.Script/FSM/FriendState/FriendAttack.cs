@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FriendAttack : State<Friend>
-{//after
+{
     float time;
     public override void Enter(Friend target)
     {
+        if(target.detect.DetectiveObj == null)
+        {
+            target.ChangeState(FriendState.Idle);
+        }
         if(target.detect.DetectiveObj.transform.position.x > target.transform.position.x)
         {
             target.transform.localScale = new Vector3(1, 1, 1);
@@ -15,11 +19,10 @@ public class FriendAttack : State<Friend>
         {
             target.transform.localScale = new Vector3(-1, 1, 1);
         }
-        Debug.Log("Iam Attack");
         time = target.AttackSpeed - target.skillOn;
-        if (target.FriendRoll == "throw")
+        if (target.FriendRoll == "RangeAttack")
         {
-            //target.attackFunc.Attack()
+            target.attackFunc.Attack(target.ATK, target.transform);
         }
         else if (target.FriendRoll == "Melee")
         {
@@ -44,7 +47,6 @@ public class FriendAttack : State<Friend>
         time -= Time.deltaTime;
         if(time <= 0)
         {
-            Debug.Log("2222");
             target.ChangeState(FriendState.Idle);
         }
     }
