@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5831598988104674705}
   - component: {fileID: 4084032425412725083}
+  - component: {fileID: 8980062567429408436}
   m_Layer: 0
   m_Name: Heal
   m_TagString: Untagged
@@ -82,3 +83,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8980062567429408436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308819886846090718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RootBone: {fileID: 0}
+  m_BoneTransforms:
+  - {fileID: 0}
+  m_Bounds:
+    m_Center: {x: -0.0008716658, y: 0.0000023841858, z: 0}
+    m_Extent: {x: 0.084130034, y: 0.08500003, z: 0}
+  m_UseBatching: 1
+  m_AlwaysUpdate: 1
