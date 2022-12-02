@@ -14,6 +14,7 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
     [SerializeField] MonsterStat data;
     public GameObject targetPoint;
     //Friend friend = new Friend();
+    public GameObject DetectPlayer;
     public float HP;
     public float Speed;
     public float ATK;
@@ -49,6 +50,7 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
         }
         if (collision.gameObject.CompareTag("Player"))
         {
+            DetectPlayer = collision.gameObject;
             CollideCharacter = true;
         }
     }

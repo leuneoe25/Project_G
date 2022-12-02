@@ -6,7 +6,6 @@ public class Body : MonoBehaviour
 {
     private float time = 2;
     bool IsLeft;
-
     public bool GetBool()
     {
         return IsLeft;
