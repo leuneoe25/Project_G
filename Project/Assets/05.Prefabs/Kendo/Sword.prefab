@@ -509,6 +509,8 @@ MonoBehaviour:
   ATK: 0
   MoveSpeed: 0
   overlap: 0
+<<<<<<< HEAD:Project/Assets/05.Prefabs/Sword.prefab
+=======
 --- !u!114 &7669428009596461930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,6 +525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kenki: {fileID: 3716168268829375011, guid: 79dfd8a0b4f13ee4d9a7f78bbf726352, type: 3}
   kendo: {fileID: 3106878281601738573}
+>>>>>>> 0b2070ba4145aa77e957f6bc59098c57f9508875:Project/Assets/05.Prefabs/Kendo/Sword.prefab
 --- !u!1 &5552671975697792165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1074,7 @@ GameObject:
   - component: {fileID: 8601428424909614397}
   - component: {fileID: 7563757014965310403}
   - component: {fileID: 4104625418953874356}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}

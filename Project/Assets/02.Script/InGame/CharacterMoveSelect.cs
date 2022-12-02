@@ -6,12 +6,13 @@ using UnityEngine.EventSystems;
 
 public class CharacterMoveSelect : MonoBehaviour
 {
-    private GameObject SelectCharacter;
+    [SerializeField] private GameObject SelectCharacter;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private CinemachineClearShot clearShot;
     [SerializeField] private GameObject CharacterSelectUI;
+    [SerializeField] private CharacterArrangement arrangement;
     RaycastHit2D raycast;
-    bool isEnterPointerUI = false;
+    public bool isEnterPointerUI = false;
     void Start()
     {
 
@@ -28,7 +29,7 @@ public class CharacterMoveSelect : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)/* && !CharacterSelectUI.activeSelf*/)
+        if (Input.GetMouseButtonDown(0)&& !arrangement.isArrangement)
         {
             raycast = Physics2D.Raycast(mainCamera.ScreenToWorldPoint(Input.mousePosition), Vector2.down, 0.1f, LayerMask.GetMask("Character"));
             if (raycast.collider != null)
@@ -41,9 +42,11 @@ public class CharacterMoveSelect : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("Chage");
                     ZoomOut(SelectCharacter);
                     SelectCharacter = raycast.collider.gameObject;
                     ZoomIn(SelectCharacter);
+                    CharacterSelectUI.SetActive(true);
                 }
             }
             else if (isEnterPointerUI)
@@ -68,6 +71,7 @@ public class CharacterMoveSelect : MonoBehaviour
         int index = FindCharacter(ZoomCharacter);
         clearShot.ChildCameras[index].Priority = 11;
         CharacterSelectUI.SetActive(true);
+        Invoke("lateSetActivetrue", 0.15f);
     }
     private void ZoomOut(GameObject ZoomCharacter)
     {
@@ -80,7 +84,10 @@ public class CharacterMoveSelect : MonoBehaviour
     {
         CharacterSelectUI.SetActive(false);
     }
-
+    public void lateSetActivetrue()
+    {
+        CharacterSelectUI.SetActive(true);
+    }
 
     private int FindCharacter(GameObject ZoomCharacter)
     {
@@ -99,5 +106,9 @@ public class CharacterMoveSelect : MonoBehaviour
     {
         Debug.Log("a");
         return SelectCharacter;
+    }
+    public void SetCharacter(GameObject g)
+    {
+        SelectCharacter = g;
     }
 }
