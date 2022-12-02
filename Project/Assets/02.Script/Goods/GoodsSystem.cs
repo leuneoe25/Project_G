@@ -68,18 +68,18 @@ public class GoodsSystem : MonoBehaviour
     }
     public void SetBuildingGoods(int _Wood,int _Glass, int _Iron)
     {
-        buildingGoods[0] = _Wood;
-        buildingGoods[1] = _Glass;
-        buildingGoods[2] = _Iron;
+        buildingGoods[0] += _Wood;
+        buildingGoods[1] += _Glass;
+        buildingGoods[2] += _Iron;
     }
     public void SetSP(int _sp)
     {
-        sp = _sp;
+        sp += _sp;
     }
     public void SetCrystals(int _Attack, int _DeBuff, int Support)
     {
-        buildingGoods[0] = _Attack;
-        buildingGoods[1] = _DeBuff;
-        buildingGoods[2] = Support;
+        crystals[0] += _Attack;
+        crystals[1] += _DeBuff;
+        crystals[2] += Support;
     }
 }
