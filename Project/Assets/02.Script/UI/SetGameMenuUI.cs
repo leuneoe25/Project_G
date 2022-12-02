@@ -13,8 +13,8 @@ public class SetGameMenuUI : MonoBehaviour
     [SerializeField] private SceneManagement scene;
     void Start()
     {
-        GoodsSystem.Instance.SetBuildingGoods(101, 101, 101);
-        GoodsSystem.Instance.SetSP(100);
+        //GoodsSystem.Instance.SetBuildingGoods(101, 101, 101);
+        //GoodsSystem.Instance.SetSP(100);
 
         SP_text.text = GoodsSystem.Instance.GetSP().ToString();
         for(int i = 0; i < Buildingtext.Length;i++)

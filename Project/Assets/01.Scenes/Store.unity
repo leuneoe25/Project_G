@@ -3180,6 +3180,11 @@ MonoBehaviour:
   PackageButton: {fileID: 76205721}
   BuildingGoodsButton: {fileID: 1271709672}
   clystalButton: {fileID: 1007663139}
+  products:
+  - {fileID: 1422477595}
+  - {fileID: 1986446387}
+  - {fileID: 949070414}
+  - {fileID: 478122447}
   scene: {fileID: 203184505}
 --- !u!4 &2037019281
 Transform:
