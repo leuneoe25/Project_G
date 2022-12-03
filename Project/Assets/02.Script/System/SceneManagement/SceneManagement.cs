@@ -25,6 +25,10 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene("StudentCouncil");
     }
+    public void LoadColleague()
+    {
+        SceneManager.LoadScene("Colleague");
+    }
     public void ExitGame()
     {
         Application.Quit();

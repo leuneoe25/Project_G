@@ -47,11 +47,11 @@ public class Colleague
     {
         get
         {
-            return training;
+            return _training;
         }
         set
         {
-            training = value;
+            _training = value;
         }
     }
 
@@ -60,23 +60,23 @@ public class Colleague
     {
         get
         {
-            return type;
+            return _type;
         }
         set
         {
-            type = value;
+            _type = value;
         }
     }
     private ColleagueClub _club;
-    public ColleagueType club
+    public ColleagueClub club
     {
         get
         {
-            return club;
+            return _club;
         }
         set
         {
-            club = value;
+            _club = value;
         }
     }
 
@@ -129,13 +129,13 @@ public class ColleagueSystem : MonoBehaviour
     }
     #endregion
     private int ColleagueCount;
-    List<Colleague> colleagues;
+    List<Colleague> colleagues = new List<Colleague>();
     void Start()
     {
         AddColleague("사이라", 3, new int[3] { 1, 2, 3 }, ColleagueClub.Archer);
+        AddColleague("다이라", 2, new int[3] { 1, 2, 3 }, ColleagueClub.Boxing);
     }
 
-    // Update is called once per frame
     private void AddColleague(string name, int rank, int[] _training, ColleagueClub club)
     {
         Colleague Character = new Colleague(name, rank,_training, club);
