@@ -10,6 +10,7 @@ public class ButtonSaver : MonoBehaviour
     [SerializeField] private Button BackButton;
     [SerializeField] private Text BackText;
     [SerializeField] private Button EnterStageButton;
+    [SerializeField] private Image Map;
 
     [SerializeField] private SceneManagement scene;
     [SerializeField] private EffectSystem effect;
