@@ -9441,7 +9441,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1820890609}
-  effectSystem: {fileID: 0}
+  effectSystem: {fileID: 192335783}
+  waveText: {fileID: 2047729448}
   monsterCount: 0
 --- !u!1 &1838706657
 GameObject:
@@ -10942,7 +10943,7 @@ GameObject:
   - component: {fileID: 2047729449}
   - component: {fileID: 2047729448}
   m_Layer: 5
-  m_Name: Text
+  m_Name: WaveText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
