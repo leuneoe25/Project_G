@@ -41,6 +41,7 @@ public class MonsterWave : MonoBehaviour
     };
     [SerializeField] private MonsterSpawner spawner;
     [SerializeField] private GameObject effectSystem;
+    [SerializeField] private SceneManagement SceneManager;
     [SerializeField] private Text waveText;
     private int stage;
     private int order;
@@ -75,6 +76,15 @@ public class MonsterWave : MonoBehaviour
                 StopCoroutine("WaveStart");
             }
             yield return new WaitForSeconds(1);
+        }
+    }
+
+    public void Death()
+    {
+        monsterCount--;
+        if (monsterCount <= 0)
+        {
+            SceneManager.LoadEndGame();
         }
     }
 }

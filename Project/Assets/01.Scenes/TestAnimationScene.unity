@@ -257,7 +257,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &87668069
 GameObject:
@@ -2722,7 +2722,7 @@ Transform:
   - {fileID: 1819731395}
   - {fileID: 1438400505}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &481424991
 MonoBehaviour:
@@ -3186,7 +3186,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &633467128
 GameObject:
@@ -5386,6 +5386,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1024747583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024747585}
+  - component: {fileID: 1024747584}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1024747584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024747583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbcaeaaeb0e27d419ad2004dd2f1acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1024747585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024747583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5405049, y: 2.0070739, z: -6.401946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034043584
 GameObject:
   m_ObjectHideFlags: 0
@@ -9409,6 +9452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Target: {fileID: 678055573}
+  _Wave: {fileID: 1820890608}
   enemy: {fileID: 8541933083225398504, guid: ed3f7682be5787b469ab6f65eec4310e, type: 3}
   left: {fileID: 1195161305}
   right: {fileID: 1626015341}
@@ -9426,7 +9470,7 @@ Transform:
   - {fileID: 1195161305}
   - {fileID: 1626015341}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1820890611
 MonoBehaviour:
@@ -9442,6 +9486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 1820890609}
   effectSystem: {fileID: 192335783}
+  SceneManager: {fileID: 1024747584}
   waveText: {fileID: 2047729448}
   monsterCount: 0
 --- !u!1 &1838706657

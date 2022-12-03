@@ -14,6 +14,7 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
 {
     [SerializeField] MonsterStat data;
     public GameObject targetPoint;
+    public GameObject wave;
     //Friend friend = new Friend();
     public GameObject DetectPlayer;
     public float HP;
@@ -125,6 +126,7 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
         HP -= _hp;
         if (HP <= 0)
         {
+            wave.GetComponent<MonsterWave>().Death();
             Destroy(gameObject);
         }
     }
