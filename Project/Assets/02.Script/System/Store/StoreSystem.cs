@@ -63,11 +63,11 @@ public class StoreSystem : MonoBehaviour
         Products.Add(TitleProduct[1, 2], "-100 0 0 10");
 
         TitleProduct[2, 0] = "공격형 보석 구매(10)100SP";
-        Products.Add(TitleProduct[2, 0], "-100 0 0 0 1");
+        Products.Add(TitleProduct[2, 0], "-100 0 0 0 10");
         TitleProduct[2, 1] = "디버프형 보석 구매(10)100SP";
-        Products.Add(TitleProduct[2, 1], "-100 0 0 0 0 1");
+        Products.Add(TitleProduct[2, 1], "-100 0 0 0 0 10");
         TitleProduct[2, 2] = "지원형 보석 구매(10)100SP";
-        Products.Add(TitleProduct[2, 2], "-100 0 0 0 0 0 1");
+        Products.Add(TitleProduct[2, 2], "-100 0 0 0 0 0 10");
 
     }
     private void SetProduct(int index)

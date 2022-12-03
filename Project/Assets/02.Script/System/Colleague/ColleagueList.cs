@@ -8,7 +8,10 @@ using UnityEngine.UI;
 public class ColleagueList : MonoBehaviour
 {
     [SerializeField] private Button BackButton;
+    [SerializeField] private Text BackText;
     [SerializeField] private SceneManagement scene;
+    [SerializeField] private EffectSystem effect;
+    [SerializeField] private Text Guide;
     [Header("Type Button")]
     [SerializeField] private Button AllButton;
     [SerializeField] private Button AttackButton;
@@ -33,14 +36,21 @@ public class ColleagueList : MonoBehaviour
 
     [Header("RankUp")]
     [SerializeField] private GameObject RankUpUI;
+    [SerializeField] private GameObject MaxImage;
+    [SerializeField] private Text[] RankText;
     [SerializeField] private Text[] Crystal;
     [SerializeField] private Text[] NowStat;
     [SerializeField] private Text[] AfterStat;
     [SerializeField] private Text NeedCrystal;
-    [SerializeField] private Button RankUp;
+    [SerializeField] private Button ExcutRankUp;
 
     [Header("Training")]
     [SerializeField] private GameObject TrainingUI;
+    [SerializeField] private Text[] TrainingStat;
+    [SerializeField] private Text Explanation;
+    [SerializeField] private Button FulReinforcement;
+    [SerializeField] private Button OneReinforcement;
+    [SerializeField] private Button ConcentrationReinforcement;
 
 
     private List<Colleague> colleagues;
@@ -62,13 +72,16 @@ public class ColleagueList : MonoBehaviour
             if (TrainingUI.activeSelf)
             {
                 TrainingUI.SetActive(false);
+                effect.Typing(BackText, "동료 스탯", 0.1f);
                 return;
             }
             else if(RankUpUI.activeSelf)
             {
                 RankUpUI.SetActive(false);
+                effect.Typing(BackText, "동료 스탯", 0.1f);
                 return;
             }
+            effect.Typing(BackText, "동료 리스트", 0.1f);
             colleagueInfoUI.SetActive(false);
             return;
         }
@@ -159,15 +172,18 @@ public class ColleagueList : MonoBehaviour
     }
     private void SetListCharacter(int listIndex, int colleaguesIndex)
     {
+        
         colleagueList[listIndex].transform.GetChild(1).GetComponent<Text>().text = colleagues[colleaguesIndex].name;
         colleagueList[listIndex].GetComponent<Button>().onClick.RemoveAllListeners();
         colleagueList[listIndex].GetComponent<Button>().onClick.AddListener(() => SetColleagueInfo(colleagues[colleaguesIndex]));
+        RankUpUI.SetActive(false);
+        TrainingUI.SetActive(false);
     }
     private void SetColleagueInfo(Colleague Character)
     {
+        effect.Typing(BackText, "동료 스탯", 0.1f);
         colleagueInfoUI.SetActive(true);
-        RankUpUI.SetActive(false);
-        TrainingUI.SetActive(false);
+        
         for (int i = 0; i < 5; i++)
         {
             if (Character.rank > i)
@@ -224,7 +240,20 @@ public class ColleagueList : MonoBehaviour
     }
     private void SetRankUpButtonFunc(Colleague Character)
     {
+        effect.Typing(BackText, "동료 승급", 0.1f);
         RankUpUI.SetActive(true);
+        if (Character.rank == 5)
+        {
+            MaxImage.SetActive(true);
+            RankText[0].text = "Rank."+Character.rank.ToString();
+            RankText[1].text = "";
+        }
+        else
+        {
+            RankText[0].text = "Rank." + Character.rank.ToString();
+            RankText[1].text = "Rank." + (Character.rank+1).ToString(); ;
+            MaxImage.SetActive(false);
+        }
         SetCrystal();
         for (int i = 0; i < 3; i++)
         {
@@ -232,12 +261,14 @@ public class ColleagueList : MonoBehaviour
             AfterStat[i].text = ((10 * (Character.rank+1)) + (Character.training[i])).ToString();
         }
         int need = 10;
-        for(int i=1;i<Character.rank;i++)
+        for(int i=0;i<Character.rank;i++)
         {
             need += need;
         }
-        NeedCrystal.text = "필요 보석 : " + GoodsSystem.Instance.GetCrystals((int)Character.type) + "/" + need;
-
+        
+        NeedCrystal.text = "필요 "+ Character.type .ToString()+ " 보석 : " + GoodsSystem.Instance.GetCrystals((int)Character.type) + "/" + need;
+        ExcutRankUp.onClick.RemoveAllListeners();
+        ExcutRankUp.onClick.AddListener(()=> ExcutRankUpFunc(Character, need));
     }
     private void SetCrystal()
     {
@@ -246,8 +277,42 @@ public class ColleagueList : MonoBehaviour
             Crystal[i].text = GoodsSystem.Instance.GetCrystals(i).ToString();
         }
     }
+    private void ExcutRankUpFunc(Colleague Character,int need)
+    {
+        if(need <= GoodsSystem.Instance.GetCrystals((int)Character.type))
+        {
+            if (Character.rank == 5)
+            {
+                effect.Guide(Guide, "최대 강화입니다", 1f);
+                return;
+            }
+            Character.rank++;
+            switch(Character.type)
+            {
+                case ColleagueType.Attack:
+                    GoodsSystem.Instance.SetCrystals(-need, 0, 0);
+                    break;
+                case ColleagueType.Debuff:
+                    GoodsSystem.Instance.SetCrystals(0, -need, 0);
+                    break;
+                case ColleagueType.Support:
+                    GoodsSystem.Instance.SetCrystals(0, 0, -need);
+                    break;
+            }
+            SetRankUpButtonFunc(Character);
+            SetColleagueInfo(Character);
+
+        }
+        else
+        {
+            effect.Guide(Guide, "재화가 부족합니다", 1f);
+            return;
+        }
+        
+    }
     private void SetTrainingButtonFunc()
     {
         TrainingUI.SetActive(true);
+        effect.Typing(BackText, "동료 훈련", 0.1f);
     }
 }

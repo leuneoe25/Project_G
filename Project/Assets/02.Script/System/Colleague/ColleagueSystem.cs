@@ -54,6 +54,7 @@ public class Colleague
             _training = value;
         }
     }
+    public int trainingCount;
 
     private ColleagueType _type;
     public ColleagueType type
