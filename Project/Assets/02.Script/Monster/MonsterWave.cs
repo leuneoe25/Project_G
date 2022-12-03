@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonsterWave : MonoBehaviour
 {
@@ -39,6 +40,8 @@ public class MonsterWave : MonoBehaviour
         }
     };
     [SerializeField] private MonsterSpawner spawner;
+    [SerializeField] private GameObject effectSystem;
+    [SerializeField] private Text waveText;
     private int stage;
     private int order;
 
@@ -48,7 +51,8 @@ public class MonsterWave : MonoBehaviour
     {
         order = 0;
         stage = PlayerPrefs.GetInt("StageLevel");
-        Debug.Log("Stage: " + stage);
+
+        effectSystem.GetComponent<EffectSystem>().Guide(waveText, "Wave " + (stage + 1), 4);
         for (int i = 0; i < 60; i++)
         {
             if (wave[stage, 0, i] == 1) monsterCount++;
@@ -59,6 +63,7 @@ public class MonsterWave : MonoBehaviour
 
     IEnumerator WaveStart()
     {
+        yield return new WaitForSeconds(5);
         while (true)
         {
             Debug.Log("order: " + order);
@@ -71,10 +76,5 @@ public class MonsterWave : MonoBehaviour
             }
             yield return new WaitForSeconds(1);
         }
-    }
-
-    void Update()
-    {
-
     }
 }
