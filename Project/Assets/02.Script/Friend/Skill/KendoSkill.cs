@@ -6,7 +6,8 @@ public class KendoSkill : MonoBehaviour
 {
     [SerializeField] GameObject kenki;
     [SerializeField] Friend kendo;
-    float cost;
+    public int cost;
+    public bool IsTest = false;
 
     public void Skill()
     {
@@ -35,6 +36,7 @@ public class KendoSkill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(IsTest)
         if(Input.GetKeyDown(KeyCode.K))
         {
             Skill();

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1308819886846090718
+--- !u!1 &2437776621973967159
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5831598988104674705}
-  - component: {fileID: 4084032425412725083}
-  - component: {fileID: 8980062567429408436}
-  - component: {fileID: -8514334451582661955}
+  - component: {fileID: 2437776621973967161}
+  - component: {fileID: 2437776621973967158}
+  - component: {fileID: 8766210664920504597}
+  - component: {fileID: -4997347616131718883}
   m_Layer: 0
-  m_Name: Heal
-  m_TagString: Untagged
+  m_Name: Food
+  m_TagString: Mine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5831598988104674705
+--- !u!4 &2437776621973967161
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308819886846090718}
+  m_GameObject: {fileID: 2437776621973967159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8299999, y: 4.695, z: 0}
+  m_LocalPosition: {x: 1, y: 4.335, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4084032425412725083
+--- !u!212 &2437776621973967158
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308819886846090718}
+  m_GameObject: {fileID: 2437776621973967159}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,47 +72,54 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
-  m_Sprite: {fileID: 3275028421494734138, guid: 04adc7b8e6e04ae4a86f22ce3c1c72a4, type: 3}
+  m_SortingOrder: 11
+  m_Sprite: {fileID: -607705258402976486, guid: 04adc7b8e6e04ae4a86f22ce3c1c72a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.17, y: 0.17}
+  m_Size: {x: 0.41, y: 0.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8980062567429408436
+--- !u!61 &8766210664920504597
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437776621973967159}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.41, y: 0.25}
+    newSize: {x: 0.41, y: 0.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.41, y: 0.25}
+  m_EdgeRadius: 0
+--- !u!114 &-4997347616131718883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308819886846090718}
+  m_GameObject: {fileID: 2437776621973967159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e15e00e077dcd54682cd14ade870645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RootBone: {fileID: 0}
-  m_BoneTransforms:
-  - {fileID: 0}
-  m_Bounds:
-    m_Center: {x: -0.0008716658, y: 0.0000023841858, z: 0}
-    m_Extent: {x: 0.084130034, y: 0.08500003, z: 0}
-  m_UseBatching: 1
-  m_AlwaysUpdate: 1
---- !u!114 &-8514334451582661955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308819886846090718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cbabe2a54023f04990e25e6d70c0f0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: da640f71726e10446ba9779020f78b91, type: 2}

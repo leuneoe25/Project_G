@@ -14,7 +14,7 @@ public enum FriendState
 public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
 {
     [SerializeField] public DetectInRange detect;
-    [SerializeField] FriendStat Data;
+    [SerializeField] public FriendStat Data;
 
     #region public
     public float AttackSpeed;
@@ -22,7 +22,7 @@ public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
     public Animator animator;
     public FuncOfAttack attackFunc;
     public string FriendRoll;
-    public int skillOn = 0;
+    public float skillOn = 0;
     #endregion
 
     public float HP;

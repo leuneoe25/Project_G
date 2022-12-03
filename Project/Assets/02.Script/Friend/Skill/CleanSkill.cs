@@ -8,11 +8,12 @@ public class CleanSkill : MonoBehaviour
     [SerializeField] GameObject clean;
     private float Spawntime = 0.1f;
     public float time = 4;
-    public float cost = 3;
+    public int cost = 3;
     float tempTime;
     bool SkillOn = false;
+    public bool IsTest = false;
 
-    void Skill()
+    public void Skill()
     {
         SkillOn = true;
         friend.ChangeState(FriendState.Run);
@@ -23,6 +24,7 @@ public class CleanSkill : MonoBehaviour
     }
     void Update()
     {
+        if(IsTest)
         if (Input.GetKeyDown(KeyCode.C))
         {
             Skill();

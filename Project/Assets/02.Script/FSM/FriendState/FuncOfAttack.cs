@@ -24,7 +24,12 @@ public class FuncOfAttack : MonoBehaviour
         Instantiate(Range, FriendPos.position, Quaternion.identity);
     }
 
+    public void Attack(float Damage, Vector3 FriendPos)
+    {
+        Instantiate(Range, FriendPos, Quaternion.identity);
+    }
     #endregion
+
 
     #region Kendo
     public void Attack(float Damage, GameObject TargetObject)

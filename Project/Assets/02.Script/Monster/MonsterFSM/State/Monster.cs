@@ -6,7 +6,8 @@ using UnityEngine;
 public enum MonsterState
 {
     Run,
-    Attack
+    Attack,
+    Sturn
 }
 
 public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
@@ -17,6 +18,7 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
     public GameObject DetectPlayer;
     public float HP;
     public float Speed;
+    public float SturnTime;
     public float ATK;
     public float ATKSpeed;
     public bool CollideCharacter = false;
@@ -26,7 +28,7 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
     #region FSM
     private MonsterState<Monster>[] states = new MonsterState<Monster>[]
     {
-        new MonsterMove(), new MonsterAttack()
+        new MonsterMove(), new MonsterAttack(), new MonsterSturn()
     };
     private MonsterStateMachine<Monster> machine = new MonsterStateMachine<Monster>();
 
