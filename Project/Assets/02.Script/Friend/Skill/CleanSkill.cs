@@ -35,7 +35,7 @@ public class CleanSkill : MonoBehaviour
             if(Spawntime < 0)
             {
                 Spawntime = 0.1f;
-                Instantiate(clean, friend.transform.position, Quaternion.identity);
+                Instantiate(clean, new Vector3(friend.transform.position.x, friend.transform.position.y - 3.5f, friend.transform.position.z), Quaternion.identity);
             }
         }
         if (time <= 0)

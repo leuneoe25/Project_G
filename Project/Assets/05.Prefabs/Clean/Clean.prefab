@@ -99,8 +99,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8411224465632858256}
   m_Bounds:
-    m_Center: {x: 0.9446179, y: -3.429943, z: 0}
-    m_Extent: {x: 0.13500077, y: 0.13000071, z: 0}
+    m_Center: {x: 0.9336171, y: -3.4203467, z: 0}
+    m_Extent: {x: 0.13499999, y: 0.12999988, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &726473073182550719
@@ -112,8 +112,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1246754942880005938}
-  - component: {fileID: 8750794698819827625}
   - component: {fileID: 3435057885633032331}
+  - component: {fileID: 8168790020906175827}
   m_Layer: 0
   m_Name: Range
   m_TagString: Untagged
@@ -135,32 +135,6 @@ Transform:
   m_Father: {fileID: 6100809099609613341}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8750794698819827625
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726473073182550719}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.12, y: 3.41}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.29, y: 1.52}
-  m_EdgeRadius: 0
 --- !u!114 &3435057885633032331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +149,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsInRange: 0
   DetectiveObj: {fileID: 0}
+--- !u!61 &8168790020906175827
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726473073182550719}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07, y: 0.08}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.49, y: 1.52}
+  m_EdgeRadius: 0
 --- !u!1 &856955664680924263
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,8 +368,8 @@ MonoBehaviour:
   - {fileID: 7993426462117151454}
   - {fileID: 6204297754470456978}
   m_Bounds:
-    m_Center: {x: 1.272443, y: -3.4234495, z: 0}
-    m_Extent: {x: 0.11402696, y: 0.17992902, z: 0}
+    m_Center: {x: 1.2999842, y: -3.455645, z: 0}
+    m_Extent: {x: 0.07000023, y: 0.207075, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1596861444820883904
@@ -503,8 +503,8 @@ MonoBehaviour:
   - {fileID: 4394993877135037982}
   - {fileID: 6610936069188140378}
   m_Bounds:
-    m_Center: {x: 0.1514433, y: -3.5772412, z: 0}
-    m_Extent: {x: 0.60036004, y: 0.037766933, z: 0}
+    m_Center: {x: 0.11682773, y: -3.6717825, z: 0}
+    m_Extent: {x: 0.60108554, y: 0.03551662, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2086749057122544101
@@ -637,8 +637,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6610936069188140378}
   m_Bounds:
-    m_Center: {x: 0.88803345, y: -4.4203463, z: 0}
-    m_Extent: {x: 0.17000586, y: 0.18541932, z: 0}
+    m_Center: {x: 0.85429, y: -4.4954195, z: 0}
+    m_Extent: {x: 0.17015073, y: 0.18533397, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2392708178382156787
@@ -652,10 +652,10 @@ GameObject:
   - component: {fileID: 6100809099609613341}
   - component: {fileID: 3331184403903581306}
   - component: {fileID: 3733892186831294507}
-  - component: {fileID: 5339693215871184597}
   - component: {fileID: 7886686170670221412}
   - component: {fileID: 1087206593098665204}
   - component: {fileID: 6429672403467205844}
+  - component: {fileID: 5237481188531209743}
   m_Layer: 0
   m_Name: Clean
   m_TagString: Player
@@ -711,7 +711,9 @@ MonoBehaviour:
   HP: 0
   ATK: 0
   MoveSpeed: 0
+  SturnTime: 0
   overlap: 0
+  isRight: 0
 --- !u!50 &3733892186831294507
 Rigidbody2D:
   serializedVersion: 4
@@ -733,32 +735,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &5339693215871184597
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2392708178382156787}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.84, y: 3.53}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.91, y: 1.62}
-  m_EdgeRadius: 0
 --- !u!95 &7886686170670221412
 Animator:
   serializedVersion: 3
@@ -808,6 +784,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arrow: {fileID: 0}
   Range: {fileID: 9177368729059378192, guid: 9482bf7ec0306214b969ceb1d6f1459c, type: 3}
+--- !u!61 &5237481188531209743
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2392708178382156787}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.12}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.69, y: 1.51}
+  m_EdgeRadius: 0
 --- !u!1 &2518108721707861994
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,8 +999,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 9131281327783087563}
   m_Bounds:
-    m_Center: {x: 0.9313439, y: -3.0179071, z: 0}
-    m_Extent: {x: 0.09470987, y: 0.107245326, z: 0}
+    m_Center: {x: 0.87491846, y: -3.0208845, z: 0}
+    m_Extent: {x: 0.060000002, y: 0.09500003, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5874184008532971994
@@ -1100,8 +1102,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4546931294199237224}
   m_Bounds:
-    m_Center: {x: 0.9974185, y: -3.0330496, z: 0}
-    m_Extent: {x: 0.08434299, y: 0.10390186, z: 0}
+    m_Center: {x: 1.0129561, y: -3.0284884, z: 0}
+    m_Extent: {x: 0.060000032, y: 0.089999914, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5939029045479999430
@@ -1236,8 +1238,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6244951938449653845}
   m_Bounds:
-    m_Center: {x: 0.9275632, y: -3.8237677, z: 0}
-    m_Extent: {x: 0.40411982, y: 0.32479966, z: 0}
+    m_Center: {x: 0.91655993, y: -3.8141723, z: 0}
+    m_Extent: {x: 0.4041201, y: 0.3248, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &6695488094633732023
@@ -1340,8 +1342,8 @@ MonoBehaviour:
   - {fileID: 8411224465632858256}
   - {fileID: 5106529261367433904}
   m_Bounds:
-    m_Center: {x: 0.94461715, y: -3.3813174, z: 0}
-    m_Extent: {x: 0.19000006, y: 0.34137487, z: 0}
+    m_Center: {x: 0.9336171, y: -3.3717213, z: 0}
+    m_Extent: {x: 0.19000006, y: 0.34137452, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &6774888382383153716
@@ -1444,8 +1446,8 @@ MonoBehaviour:
   - {fileID: 4182009512028026651}
   - {fileID: 3038583592088772121}
   m_Bounds:
-    m_Center: {x: 0.6873499, y: -3.5035357, z: 0}
-    m_Extent: {x: 0.11194968, y: 0.19025171, z: 0}
+    m_Center: {x: 0.6424484, y: -3.4996166, z: 0}
+    m_Extent: {x: 0.06000018, y: 0.1952287, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &8229139807952682405

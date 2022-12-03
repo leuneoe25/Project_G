@@ -895,6 +895,7 @@ GameObject:
   - component: {fileID: 1893488815982751651}
   - component: {fileID: -1640842278597713231}
   - component: {fileID: -7160437792993059027}
+  - component: {fileID: 5280130839642442272}
   m_Layer: 10
   m_Name: Bow
   m_TagString: Player
@@ -1017,7 +1018,9 @@ MonoBehaviour:
   HP: 0
   ATK: 0
   MoveSpeed: 0
+  SturnTime: 0
   overlap: 0
+  isRight: 0
 --- !u!114 &-7160437792993059027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,6 +1034,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Arrow: {fileID: 6334771661567540469, guid: ba6500e238ef6914cb42cc3832bd9a74, type: 3}
+  Range: {fileID: 0}
+--- !u!114 &5280130839642442272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286154829788786614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29088b409c2aae646b5fa544096e49e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friend: {fileID: -1640842278597713231}
+  time: 5
+  cost: 3
 --- !u!1 &5454488679150136876
 GameObject:
   m_ObjectHideFlags: 0

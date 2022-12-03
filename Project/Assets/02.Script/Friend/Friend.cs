@@ -38,6 +38,8 @@ public class Friend : MonoBehaviour, IAttackAble, IGetDamagedAble
        new FriendIdle(), new FriendRun(), new FriendAttack(), new FriendSturn()
     };
     private StateMachine<Friend> machine = new StateMachine<Friend>();
+    
+    public bool isRight;
 
     public void Killed()
     {
