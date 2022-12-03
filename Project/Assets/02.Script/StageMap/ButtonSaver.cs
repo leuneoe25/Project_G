@@ -39,6 +39,7 @@ public class ButtonSaver : MonoBehaviour
 
     void ButtonFunc(int num)
     {
+        PlayerPrefs.SetInt("StageLevel", num);
         effect.Typing(BackText, "스테이지 입장", 0.1f);
         UI.SetActive(true);
     }
