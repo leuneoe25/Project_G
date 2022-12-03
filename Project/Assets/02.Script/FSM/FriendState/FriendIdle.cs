@@ -17,9 +17,16 @@ public class FriendIdle:State<Friend>
         {
             target.ChangeState(FriendState.Sturn);
         }
-        if(target.detect.IsInRange)
+        if(target.FriendRoll == "Mine")
         {
             target.ChangeState(FriendState.Attack);
+        }
+        else
+        {
+            if (target.detect.IsInRange)
+            {
+                target.ChangeState(FriendState.Attack);
+            }
         }
     }
 }

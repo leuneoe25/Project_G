@@ -30,10 +30,12 @@ public class EffectSystem : MonoBehaviour
 
     public void Guide(Text text, string s, float takeTime)
     {
+        StopAllCoroutines();
         StartCoroutine(GuideEffect(text, s, takeTime));
     }
     IEnumerator GuideEffect(Text text, string s, float takeTime)
     {
+
         text.gameObject.SetActive(true);
         text.text = s;
         float time = takeTime / 10 /2 ;

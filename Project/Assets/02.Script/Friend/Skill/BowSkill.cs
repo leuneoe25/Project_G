@@ -10,8 +10,9 @@ public class BowSkill : MonoBehaviour
     float tempTime;
     float tempSpeed;
     bool SkillOn = false;
+    public bool IsTest = false;
 
-    void Skill()
+    public void Skill()
     {
         SkillOn = true;
         friend.AttackSpeed = friend.skillOn + 0.1f;
@@ -23,6 +24,7 @@ public class BowSkill : MonoBehaviour
     }
     void Update()
     {
+        if(IsTest)
         if(Input.GetKeyDown(KeyCode.G))
         {
             Skill();
