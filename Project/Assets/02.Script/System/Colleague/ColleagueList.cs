@@ -27,6 +27,20 @@ public class ColleagueList : MonoBehaviour
     [Header("colleagueInfoList")]
     [SerializeField] private List<GameObject> colleagueInfoList;
 
+    [Header("Enfoce")]
+    [SerializeField] private Button RankUpButton;
+    [SerializeField] private Button TrainingButton;
+
+    [Header("RankUp")]
+    [SerializeField] private GameObject RankUpUI;
+    [SerializeField] private Text[] Crystal;
+    [SerializeField] private Text[] NowStat;
+    [SerializeField] private Text[] AfterStat;
+    [SerializeField] private Text NeedCrystal;
+    [SerializeField] private Button RankUp;
+
+    [Header("Training")]
+    [SerializeField] private GameObject TrainingUI;
 
 
     private List<Colleague> colleagues;
@@ -45,6 +59,16 @@ public class ColleagueList : MonoBehaviour
     {
         if(colleagueInfoUI.activeSelf)
         {
+            if (TrainingUI.activeSelf)
+            {
+                TrainingUI.SetActive(false);
+                return;
+            }
+            else if(RankUpUI.activeSelf)
+            {
+                RankUpUI.SetActive(false);
+                return;
+            }
             colleagueInfoUI.SetActive(false);
             return;
         }
@@ -142,6 +166,8 @@ public class ColleagueList : MonoBehaviour
     private void SetColleagueInfo(Colleague Character)
     {
         colleagueInfoUI.SetActive(true);
+        RankUpUI.SetActive(false);
+        TrainingUI.SetActive(false);
         for (int i = 0; i < 5; i++)
         {
             if (Character.rank > i)
@@ -162,6 +188,12 @@ public class ColleagueList : MonoBehaviour
         {
             Stat[i].text = ((10 * Character.rank) + Character.training[i]).ToString();
         }
+
+        RankUpButton.onClick.RemoveAllListeners();
+        RankUpButton.onClick.AddListener(()=>SetRankUpButtonFunc(Character));
+        TrainingButton.onClick.RemoveAllListeners();
+        TrainingButton.onClick.AddListener(SetTrainingButtonFunc);
+
         SetColleagueInfoList(Character);
     }
     private void SetColleagueInfoList(Colleague Character)
@@ -190,6 +222,32 @@ public class ColleagueList : MonoBehaviour
         }
         
     }
-    private void n()
-    { Debug.Log("null"); }  
+    private void SetRankUpButtonFunc(Colleague Character)
+    {
+        RankUpUI.SetActive(true);
+        SetCrystal();
+        for (int i = 0; i < 3; i++)
+        {
+            NowStat[i].text = ((10*Character.rank) + (Character.training[i])).ToString();
+            AfterStat[i].text = ((10 * (Character.rank+1)) + (Character.training[i])).ToString();
+        }
+        int need = 10;
+        for(int i=1;i<Character.rank;i++)
+        {
+            need += need;
+        }
+        NeedCrystal.text = "필요 보석 : " + GoodsSystem.Instance.GetCrystals((int)Character.type) + "/" + need;
+
+    }
+    private void SetCrystal()
+    {
+        for(int i=0;i<3;i++)
+        {
+            Crystal[i].text = GoodsSystem.Instance.GetCrystals(i).ToString();
+        }
+    }
+    private void SetTrainingButtonFunc()
+    {
+        TrainingUI.SetActive(true);
+    }
 }
