@@ -3676,7 +3676,7 @@ GameObject:
   - component: {fileID: 405109682}
   - component: {fileID: 405109681}
   m_Layer: 5
-  m_Name: Text_2
+  m_Name: Consumption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5117,11 +5117,19 @@ MonoBehaviour:
   NeedCrystal: {fileID: 125198793}
   ExcutRankUp: {fileID: 1609392337}
   TrainingUI: {fileID: 571525961}
-  TrainingStat: []
-  Explanation: {fileID: 0}
-  FulReinforcement: {fileID: 0}
-  OneReinforcement: {fileID: 0}
-  ConcentrationReinforcement: {fileID: 0}
+  TrainingStat:
+  - {fileID: 1876823516}
+  - {fileID: 420182952}
+  - {fileID: 1612282766}
+  SP: {fileID: 1928544015}
+  TrainingCount: {fileID: 1585587854}
+  Explanation: {fileID: 1876821672}
+  TrainingModeText: {fileID: 1930953979}
+  Consumption: {fileID: 405109681}
+  FulReinforcement: {fileID: 206053704}
+  OneReinforcement: {fileID: 583765109}
+  ConcentrationReinforcement: {fileID: 251741378}
+  ExcutTraining: {fileID: 470589931}
 --- !u!4 &529945251
 Transform:
   m_ObjectHideFlags: 0
@@ -7881,7 +7889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 17.1, y: -16.5}
+  m_AnchoredPosition: {x: 17.099998, y: -16.5}
   m_SizeDelta: {x: 34.2, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &798260415
@@ -17901,8 +17909,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -123}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 26.93, y: -123}
+  m_SizeDelta: {x: 213.87, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1930953979
 MonoBehaviour:
@@ -17937,7 +17945,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD604\uC7AC \uD6C8\uB828 \uBAA8\uB4DC : "
+  m_Text: "\uD604\uC7AC \uD6C8\uB828 \uBAA8\uB4DC : \uC9D1\uC911 \uD6C8\uB828"
 --- !u!222 &1930953980
 CanvasRenderer:
   m_ObjectHideFlags: 0

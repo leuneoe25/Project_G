@@ -133,8 +133,8 @@ public class ColleagueSystem : MonoBehaviour
     List<Colleague> colleagues = new List<Colleague>();
     void Start()
     {
-        AddColleague("사이라", 3, new int[3] { 1, 2, 3 }, ColleagueClub.Archer);
-        AddColleague("다이라", 2, new int[3] { 1, 2, 3 }, ColleagueClub.Boxing);
+        AddColleague("사이라", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
+        AddColleague("다이라", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Boxing);
     }
 
     private void AddColleague(string name, int rank, int[] _training, ColleagueClub club)

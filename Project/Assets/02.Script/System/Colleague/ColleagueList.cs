@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Experimental.TerrainAPI;
 using UnityEngine.UI;
 
 public class ColleagueList : MonoBehaviour
@@ -47,10 +48,16 @@ public class ColleagueList : MonoBehaviour
     [Header("Training")]
     [SerializeField] private GameObject TrainingUI;
     [SerializeField] private Text[] TrainingStat;
+    [SerializeField] private Text SP;
+    [SerializeField] private Text TrainingCount;
     [SerializeField] private Text Explanation;
+    [SerializeField] private Text TrainingModeText;
+    [SerializeField] private Text Consumption;
     [SerializeField] private Button FulReinforcement;
     [SerializeField] private Button OneReinforcement;
     [SerializeField] private Button ConcentrationReinforcement;
+    private int TrainingMode;
+    [SerializeField] private Button ExcutTraining;
 
 
     private List<Colleague> colleagues;
@@ -208,7 +215,7 @@ public class ColleagueList : MonoBehaviour
         RankUpButton.onClick.RemoveAllListeners();
         RankUpButton.onClick.AddListener(()=>SetRankUpButtonFunc(Character));
         TrainingButton.onClick.RemoveAllListeners();
-        TrainingButton.onClick.AddListener(SetTrainingButtonFunc);
+        TrainingButton.onClick.AddListener(()=>SetTrainingButtonFunc(Character));
 
         SetColleagueInfoList(Character);
     }
@@ -310,9 +317,128 @@ public class ColleagueList : MonoBehaviour
         }
         
     }
-    private void SetTrainingButtonFunc()
+    //Training
+    private void SetTrainingButtonFunc(Colleague Character)
     {
         TrainingUI.SetActive(true);
+        FulReinforcement.onClick.RemoveAllListeners();
+        FulReinforcement.onClick.AddListener(FulReinforcementFunc);
+        OneReinforcement.onClick.RemoveAllListeners();
+        OneReinforcement.onClick.AddListener(OneReinforcementFunc);
+        ConcentrationReinforcement.onClick.RemoveAllListeners();
+        ConcentrationReinforcement.onClick.AddListener(ConcentrationReinforcementFunc);
+
         effect.Typing(BackText, "동료 훈련", 0.1f);
+        SP.text = GoodsSystem.Instance.GetSP().ToString();
+        TrainingMode = 0;
+        Explanation.text = "전체를 조금만 강화하는 훈련입니다";
+        //switch(TrainingMode)
+        //{
+        //    case 0:
+        //        TrainingModeText.text = "전체 훈련";
+        //        Explanation.text = "전체를 조금만 강화하는 훈련입니다";
+        //        Consumption.text = "소모 SP : 100";
+        //        break;
+        //    case 1:
+        //        TrainingModeText.text = "일부 훈련";
+        //        Explanation.text = "하나를 어느정도 강화하는 훈련입니다";
+        //        Consumption.text = "소모 SP : 250";
+        //        break;
+        //    case 2:
+        //        TrainingModeText.text = "집중 훈련";
+        //        Explanation.text = "하나를 많이 강화하는 훈련입니다";
+        //        Consumption.text = "소모 SP : 500";
+        //        break;
+        //}
+        TrainingCount.text = "훈련 가능 횟수 : " + (5-Character.trainingCount);
+
+        for (int i = 0; i < 3; i++)
+        {
+            TrainingStat[i].text = ((10 * Character.rank) + (Character.training[i])).ToString();
+        }
+        ExcutTraining.onClick.RemoveAllListeners();
+        ExcutTraining.onClick.AddListener(() => ExcutTrainingFunc(Character));
+    }
+    private void FulReinforcementFunc()
+    {
+        TrainingMode = 0;
+        TrainingModeText.text = "현재 훈련 모드 : 전체 훈련";
+        Explanation.text = "전체를 조금만 강화하는 훈련입니다";
+        Consumption.text = "소모 SP : 100";
+    }
+    private void OneReinforcementFunc()
+    {
+        TrainingMode = 1;
+        TrainingModeText.text = "현재 훈련 모드 : 일부 훈련";
+        Explanation.text = "랜덤으로 하나를 어느정도 강화하는 훈련입니다";
+        Consumption.text = "소모 SP : 250";
+    }
+    private void ConcentrationReinforcementFunc()
+    {
+        TrainingMode = 2;
+        TrainingModeText.text = "현재 훈련 모드 : 집중 훈련";
+        Explanation.text = "랜덤으로 두개를 많이 강화하는 훈련입니다";
+        Consumption.text = "소모 SP : 500";
+    }
+    private void ExcutTrainingFunc(Colleague Character)
+    {
+        if(Character.trainingCount == 5)
+        {
+            effect.Guide(Guide, "최대 훈련 입니다", 1f);
+            return;
+        }
+        switch (TrainingMode)
+        {
+            case 0:
+                if(GoodsSystem.Instance.GetSP() >= 100)
+                {
+                    for(int i=0;i<3;i++)
+                    {
+                        Character.training[i] += 5;
+                    }
+                    Character.trainingCount++;
+                    GoodsSystem.Instance.SetSP(-100);
+                }
+                else
+                {
+                    effect.Guide(Guide, "재화가 부족합니다", 1f);
+                    return;
+                }
+                break;
+            case 1:
+                if (GoodsSystem.Instance.GetSP() >= 250)
+                {
+                    int r = Random.Range(0, 4);
+                    Character.training[r] += 20;
+                    Character.trainingCount++;
+                    GoodsSystem.Instance.SetSP(-250);
+                }
+                else
+                {
+                    effect.Guide(Guide, "재화가 부족합니다", 1f);
+                    return;
+                }
+                break;
+            case 2:
+                if (GoodsSystem.Instance.GetSP() >= 500)
+                {
+                    int r = Random.Range(0, 4);
+                    for (int i = 0; i < 3; i++)
+                    {
+                        if(r!=i)
+                            Character.training[i] += 20;
+                    }
+                    Character.trainingCount++;
+                    GoodsSystem.Instance.SetSP(-500);
+                }
+                else
+                {
+                    effect.Guide(Guide, "재화가 부족합니다", 1f);
+                    return;
+                }
+                break;
+        }
+        SetTrainingButtonFunc(Character);
+        SetColleagueInfo(Character);
     }
 }
