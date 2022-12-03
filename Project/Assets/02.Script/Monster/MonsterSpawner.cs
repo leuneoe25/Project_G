@@ -17,6 +17,20 @@ public class MonsterSpawner : MonoBehaviour
 
     }
 
+    public void SpawnLeft()
+    {
+        GameObject obj = Instantiate(enemy, left.position, Quaternion.Euler(0, 0, 0));
+        Monster monster = obj.GetComponent<Monster>();
+        monster.targetPoint = _Target;
+    }
+
+    public void SpawnRight()
+    {
+        GameObject obj = Instantiate(enemy, left.position, Quaternion.Euler(0, 180f, 0));
+        Monster monster = obj.GetComponent<Monster>();
+        monster.targetPoint = _Target;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
