@@ -131,6 +131,7 @@ public class ColleagueSystem : MonoBehaviour
     #endregion
     private int ColleagueCount;
     List<Colleague> colleagues = new List<Colleague>();
+    List<Colleague> Dack
     void Start()
     {
         AddColleague("ªÁ¿Ã∂Û", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
