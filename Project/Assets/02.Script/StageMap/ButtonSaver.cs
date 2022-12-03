@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class ButtonSaver : MonoBehaviour
 {
+    [SerializeField] private GameObject UI;
+    [Header("Back")]
+    [SerializeField] private Button BackButton;
+    [SerializeField] private Text BackText;
+    [SerializeField] private Button EnterStageButton;
+
+    [SerializeField] private SceneManagement scene;
+    [SerializeField] private EffectSystem effect;
+
     [SerializeField] Button[] buttons;
     [SerializeField] ButtonList buttonList;
     [SerializeField] ButtonAnimation buttonAnimation;
@@ -24,13 +33,31 @@ public class ButtonSaver : MonoBehaviour
             }
         }
 
+        BackButton.onClick.AddListener(BackButtonFunc);
+        EnterStageButton.onClick.AddListener(EnterStageButtonFunc);
     }
 
     void ButtonFunc(int num)
     {
-        buttonAnimation.UnlockNextStage(num);
+        effect.Typing(BackText, "스테이지 입장", 0.1f);
+        UI.SetActive(true);
     }
-
+    private void BackButtonFunc()
+    {
+        if(UI.activeSelf)
+        {
+            effect.Typing(BackText, "수호", 0.1f);
+            UI.SetActive(false);
+        }
+        else
+        {
+            scene.LoadMenu();
+        }
+    }
+    private void EnterStageButtonFunc()
+    {
+        scene.LoadGameScene();
+    }
     public void LockOn(int num)
     {
         buttonList.buttons[num].gameObject.SetActive(true);

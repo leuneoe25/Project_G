@@ -17,7 +17,14 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene("TestAnimationScene");
     }
-
+    public void LoadStore()
+    {
+        SceneManager.LoadScene("Store");
+    }
+    public void LoadStudentCouncil()
+    {
+        SceneManager.LoadScene("StudentCouncil");
+    }
     public void ExitGame()
     {
         Application.Quit();
