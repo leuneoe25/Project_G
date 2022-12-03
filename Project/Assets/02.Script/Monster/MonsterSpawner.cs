@@ -26,7 +26,7 @@ public class MonsterSpawner : MonoBehaviour
 
     public void SpawnRight()
     {
-        GameObject obj = Instantiate(enemy, left.position, Quaternion.Euler(0, 180f, 0));
+        GameObject obj = Instantiate(enemy, right.position, Quaternion.Euler(0, 180f, 0));
         Monster monster = obj.GetComponent<Monster>();
         monster.targetPoint = _Target;
     }

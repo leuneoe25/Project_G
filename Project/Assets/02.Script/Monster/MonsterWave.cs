@@ -48,7 +48,8 @@ public class MonsterWave : MonoBehaviour
     {
         order = 0;
         stage = PlayerPrefs.GetInt("StageLevel");
-        for(int i = 0; i < 60; i++)
+        Debug.Log("Stage: " + stage);
+        for (int i = 0; i < 60; i++)
         {
             if (wave[stage, 0, i] == 1) monsterCount++;
             if (wave[stage, 1, i] == 1) monsterCount++;
@@ -60,6 +61,7 @@ public class MonsterWave : MonoBehaviour
     {
         while (true)
         {
+            Debug.Log("order: " + order);
             if (wave[stage, 0, order] == 1) { spawner.SpawnLeft(); }
             if (wave[stage, 1, order] == 1) { spawner.SpawnRight(); }
             order++;
