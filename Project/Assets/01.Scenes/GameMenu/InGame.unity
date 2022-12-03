@@ -14492,6 +14492,7 @@ GameObject:
   - component: {fileID: 1943794356}
   - component: {fileID: 1943794358}
   - component: {fileID: 1943794357}
+  - component: {fileID: 1943794359}
   m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
@@ -14556,6 +14557,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943794355}
   m_CullTransparentMesh: 1
+--- !u!114 &1943794359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943794355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f230f5262e119814a8f2042fffc9b3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image:
+  - {fileID: 4750651203034271755, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
+  - {fileID: 1216698196264918829, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
+  - {fileID: -8675770273868967379, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
+  - {fileID: 8226248545731137778, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
+  - {fileID: 2114946747282504503, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
+  - {fileID: 2134840068954662044, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
+  - {fileID: -3941285087793611580, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
 --- !u!1 &1961047395
 GameObject:
   m_ObjectHideFlags: 0
