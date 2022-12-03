@@ -101,6 +101,7 @@ public class Colleague
         }
     }
 }
+
 public class ColleagueSystem : MonoBehaviour
 {
     #region Singleton
@@ -131,6 +132,28 @@ public class ColleagueSystem : MonoBehaviour
     #endregion
     private int ColleagueCount;
     List<Colleague> colleagues = new List<Colleague>();
+    List<Colleague> Deck;
+
+    public void Add(Colleague colleague)
+    {
+        if(Deck.Count < 5)
+        {
+            Deck.Add(colleague);
+        }
+    }
+
+    public bool IsInList(string name)
+    {
+        for(int i = 0; i < Deck.Count; ++i)
+        {
+            if(Deck[i].name == name)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     void Start()
     {
         AddColleague("»çÀÌ¶ó", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
