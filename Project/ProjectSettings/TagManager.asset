@@ -11,6 +11,8 @@ TagManager:
   - RangeAttack
   - CleanSkill
   - SoundSlider
+  - Ground
+  - Mine
   layers:
   - Default
   - TransparentFX

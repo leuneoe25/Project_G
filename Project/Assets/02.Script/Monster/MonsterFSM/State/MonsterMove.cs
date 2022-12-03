@@ -16,7 +16,11 @@ public class MonsterMove : MonsterState<Monster>
     }
     public override void Update(Monster target)
     {
-        if(Mathf.Abs(target.Target.x - target.transform.position.x) >= 1f)
+        if (target.SturnTime > 0)
+        {
+            target.ChangeState(MonsterState.Sturn);
+        }
+        if (Mathf.Abs(target.Target.x - target.transform.position.x) >= 1f)
         target.transform.Translate(TargetPos * target.Speed * Time.deltaTime, Space.World);
         if(target.CollideCharacter)
         {

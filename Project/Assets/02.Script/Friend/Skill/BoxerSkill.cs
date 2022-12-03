@@ -6,8 +6,9 @@ public class BoxerSkill : MonoBehaviour
 {
     [SerializeField] Friend boxer;
     [SerializeField] GameObject FlyingBody;
-    public float cost;
-    void Skill()
+    public int cost;
+    public bool IsTest = false;
+    public void Skill()
     {
         if (boxer.detect.DetectiveObj != null)
         {
@@ -39,6 +40,7 @@ public class BoxerSkill : MonoBehaviour
 
     void Update()
     {
+        if(IsTest)
         if(Input.GetKeyDown(KeyCode.B))
         {
             Skill();

@@ -16,10 +16,16 @@ public class Player : MonoBehaviour
         new PlayerIdle(),new PlayerRun()
    };
     private StateMachine<Player> machine = new StateMachine<Player>();
-
+    public float HP = 100;
+    public float Speed;
     //public EnityData data;
     public Rigidbody2D rigid;
     public Animator animator;
+
+    public void SetHP(float Damage)
+    {
+        HP -= Damage;
+    }
 
     public float moveSpeed = 3f;
     void Start()

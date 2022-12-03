@@ -6,6 +6,8 @@ public class SeaSkill : MonoBehaviour
 {
     [SerializeField] GameObject SeaWater;
     [SerializeField] Friend Sea;
+    public bool IsTest = false;
+    public int cost;
 
     public void Skill()
     {
@@ -24,6 +26,7 @@ public class SeaSkill : MonoBehaviour
 
     private void Update()
     {
+        if(IsTest)
         if (Input.GetKeyDown(KeyCode.S))
         {
             Skill();
