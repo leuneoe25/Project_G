@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 209911580}
   - component: {fileID: 209911579}
   m_Layer: 5
-  m_Name: Enforce_Button
+  m_Name: StudentCouncil_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,6 +1773,7 @@ MonoBehaviour:
   - {fileID: 206537254}
   - {fileID: 1590920826}
   StoreButton: {fileID: 1850547429}
+  StudentCouncilButton: {fileID: 209911579}
 --- !u!1 &1268764625
 GameObject:
   m_ObjectHideFlags: 0

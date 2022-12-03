@@ -11,9 +11,11 @@ public class SetGameMenuUI : MonoBehaviour
     [SerializeField] private Text[] Buildingtext;
 
     [SerializeField] private Button StoreButton;
+    [SerializeField] private Button StudentCouncilButton;
     void Start()
     {
         StoreButton.onClick.AddListener(scene.LoadStore);
+        StudentCouncilButton.onClick.AddListener(scene.LoadStudentCouncil);
 
         SP_text.text = GoodsSystem.Instance.GetSP().ToString();
         for(int i = 0; i < Buildingtext.Length;i++)
