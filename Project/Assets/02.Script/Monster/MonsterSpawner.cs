@@ -38,20 +38,7 @@ public class MonsterSpawner : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject obj;
-            if (spawnLeft) obj = Instantiate(enemy, left.position, Quaternion.Euler(0, 0, 0));
-            else obj = Instantiate(enemy, right.position, Quaternion.Euler(0, 180f, 0));
-            Monster monster = obj.GetComponent<Monster>();
-            monster.targetPoint = _Target;
-            monster.wave = gameObject;
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            spawnLeft = true;
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            spawnLeft = false;
+            SpawnLeft();
         }
     }
 }

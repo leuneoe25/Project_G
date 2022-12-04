@@ -126,8 +126,8 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
         HP -= _hp;
         if (HP <= 0)
         {
-            wave.GetComponent<MonsterWave>().Death();
-            Destroy(gameObject);
+                wave.GetComponent<MonsterWave>().Death();
+                Destroy(gameObject);
         }
     }
     public void GetDamaged(int value)
