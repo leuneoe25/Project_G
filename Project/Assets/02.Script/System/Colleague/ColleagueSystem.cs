@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public enum ColleagueType
@@ -132,32 +133,19 @@ public class ColleagueSystem : MonoBehaviour
     #endregion
     private int ColleagueCount;
     List<Colleague> colleagues = new List<Colleague>();
-    List<Colleague> Deck;
+    //List<Colleague> Deck;
+    Dictionary<int, List<Colleague>> DeckMap = new Dictionary<int, List<Colleague>>();
 
-    public void Add(Colleague colleague)
-    {
-        if(Deck.Count < 5)
-        {
-            Deck.Add(colleague);
-        }
-    }
-
-    public bool IsInList(string name)
-    {
-        for(int i = 0; i < Deck.Count; ++i)
-        {
-            if(Deck[i].name == name)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
 
     void Start()
     {
         AddColleague("사이라", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
         AddColleague("다이라", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Boxing);
+        DeckMap.Add(0, new List<Colleague>());
+        DeckMap.Add(1, new List<Colleague>());
+        DeckMap.Add(2, new List<Colleague>());
+        DeckMap.Add(3, new List<Colleague>());
+        DeckMap.Add(4, new List<Colleague>());
     }
 
     private void AddColleague(string name, int rank, int[] _training, ColleagueClub club)
@@ -165,8 +153,47 @@ public class ColleagueSystem : MonoBehaviour
         Colleague Character = new Colleague(name, rank,_training, club);
         colleagues.Add(Character);
     }
+
+    public void Add(int DeckNum, int index,Colleague colleague)
+    {
+        if (DeckMap[DeckNum].Count <= 5)
+        {
+            DeckMap[DeckNum][index] = colleague;
+        }
+    }
+    public void Swap(int DeckNum, int a,int y)
+    {
+        Colleague colleague = DeckMap[DeckNum][a];
+        DeckMap[DeckNum][a] = DeckMap[DeckNum][y];
+        DeckMap[DeckNum][y] = colleague;
+    }
+    public void DeckClear(int DeckNum)
+    {
+        DeckMap[DeckNum] = new List<Colleague>();
+        for (int i = DeckMap[DeckNum].Count; i < 5; i++)
+        {
+            DeckMap[DeckNum].Add(null);
+        }
+    }
+    public bool IsInList(int index, string name)
+    {
+        for (int i = 0; i < DeckMap[index].Count; ++i)
+        {
+            if (DeckMap[index][i] == null)
+                continue;
+            if (DeckMap[index][i].name == name)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public List<Colleague> Getcolleagues()
     {
         return colleagues;
+    }
+    public List<Colleague> GetDeck(int index)
+    {
+        return DeckMap[index];
     }
 }

@@ -13,6 +13,7 @@ public class EffectSystem : MonoBehaviour
 
     public void Typing(Text text, string s, float takeTime)
     {
+        StopAllCoroutines();
         StartCoroutine(TypingEffect(text, s, takeTime));
     }
     IEnumerator TypingEffect(Text text,string s,float takeTime)
@@ -39,7 +40,7 @@ public class EffectSystem : MonoBehaviour
         text.gameObject.SetActive(true);
         text.text = s;
         float time = takeTime / 10 /2 ;
-        Color c = new Color(0,0,0,0);
+        Color c = new Color(1,1,1,0);
         float add = 1f / 10f;
         for (int i = 0; i < 10; i++)
         {
