@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Cook
   m_EditorClassIdentifier: 
   _hp: 140
-  _apk: 80
+  _apk: 120
   _moveSpeed: 0
   _atkSpeed: 10

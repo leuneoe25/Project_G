@@ -39,6 +39,10 @@ public class Slow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isGround)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.01f, transform.position.z);
+        }
         time -= Time.deltaTime;
         if(time <= 0)
         {
