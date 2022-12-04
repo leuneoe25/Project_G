@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 383a040c9d229cd4b8adc13b55159c4d, type: 3}
-  m_Name: Cook
+  m_Name: Band
   m_EditorClassIdentifier: 
-  _hp: 140
-  _apk: 120
+  _hp: 200
+  _apk: 0
   _moveSpeed: 0
-  _atkSpeed: 10
+  _atkSpeed: 5

@@ -15,4 +15,4 @@ MonoBehaviour:
   _hp: 200
   _apk: 10
   _moveSpeed: 2
-  _atkSpeed: 6
+  _atkSpeed: 4.5

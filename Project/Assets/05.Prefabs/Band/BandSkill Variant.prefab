@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 338182739158269579, guid: eb562fcd8ce8af14cbd4428f0588e1d9, type: 3}
       propertyPath: m_Name
-      value: BandSkill
+      value: BandSkill Variant
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 338182739158266231, guid: eb562fcd8ce8af14cbd4428f0588e1d9, type: 3}
@@ -63,7 +63,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 338182739158269579, guid: eb562fcd8ce8af14cbd4428f0588e1d9, type: 3}
   m_PrefabInstance: {fileID: 7715126779756425508}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8329014333602374022
+--- !u!114 &9163041457089740685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,6 +72,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8043663709556330415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 658b07819e2b79241834149cc8611f98, type: 3}
+  m_Script: {fileID: 11500000, guid: e5d560a5b63800446ab3853eff5fb640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

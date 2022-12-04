@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Clean
   m_EditorClassIdentifier: 
   _hp: 600
-  _apk: 5
+  _apk: 10
   _moveSpeed: 0
   _atkSpeed: 1

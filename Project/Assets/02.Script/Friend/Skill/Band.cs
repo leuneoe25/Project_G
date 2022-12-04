@@ -53,7 +53,7 @@ public class Band : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 1000, transform.position.z);
             time2 -= Time.deltaTime;
-            if(time2 <= 0)
+            if (time2 <= 0)
             {
                 Destroy(gameObject);
             }
