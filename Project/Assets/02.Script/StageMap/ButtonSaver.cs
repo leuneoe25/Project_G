@@ -44,7 +44,7 @@ public class ButtonSaver : MonoBehaviour
         PlayerPrefs.SetInt("StageLevel", num);
         effect.Typing(BackText, "스테이지 입장", 0.1f);
         World.transform.GetChild(0).GetComponent<Text>().text = "월드 " + (num + 1);
-        World.transform.GetChild(1).GetComponent<Text>().text = buttons[num].GetComponentInChildren<Text>().text +" 수호";
+        World.transform.GetChild(1).GetComponent<Text>().text = buttons[num].GetComponentInChildren<Text>().text + " 수호";
         World.transform.GetChild(2).GetComponent<MapImage>().ImageChange(num);
         party.SetParty();
 

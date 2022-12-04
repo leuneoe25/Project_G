@@ -67,7 +67,6 @@ public class MonsterWave : MonoBehaviour
         yield return new WaitForSeconds(5);
         while (true)
         {
-            Debug.Log("order: " + order);
             if (wave[stage, 0, order] == 1) { spawner.SpawnLeft(); }
             if (wave[stage, 1, order] == 1) { spawner.SpawnRight(); }
             order++;
