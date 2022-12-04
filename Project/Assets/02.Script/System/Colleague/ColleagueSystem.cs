@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -7,20 +6,16 @@ using UnityEngine;
 public enum ColleagueType
 {
     Attack,
-    Support,
     Debuff,
+    Support
 }
 public enum ColleagueClub
 {
     Archer,
-    Kendo,
     Clean,
-    Sea,
-    Science,
+    Kendo,
     Boxing,
-    Band,
-    Cooking,
-    Library
+    Sea,
 }
 public class Colleague
 {
@@ -96,18 +91,12 @@ public class Colleague
         switch (_club)
         {
             case ColleagueClub.Archer:
-            case ColleagueClub.Kendo:
             case ColleagueClub.Clean:
+            case ColleagueClub.Kendo:
                 _type = ColleagueType.Attack;
                 break;
-            case ColleagueClub.Sea:
-            case ColleagueClub.Science:
             case ColleagueClub.Boxing:
-                _type = ColleagueType.Support;
-                break;
-            case ColleagueClub.Band:
-            case ColleagueClub.Cooking:
-            case ColleagueClub.Library:
+            case ColleagueClub.Sea:
                 _type = ColleagueType.Debuff;
                 break;
         }
@@ -153,12 +142,6 @@ public class ColleagueSystem : MonoBehaviour
         AddColleague("사이라", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
         AddColleague("다이라", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Boxing);
         DeckMap.Add(0, new List<Colleague>());
-        DeckMap[0].Add(colleagues[0]);
-        DeckMap[0].Add(colleagues[1]);
-
-
-
-
         DeckMap.Add(1, new List<Colleague>());
         DeckMap.Add(2, new List<Colleague>());
         DeckMap.Add(3, new List<Colleague>());
@@ -187,10 +170,6 @@ public class ColleagueSystem : MonoBehaviour
     public void DeckClear(int DeckNum)
     {
         DeckMap[DeckNum] = new List<Colleague>();
-        for (int i = DeckMap[DeckNum].Count; i < 5; i++)
-        {
-            DeckMap[DeckNum].Add(null);
-        }
     }
     public bool IsInList(int index, string name)
     {
