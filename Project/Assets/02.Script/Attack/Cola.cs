@@ -15,13 +15,14 @@ public class Cola : MonoBehaviour
         if (collision.CompareTag("Monster") || collision.CompareTag("Poundation"))
         {
             Instantiate(Slow, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
     float time = 3;
     void Update()
     {
         time -= Time.deltaTime;
-        transform.Translate(Vector2.up * 40 * Time.deltaTime);
+        transform.Translate(Vector2.up * 10 * Time.deltaTime);
         if (time <= 0)
         {
             Destroy(gameObject);
