@@ -63,12 +63,6 @@ public class ColleagueOrganization : MonoBehaviour
 
         AllClear.onClick.AddListener(AllClearFunc);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnColleagueOrganizationFunc()
     {
         isMove = false;
@@ -228,15 +222,14 @@ public class ColleagueOrganization : MonoBehaviour
         AllButton.onClick.RemoveAllListeners();
         AllButton.onClick.AddListener(()=>AllButtonFunc(index));
         ColleagueType type = ColleagueType.Attack;
-        type = ColleagueType.Attack;
         AttackButton.onClick.RemoveAllListeners();
         AttackButton.onClick.AddListener(() => TypeButtonFunc(index, type));
-        type = ColleagueType.Debuff;
+        ColleagueType dtype = ColleagueType.Debuff;
         DebuffButton.onClick.RemoveAllListeners();
-        DebuffButton.onClick.AddListener(() => TypeButtonFunc(index, type));
-        type = ColleagueType.Support;
+        DebuffButton.onClick.AddListener(() => TypeButtonFunc(index, dtype));
+        ColleagueType stype = ColleagueType.Support;
         SupportButton.onClick.RemoveAllListeners();
-        SupportButton.onClick.AddListener(() => TypeButtonFunc(index, type));
+        SupportButton.onClick.AddListener(() => TypeButtonFunc(index, stype));
     }
     private void AllButtonFunc(int num)
     {
@@ -277,6 +270,7 @@ public class ColleagueOrganization : MonoBehaviour
         List<Colleague> colleagues = ColleagueSystem.Instance.Getcolleagues();
         for (int i = 0; i < ColleagueListButton.Count; i++)
         {
+            ColleagueListButton[i].gameObject.SetActive(false);
             if (i >= colleagues.Count)
             {
                 ColleagueListButton[i].gameObject.SetActive(false);
