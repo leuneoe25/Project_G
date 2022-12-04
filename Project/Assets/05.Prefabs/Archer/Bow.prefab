@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detect: {fileID: 3668162085673796686}
-  Data: {fileID: 0}
+  Data: {fileID: 11400000, guid: e356651a80dbbd64587059c978a9fc14, type: 2}
   AttackSpeed: 2
   rigid: {fileID: 1842362261659223232}
   animator: {fileID: 510522638867168601}
@@ -1050,6 +1050,7 @@ MonoBehaviour:
   friend: {fileID: -1640842278597713231}
   time: 5
   cost: 3
+  IsTest: 0
 --- !u!1 &5454488679150136876
 GameObject:
   m_ObjectHideFlags: 0
