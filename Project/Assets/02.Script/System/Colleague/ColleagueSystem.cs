@@ -170,6 +170,10 @@ public class ColleagueSystem : MonoBehaviour
     public void DeckClear(int DeckNum)
     {
         DeckMap[DeckNum] = new List<Colleague>();
+        for (int i = DeckMap[DeckNum].Count; i < 5; i++)
+        {
+            DeckMap[DeckNum].Add(null);
+        }
     }
     public bool IsInList(int index, string name)
     {
