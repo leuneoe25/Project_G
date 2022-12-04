@@ -64,6 +64,7 @@ public class ButtonSaver : MonoBehaviour
     }
     private void EnterStageButtonFunc()
     {
+        PlayerPrefs.SetInt("PartyNum", party.Index);
         scene.LoadGameScene();
     }
     public void LockOn(int num)

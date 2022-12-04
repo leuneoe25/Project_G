@@ -11,7 +11,10 @@ public class PartyManagement : MonoBehaviour
     [SerializeField] private Text partyNumber;
     List<Colleague> list;
     private int index;
-
+    public int Index
+    {
+        get { return index; }
+    }
     private void Start()
     {
         index = 0;

@@ -21,8 +21,11 @@ public class CharacterArrangement : MonoBehaviour
     //Null카메라를 가져올 변수
     [SerializeField] private Queue<GameObject> NullCameraList = new Queue<GameObject>();
     public bool isArrangement = false;
+    private int partyIndex;
+
     void Start()
     {
+        partyIndex = PlayerPrefs.GetInt("PartyNum");
         SetCard();
         for(int i=0; i< clearShot.ChildCameras.Length; i++)
         {

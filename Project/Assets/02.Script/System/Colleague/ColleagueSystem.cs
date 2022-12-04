@@ -6,16 +6,20 @@ using UnityEngine;
 public enum ColleagueType
 {
     Attack,
+    Support,
     Debuff,
-    Support
 }
 public enum ColleagueClub
 {
     Archer,
-    Clean,
     Kendo,
-    Boxing,
+    Clean,
     Sea,
+    Science,
+    Boxing,
+    Band,
+    Cooking,
+    Library
 }
 public class Colleague
 {
@@ -91,12 +95,18 @@ public class Colleague
         switch (_club)
         {
             case ColleagueClub.Archer:
-            case ColleagueClub.Clean:
             case ColleagueClub.Kendo:
+            case ColleagueClub.Clean:
                 _type = ColleagueType.Attack;
                 break;
-            case ColleagueClub.Boxing:
             case ColleagueClub.Sea:
+            case ColleagueClub.Science:
+            case ColleagueClub.Boxing:
+                _type = ColleagueType.Support;
+                break;
+            case ColleagueClub.Band:
+            case ColleagueClub.Cooking:
+            case ColleagueClub.Library:
                 _type = ColleagueType.Debuff;
                 break;
         }
