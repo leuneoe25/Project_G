@@ -10,7 +10,7 @@ public class ButtonSaver : MonoBehaviour
     [SerializeField] private Button BackButton;
     [SerializeField] private Text BackText;
     [SerializeField] private Button EnterStageButton;
-    [SerializeField] private Image Map;
+    [SerializeField] private GameObject World;
 
     [SerializeField] private SceneManagement scene;
     [SerializeField] private EffectSystem effect;
@@ -23,13 +23,13 @@ public class ButtonSaver : MonoBehaviour
 
     private void Start()
     {
-        buttonList = GetComponent<ButtonList>();    
-        for(int i = 0; i < buttons.Length; ++i)
+        buttonList = GetComponent<ButtonList>();
+        for (int i = 0; i < buttons.Length; ++i)
         {
             buttonList.Add(buttons[i]);
             int a = i;
             buttonList.buttons[i].onClick.AddListener(() => ButtonFunc(a));
-            if(i != 0)
+            if (i != 0)
             {
                 buttonList.buttons[i].gameObject.SetActive(false);
             }
@@ -42,21 +42,17 @@ public class ButtonSaver : MonoBehaviour
     void ButtonFunc(int num)
     {
         PlayerPrefs.SetInt("StageLevel", num);
-        Map.GetComponent<MapImage>().ImageChange(num);
         effect.Typing(BackText, "스테이지 입장", 0.1f);
-<<<<<<< HEAD
         World.transform.GetChild(0).GetComponent<Text>().text = "월드 " + (num + 1);
-        World.transform.GetChild(1).GetComponent<Text>().text = buttons[num].GetComponentInChildren<Text>().text +" 수호";
+        World.transform.GetChild(1).GetComponent<Text>().text = buttons[num].GetComponentInChildren<Text>().text + " 수호";
         World.transform.GetChild(2).GetComponent<MapImage>().ImageChange(num);
         party.SetParty();
 
-=======
->>>>>>> parent of 5aa431d (Merge branch 'main' of https://github.com/spfkeh/Project_G)
         UI.SetActive(true);
     }
     private void BackButtonFunc()
     {
-        if(UI.activeSelf)
+        if (UI.activeSelf)
         {
             effect.Typing(BackText, "수호", 0.1f);
             UI.SetActive(false);

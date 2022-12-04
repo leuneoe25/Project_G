@@ -6368,7 +6368,7 @@ MonoBehaviour:
   BackButton: {fileID: 1858655848}
   BackText: {fileID: 1885688282}
   EnterStageButton: {fileID: 1053070433}
-  Map: {fileID: 1943794357}
+  World: {fileID: 290369463}
   scene: {fileID: 1999981117}
   effect: {fileID: 2018296630}
   buttons:
