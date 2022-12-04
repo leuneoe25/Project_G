@@ -5188,8 +5188,6 @@ MonoBehaviour:
   scene: {fileID: 89545126}
   effect: {fileID: 1047357663}
   Guide: {fileID: 1116912380}
-  ColleagueOrganization: {fileID: 0}
-  AddList: {fileID: 0}
   AllButton: {fileID: 1442448943}
   AttackButton: {fileID: 456059117}
   DebuffButton: {fileID: 278976359}
