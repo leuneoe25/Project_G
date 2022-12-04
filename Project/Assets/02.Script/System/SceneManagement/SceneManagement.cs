@@ -37,4 +37,10 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene("EndGame");
     }
+
+
+    public void OpenStage()
+    {
+        ClearChack.Instance.OpenStage();
+    }
 }

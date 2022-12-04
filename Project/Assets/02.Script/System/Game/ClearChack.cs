@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,14 +33,14 @@ public class ClearChack : MonoBehaviour
     #endregion
 
     private bool[] open = new bool[7];
-    
+
     private void Start()
     {
-        open[0] = true;    
+        open[0] = true;
     }
-    public void OpenStage(int idx)
+    public void OpenStage()
     {
-        open[idx] = true;
+        open[(PlayerPrefs.GetInt("StageLevel") + 1)] = true;
     }
 
     public bool IsOpen(int idx)

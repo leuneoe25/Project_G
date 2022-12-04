@@ -43,6 +43,7 @@ public class MonsterWave : MonoBehaviour
     [SerializeField] private GameObject effectSystem;
     [SerializeField] private SceneManagement SceneManager;
     [SerializeField] private Text waveText;
+    [SerializeField] private Text LeftMonster;
     private int stage;
     private int order;
 
@@ -59,6 +60,7 @@ public class MonsterWave : MonoBehaviour
             if (wave[stage, 0, i] == 1) monsterCount++;
             if (wave[stage, 1, i] == 1) monsterCount++;
         }
+        LeftMonster.text = "남은 적 : " + monsterCount.ToString();
         StartCoroutine("WaveStart");
     }
 
@@ -81,6 +83,7 @@ public class MonsterWave : MonoBehaviour
     public void Death()
     {
         monsterCount--;
+        LeftMonster.text = "남은 적 : " + monsterCount.ToString();
         if (monsterCount <= 0)
         {
             SceneManager.LoadEndGame();

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.EventSystems;
+using System.ComponentModel;
+using UnityEngine.UI;
 
 public class CharacterArrangement : MonoBehaviour
 {
@@ -21,15 +23,34 @@ public class CharacterArrangement : MonoBehaviour
     //Null카메라를 가져올 변수
     [SerializeField] private Queue<GameObject> NullCameraList = new Queue<GameObject>();
     public bool isArrangement = false;
+
+    private List<Colleague> CharacterList;
+    [SerializeField] private Sprite[] CharacterImage;
+    [SerializeField] private Text setedChar;
     private int partyIndex;
+    private bool[] isSet = new bool[5];
+    private int[] characterNumber = new int[5];
+    private int setChar = 0;
+
+    [SerializeField] private GameObject effectSystem;
+    [SerializeField] private Text SetedText;
 
     void Start()
     {
+        setedChar.text = "배치한 캐릭터 : " + setChar;
+
         partyIndex = PlayerPrefs.GetInt("PartyNum");
-        SetCard();
-        for(int i=0; i< clearShot.ChildCameras.Length; i++)
+        CharacterList = ColleagueSystem.Instance.GetDeck(partyIndex);
+        DeployPeople = CharacterList.Count;
+        for (int i = 0; i < CharacterList.Count; i++)
         {
-            if(clearShot.ChildCameras[i].name == "Null")
+            characterNumber[i] = (int)CharacterList[i].club;
+        }
+
+        SetCard();
+        for (int i = 0; i < clearShot.ChildCameras.Length; i++)
+        {
+            if (clearShot.ChildCameras[i].name == "Null")
             {
                 Debug.Log(i);
                 NullCameraList.Enqueue(clearShot.ChildCameras[i].gameObject);
@@ -51,9 +72,20 @@ public class CharacterArrangement : MonoBehaviour
         }
         else if (DeployPeople != CharacterCardList.Length)
         {
+            for (int i = 0; i < DeployPeople; i++)
+            {
+                CharacterCardList[i].GetComponent<Image>().sprite = CharacterImage[characterNumber[i]];
+            }
             for (int i = DeployPeople; i < CharacterCardList.Length; i++)
             {
                 CharacterCardList[i].SetActive(false);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < DeployPeople; i++)
+            {
+                CharacterCardList[i].GetComponent<Image>().sprite = CharacterImage[characterNumber[i]];
             }
         }
 
@@ -95,18 +127,28 @@ public class CharacterArrangement : MonoBehaviour
 
     private void CreateCharacter(int index)
     {
-        if (null == moveManager.GetComponent<MovePosition>().selected)
+        if (!isSet[index])
         {
-            GameObject Char = Instantiate(objects[index], mainCamera.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
-            GameObject C = NullCameraList.Dequeue();
-            //Char.name = "캐릭터";
-            C.SetActive(true);
-            C.transform.position = Char.transform.position;
-            C.name = Char.name;
-            C.GetComponent<CinemachineVirtualCamera>().Follow = Char.transform;
-            moveManager.GetComponent<MovePosition>().SetPosition(Char);
-            isArrangement = true;
+            isSet[index] = true;
+            setChar++;
+            setedChar.text = "배치한 캐릭터 : " + setChar;
+            if (null == moveManager.GetComponent<MovePosition>().selected)
+            {
+                GameObject Char = Instantiate(objects[characterNumber[index]], mainCamera.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+                GameObject C = NullCameraList.Dequeue();
+                //Char.name = "캐릭터";
+                C.SetActive(true);
+                C.transform.position = Char.transform.position;
+                C.name = Char.name;
+                C.GetComponent<CinemachineVirtualCamera>().Follow = Char.transform;
+                moveManager.GetComponent<MovePosition>().SetPosition(Char);
+                isArrangement = true;
 
+            }
+        }
+        else
+        {
+            effectSystem.GetComponent<EffectSystem>().Guide(SetedText, "이미 배치한 동료입니다", 1);
         }
     }
 }
