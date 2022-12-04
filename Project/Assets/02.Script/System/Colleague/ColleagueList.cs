@@ -13,6 +13,8 @@ public class ColleagueList : MonoBehaviour
     [SerializeField] private SceneManagement scene;
     [SerializeField] private EffectSystem effect;
     [SerializeField] private Text Guide;
+    [SerializeField] private GameObject ColleagueOrganization;
+    [SerializeField] private GameObject AddList;
     [Header("Type Button")]
     [SerializeField] private Button AllButton;
     [SerializeField] private Button AttackButton;
@@ -91,6 +93,18 @@ public class ColleagueList : MonoBehaviour
             effect.Typing(BackText, "동료 리스트", 0.1f);
             colleagueInfoUI.SetActive(false);
             return;
+        }
+        else if(ColleagueOrganization.activeSelf)
+        {
+            if(AddList.activeSelf)
+            {
+                AddList.SetActive(false);
+                effect.Typing(BackText, "동료 편성", 0.1f);
+            }
+            else
+            {
+                scene.LoadMenu();
+            }
         }
         else
         {
