@@ -27,9 +27,8 @@ public class ButtonSaver : MonoBehaviour
         for (int i = 0; i < buttons.Length; ++i)
         {
             buttonList.Add(buttons[i]);
-            int a = i;
-            buttonList.buttons[i].onClick.AddListener(() => ButtonFunc(a));
-            if (i != 0)
+            buttonList.buttons[i].onClick.AddListener(() => ButtonFunc(i));
+            if (!ClearChack.Instance.IsOpen(i))
             {
                 buttonList.buttons[i].gameObject.SetActive(false);
             }
