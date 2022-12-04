@@ -641,9 +641,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MENTOS: {fileID: 2228326921890651563, guid: 3957c9cc2b72ef245a389fb7a967e20f, type: 3}
-  Cola: {fileID: 0}
+  Cola: {fileID: 4899787022415798459, guid: f848d58b54b218945975c36533f82e21, type: 3}
   cost: 0
   IsTest: 0
+  time: 1
 --- !u!1 &2718390485337739423
 GameObject:
   m_ObjectHideFlags: 0

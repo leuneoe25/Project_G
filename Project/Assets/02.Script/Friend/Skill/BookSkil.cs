@@ -23,7 +23,7 @@ public class BookSkil : MonoBehaviour
     {
         if(IsTest)
         {
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.O))
             {
                 Skill();
             }

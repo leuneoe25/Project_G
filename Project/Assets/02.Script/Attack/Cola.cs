@@ -12,7 +12,7 @@ public class Cola : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Monster") || collision.CompareTag("Poundation"))
+        if (collision.CompareTag("Monster") || collision.CompareTag("Ground"))
         {
             Instantiate(Slow, transform.position, Quaternion.identity);
             Destroy(gameObject);
