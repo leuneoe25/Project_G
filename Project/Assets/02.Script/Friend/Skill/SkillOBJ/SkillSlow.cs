@@ -46,7 +46,7 @@ public class SkillSlow : MonoBehaviour
     {
         if (!isGround)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y - (0.01f * ColaSpeed), transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y - (0.02f * ColaSpeed), transform.position.z);
         }
         if(isGround)
         time -= Time.deltaTime;

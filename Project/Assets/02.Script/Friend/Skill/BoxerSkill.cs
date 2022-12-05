@@ -28,6 +28,8 @@ public class BoxerSkill : MonoBehaviour
         }
         else
         {
+
+            GameObject.Find("CostManager").GetComponent<CostControl>().GSCost(3);
             Debug.Log("There is No Target!");
         }
         

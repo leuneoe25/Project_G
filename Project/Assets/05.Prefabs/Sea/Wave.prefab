@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8095800696900137627}
   - component: {fileID: 8095800696900137572}
   - component: {fileID: 2138464029018876206}
+  - component: {fileID: -3728188858534493057}
   m_Layer: 0
   m_Name: Wave
   m_TagString: BoxerSkill
@@ -123,3 +124,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.15}
   m_EdgeRadius: 0
+--- !u!114 &-3728188858534493057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8095800696900137573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c09a821e8a9a6384a977ded5ab2e9fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -28,7 +28,7 @@ public class SeaSkill : MonoBehaviour
         }
         else
         {
-
+            GameObject.Find("CostManager").GetComponent<CostControl>().GSCost(3);
         }
     }
 
