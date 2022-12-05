@@ -23,20 +23,12 @@ public class PartyManagement : MonoBehaviour
     {
         partyNumber.text = "ÆÄÆ¼ " + (index + 1);
         list = ColleagueSystem.Instance.GetDeck(index);
-        Debug.Log(list[0].club);
-        Debug.Log(list[1].club);
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < list.Count; i++)
         {
-            if (list[i] == null)
-            {
-                Debug.Log(i + "1");
-                NowParty[i].sprite = nullImage;
-            }
-            else
-            {
-                Debug.Log(i + "2");
+            if (list[i] != null)
                 NowParty[i].sprite = colleagues[(int)list[i].club];
-            }
+            else
+                NowParty[i].sprite = nullImage;
         }
     }
     public void BeforeParty()

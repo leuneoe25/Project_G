@@ -153,8 +153,12 @@ public class ColleagueSystem : MonoBehaviour
         AddColleague("사이라", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
         AddColleague("다이라", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Boxing);
         DeckMap.Add(0, new List<Colleague>());
-        DeckMap[0].Add(colleagues[0]);
-        DeckMap[0].Add(colleagues[1]);
+        for (int i = DeckMap[0].Count; i < 5; i++)
+        {
+            DeckMap[0].Add(null);
+        }
+        Add(0,1,colleagues[0]);
+        Add(0,3,colleagues[1]);
 
 
 
