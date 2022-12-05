@@ -15,7 +15,7 @@ public class SceneManagement : MonoBehaviour
     }
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("TestAnimationScene");
+        SceneManager.LoadScene("GameScene");
     }
     public void LoadStore()
     {

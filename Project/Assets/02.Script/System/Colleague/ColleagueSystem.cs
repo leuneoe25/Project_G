@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -152,6 +153,12 @@ public class ColleagueSystem : MonoBehaviour
         AddColleague("사이라", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
         AddColleague("다이라", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Boxing);
         DeckMap.Add(0, new List<Colleague>());
+        DeckMap[0].Add(colleagues[0]);
+        DeckMap[0].Add(colleagues[1]);
+
+
+
+
         DeckMap.Add(1, new List<Colleague>());
         DeckMap.Add(2, new List<Colleague>());
         DeckMap.Add(3, new List<Colleague>());

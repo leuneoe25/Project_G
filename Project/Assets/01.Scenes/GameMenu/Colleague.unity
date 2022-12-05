@@ -5164,6 +5164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 529945251}
   - component: {fileID: 529945250}
+  - component: {fileID: 529945252}
   m_Layer: 0
   m_Name: Colleague
   m_TagString: Untagged
@@ -5188,6 +5189,8 @@ MonoBehaviour:
   scene: {fileID: 89545126}
   effect: {fileID: 1047357663}
   Guide: {fileID: 1116912380}
+  ColleagueOrganization: {fileID: 0}
+  AddList: {fileID: 0}
   AllButton: {fileID: 1442448943}
   AttackButton: {fileID: 456059117}
   DebuffButton: {fileID: 278976359}
@@ -5291,6 +5294,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529945252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529945249}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b51ec418613d1ff49b03178dc382c999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 0}
+  BackText: {fileID: 0}
+  Guide: {fileID: 0}
+  OnColleagueOrganization: {fileID: 0}
+  OnColleagueList: {fileID: 0}
+  ColleagueOrganizationObject: {fileID: 0}
+  ColleagueListObject: {fileID: 0}
+  LeftArrow: {fileID: 0}
+  RightArrow: {fileID: 0}
+  DeckNumber: {fileID: 0}
+  ResetButton: {fileID: 0}
+  DeckList: []
+  DeckInfo: []
+  DeckClear: []
+  Move: {fileID: 0}
+  MoveCancel: {fileID: 0}
+  MoveState: {fileID: 0}
+  AllClear: {fileID: 0}
+  AllButton: {fileID: 0}
+  AttackButton: {fileID: 0}
+  DebuffButton: {fileID: 0}
+  SupportButton: {fileID: 0}
+  ColleagueListButton: []
+  AddList: {fileID: 0}
 --- !u!1 &532085456
 GameObject:
   m_ObjectHideFlags: 0
@@ -9870,7 +9909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &988613974
 RectTransform:
   m_ObjectHideFlags: 0
