@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class FriendGetTime : MonoBehaviour
 {
     [SerializeField] Button button;
+    [SerializeField] GameObject GetFriendObject;
     [SerializeField] Button X;
     [SerializeField] GameObject Object;
     [SerializeField] Text[] text;
@@ -24,7 +25,7 @@ public class FriendGetTime : MonoBehaviour
         text[2].text = TextText[2] + cost.ToString();
     }
 
-    public void GetPlayer()
+    public void GetFriend()
     {
         Object.SetActive(false);
     }
