@@ -11,7 +11,7 @@ public class Kenki : MonoBehaviour
     public bool GetBool()
     {
         return IsLeft;
-    }
+    }   
     public void left()
     {
         gameObject.transform.localScale = new Vector3(1, 1, 1);

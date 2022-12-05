@@ -1315,8 +1315,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 5400c49b82737954c9878e9884b43fef, type: 2}
   targetPoint: {fileID: 0}
+  wave: {fileID: 0}
+  DetectPlayer: {fileID: 0}
   HP: 0
   Speed: 0
+  SturnTime: 0
   ATK: 0
   ATKSpeed: 0
   CollideCharacter: 0
@@ -1343,7 +1346,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-5617263504457221282
 BoxCollider2D:
   m_ObjectHideFlags: 0
