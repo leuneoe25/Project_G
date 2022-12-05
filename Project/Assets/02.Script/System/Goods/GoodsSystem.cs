@@ -40,6 +40,40 @@ public class GoodsSystem : MonoBehaviour
 
     int[] crystals = new int[3];
 
+    #region Council
+    
+    int CouncilLv = 1;
+
+    int HpUpLv;
+
+    int ReduceTimeLv;
+
+    int DeflaultCostLv;
+
+    public int GSetCouncilLv(int Lv = 0)
+    {
+        CouncilLv += Lv;
+        return CouncilLv;
+    }
+
+    public int GSetHpLv(int Lv = 0)
+    {
+        HpUpLv += Lv;
+        return HpUpLv;
+    }
+    public int GSetReduceLv(int Lv = 0)
+    {
+        ReduceTimeLv += Lv;
+        return ReduceTimeLv;
+    }
+    public int GSetDefault(int Lv = 0)
+    {
+        DeflaultCostLv += Lv;
+        return DeflaultCostLv;
+    }
+
+    #endregion
+
     /// <summary>
     /// Get building goods
     /// </summary>
