@@ -109,7 +109,10 @@ public class StoreSystem : MonoBehaviour
                 goods[index] = "";
             }
         }
-
+        if(GoodsSystem.Instance.GetSP() < (-1 * Convert.ToInt32(goods[0])))
+        {
+            return;
+        }
         GoodsSystem.Instance.SetSP(Convert.ToInt32(goods[0]));
         GoodsSystem.Instance.SetBuildingGoods(Convert.ToInt32(goods[1]), Convert.ToInt32(goods[2]), Convert.ToInt32(goods[3]));
         GoodsSystem.Instance.SetCrystals(Convert.ToInt32(goods[4]), Convert.ToInt32(goods[5]), Convert.ToInt32(goods[6]));

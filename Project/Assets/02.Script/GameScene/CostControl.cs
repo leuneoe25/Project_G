@@ -13,7 +13,7 @@ public class CostControl : MonoBehaviour
     void Start()
     {
         nowCost = 0;
-        GSCost(1);
+        GSCost(3+(GoodsSystem.Instance.GSetDefault() * 0.5f));
     }
 
     public bool UseCost(float value)

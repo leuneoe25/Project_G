@@ -29,8 +29,12 @@ public class FriendGetTime : MonoBehaviour
     
     public void LoadNext()
     {
-        Object.SetActive(false);
-        GetFriendObject.SetActive(true);
+        if(GoodsSystem.Instance.GetSP() > cost)
+        {
+            Object.SetActive(false);
+            GetFriendObject.SetActive(true);
+        }
+
     }
 
     public void GetFriend()
@@ -40,15 +44,18 @@ public class FriendGetTime : MonoBehaviour
 
     public void PushButton()
     {
-        if(!Object.activeSelf)
+        if(ColleagueSystem.Instance.Getcolleagues().Count != 18)
         {
-            Object.SetActive(true);
-            TextSet();
-            X.onClick.AddListener(() => PushButton());
-        }
-        else
-        {
-            Object.SetActive(false);
+            if (!Object.activeSelf)
+            {
+                Object.SetActive(true);
+                TextSet();
+                X.onClick.AddListener(() => PushButton());
+            }
+            else
+            {
+                Object.SetActive(false);
+            }
         }
     }
 }

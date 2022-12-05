@@ -29,18 +29,21 @@ public class CommonLvUp : MonoBehaviour
 
     void HpLvUp()
     {
-        if(!LvMax[0])
+        if (!LvMax[0])
         {
-            GoodsSystem.Instance.SetSP(-1 * price[Lv[0]]);
-            Lv[0]++;
-            GoodsSystem.Instance.GSetHpLv(1);
-            HpUp = HpUPStat[Lv[0]];
-            SetText(0);
-            if(Lv[0] == HpUPStat.Length - 1)
+            if (GoodsSystem.Instance.GetSP() > price[Lv[0]])
             {
-                LvMax[0] = true;
-                Text text = buttons[0].transform.GetChild(0).GetComponent<Text>();
-                text.text = "MAX";
+                GoodsSystem.Instance.SetSP(-1 * price[Lv[0]]);
+                Lv[0]++;
+                GoodsSystem.Instance.GSetHpLv(1);
+                HpUp = HpUPStat[Lv[0]];
+                SetText(0);
+                if (Lv[0] == HpUPStat.Length - 1)
+                {
+                    LvMax[0] = true;
+                    Text text = buttons[0].transform.GetChild(0).GetComponent<Text>();
+                    text.text = "MAX";
+                }
             }
         }
     }
@@ -49,16 +52,20 @@ public class CommonLvUp : MonoBehaviour
     {
         if (!LvMax[1])
         {
-            GoodsSystem.Instance.SetSP(-1 * price[Lv[1]]);
-            Lv[1]++;
-            GoodsSystem.Instance.GSetReduceLv(1);
-            ReduCeTime = ReduceRecuitTime[Lv[1]];
-            SetText(1);
-            if (Lv[1] == ReduceRecuitTime.Length - 1)
+            if (GoodsSystem.Instance.GetSP() > price[Lv[1]])
             {
-                LvMax[1] = true;
-                Text text = buttons[1].transform.GetChild(0).GetComponent<Text>();
-                text.text = "MAX";
+
+                GoodsSystem.Instance.SetSP(-1 * price[Lv[1]]);
+                Lv[1]++;
+                GoodsSystem.Instance.GSetReduceLv(1);
+                ReduCeTime = ReduceRecuitTime[Lv[1]];
+                SetText(1);
+                if (Lv[1] == ReduceRecuitTime.Length - 1)
+                {
+                    LvMax[1] = true;
+                    Text text = buttons[1].transform.GetChild(0).GetComponent<Text>();
+                    text.text = "MAX";
+                }
             }
         }
     }
@@ -68,16 +75,19 @@ public class CommonLvUp : MonoBehaviour
     {
         if (!LvMax[2])
         {
-            GoodsSystem.Instance.SetSP(-1 * price[Lv[2]]);
-            Lv[2]++;
-            GoodsSystem.Instance.GSetDefault(1);
-            BaseCostUp = CostUp[Lv[2]];
-            SetText(2);
-            if (Lv[2] == CostUp.Length - 1)
+            if (GoodsSystem.Instance.GetSP() > price[Lv[2]])
             {
-                LvMax[2] = true;
-                Text text = buttons[2].transform.GetChild(0).GetComponent<Text>();
-                text.text = "MAX";
+                GoodsSystem.Instance.SetSP(-1 * price[Lv[2]]);
+                Lv[2]++;
+                GoodsSystem.Instance.GSetDefault(1);
+                BaseCostUp = CostUp[Lv[2]];
+                SetText(2);
+                if (Lv[2] == CostUp.Length - 1)
+                {
+                    LvMax[2] = true;
+                    Text text = buttons[2].transform.GetChild(0).GetComponent<Text>();
+                    text.text = "MAX";
+                }
             }
         }
     }
@@ -90,7 +100,7 @@ public class CommonLvUp : MonoBehaviour
         Lv[0] = GoodsSystem.Instance.GSetHpLv();
         Lv[1] = GoodsSystem.Instance.GSetReduceLv();
         Lv[2] = GoodsSystem.Instance.GSetDefault();
-        for(int i = 0; i < 3; ++i)
+        for (int i = 0; i < 3; ++i)
         {
             if (Lv[i] == ReduceRecuitTime.Length - 1)
             {
@@ -99,7 +109,7 @@ public class CommonLvUp : MonoBehaviour
                 text.text = "MAX";
             }
         }
-        for(int i = 0; i < 3; ++i)
+        for (int i = 0; i < 3; ++i)
         {
             SetText(i);
         }
@@ -109,6 +119,6 @@ public class CommonLvUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
