@@ -20,7 +20,7 @@ public class CostControl : MonoBehaviour
     {
         if (nowCost >= value)
         {
-            GSCost(value);
+            GSCost(-value);
             return true;
         }
         return false;

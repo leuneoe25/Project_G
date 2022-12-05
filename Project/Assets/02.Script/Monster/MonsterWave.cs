@@ -48,6 +48,7 @@ public class MonsterWave : MonoBehaviour
     private int order;
 
     public int monsterCount;
+    [SerializeField] private CostControl Cost;
 
     void Start()
     {
@@ -83,6 +84,7 @@ public class MonsterWave : MonoBehaviour
     public void Death()
     {
         monsterCount--;
+        Cost.GSCost(0.5f);
         LeftMonster.text = "³²Àº Àû : " + monsterCount.ToString();
         if (monsterCount <= 0)
         {

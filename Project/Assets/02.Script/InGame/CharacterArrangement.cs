@@ -139,6 +139,11 @@ public class CharacterArrangement : MonoBehaviour
     {
         if (!isSet[index])
         {
+            if (!Cost.UseCost(1))
+            {
+                effectSystem.GetComponent<EffectSystem>().Guide(SetedText, "코스트가 부족합니다.", 1);
+                return;
+            }
             isSet[index] = true;
             setChar++;
             setedChar.text = "배치한 캐릭터 : " + setChar;
@@ -160,7 +165,37 @@ public class CharacterArrangement : MonoBehaviour
         {
             if (Cost.UseCost(3))
             {
-                //각성 사용
+                switch (characterNumber[index])
+                {
+                    case 0:
+                        Friends[index].GetComponent<BowSkill>().Skill();
+                        break;
+                    case 1:
+                        Friends[index].GetComponent<KendoSkill>().Skill();
+                        break;
+                    case 2:
+                        Friends[index].GetComponent<CleanSkill>().Skill();
+                        break;
+                    case 3:
+                        Friends[index].GetComponent<SeaSkill>().Skill();
+                        break;
+                    case 4:
+                        Friends[index].GetComponent<ScienceSkill>().Skill();
+                        break;
+                    case 5:
+                        Debug.Log("boxer skill");
+                        Friends[index].GetComponent<BoxerSkill>().Skill();
+                        break;
+                    case 6:
+                        Friends[index].GetComponent<BandSkill>().Skill();
+                        break;
+                    case 7:
+                        Friends[index].GetComponent<CookSkill>().Skill();
+                        break;
+                    case 8:
+                        Friends[index].GetComponent<BookSkil>().Skill();
+                        break;
+                }
             }
             else effectSystem.GetComponent<EffectSystem>().Guide(SetedText, "코스트가 부족합니다.", 1);
         }

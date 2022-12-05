@@ -47,7 +47,7 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("CleanSkill"))
+        if (collision.CompareTag("CleanSkill"))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
         }
@@ -81,7 +81,7 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
     {
         if (collision.CompareTag("CleanSkill"))
         {
-            if(transform.position.x > targetPoint.transform.position.x)
+            if (transform.position.x > targetPoint.transform.position.x)
             {
                 transform.position = new Vector3(transform.position.x + 0.05f, transform.position.y - 0.1f, transform.position.z);
             }
@@ -126,9 +126,13 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
         HP -= _hp;
         if (HP <= 0)
         {
-                wave.GetComponent<MonsterWave>().Death();
-                Destroy(gameObject);
+            Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        wave.GetComponent<MonsterWave>().Death();
     }
     public void GetDamaged(int value)
     {
