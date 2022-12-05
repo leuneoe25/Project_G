@@ -11,16 +11,24 @@ public class SeaSkill : MonoBehaviour
 
     public void Skill()
     {
-        //코스트 소모
-        GameObject Wave = Instantiate(SeaWater, transform.position, Quaternion.identity);
-        Body body = Wave.GetComponent<Body>();
-        if (Sea.isRight)
+        if (Sea.detect.DetectiveObj != null)
         {
-            body.Right();
+            Vector3 position = Sea.detect.DetectiveObj.transform.position;
+            GameObject Wave = Instantiate(SeaWater, transform.position, Quaternion.identity);
+            Body body = Wave.GetComponent<Body>();
+
+            if (Sea.transform.position.x > position.x)
+            {
+                body.left();
+            }
+            else if(Sea.transform.position.x < position.x)
+            {
+                body.Right();
+            }
         }
         else
         {
-            body.left();
+
         }
     }
 
