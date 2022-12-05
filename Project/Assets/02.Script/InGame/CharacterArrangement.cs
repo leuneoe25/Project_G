@@ -44,7 +44,8 @@ public class CharacterArrangement : MonoBehaviour
         DeployPeople = CharacterList.Count;
         for (int i = 0; i < CharacterList.Count; i++)
         {
-            characterNumber[i] = (int)CharacterList[i].club;
+            if (CharacterList[i] != null) characterNumber[i] = (int)CharacterList[i].club;
+            else characterNumber[i] = 9;
         }
 
         SetCard();
