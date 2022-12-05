@@ -44,7 +44,11 @@ public class CharacterArrangement : MonoBehaviour
         DeployPeople = CharacterList.Count;
         for (int i = 0; i < CharacterList.Count; i++)
         {
-            if (CharacterList[i] != null) characterNumber[i] = (int)CharacterList[i].club;
+            if (CharacterList[i] != null)
+            {
+                characterNumber[i] = (int)CharacterList[i].club;
+                CharacterCardList[i].GetComponentInChildren<Text>().text = CharacterList[i].name;
+            }
             else characterNumber[i] = 9;
         }
 
@@ -94,6 +98,7 @@ public class CharacterArrangement : MonoBehaviour
 
         for (int i = 0; i < DeployPeople; i++)
         {
+            if (CharacterList[i] == null) continue;
             //temporary var
             GameObject v = CharacterCardList[i];
             //Enter Pointer
