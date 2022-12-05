@@ -5381,6 +5381,7 @@ MonoBehaviour:
   setedChar: {fileID: 534740036}
   effectSystem: {fileID: 218675008}
   SetedText: {fileID: 899535210}
+  Cost: {fileID: 773095486}
 --- !u!4 &878383580
 Transform:
   m_ObjectHideFlags: 0
@@ -12009,6 +12010,7 @@ MonoBehaviour:
   waveText: {fileID: 542881322}
   LeftMonster: {fileID: 1976627361}
   monsterCount: 0
+  Cost: {fileID: 773095486}
 --- !u!114 &2107230721
 MonoBehaviour:
   m_ObjectHideFlags: 0

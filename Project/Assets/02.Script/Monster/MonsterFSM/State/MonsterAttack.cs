@@ -7,6 +7,7 @@ public class MonsterAttack : MonsterState<Monster>
     float time = 3;
     public override void Enter(Monster target)
     {
+        target.animator.SetInteger("State", 1);
         time = 3;
         Friend friend = target.DetectPlayer.GetComponent<Friend>();
         Player player;
