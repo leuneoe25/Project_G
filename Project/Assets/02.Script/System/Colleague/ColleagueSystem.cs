@@ -179,7 +179,7 @@ public class ColleagueSystem : MonoBehaviour
         AddColleague("사이라", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
         AddColleague("다이라", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Boxing);
         AddColleague("카카로트", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Sea);
-        AddColleague("카카로트", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Band);
+        AddColleague("샤를롯", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Band);
         Add(0, 1, colleagues[0]);
         Add(0, 3, colleagues[1]);
     }
