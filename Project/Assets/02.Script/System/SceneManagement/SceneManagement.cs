@@ -37,6 +37,10 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene("EndGame");
     }
+    public void LoadTuto()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 
 
     public void OpenStage()
