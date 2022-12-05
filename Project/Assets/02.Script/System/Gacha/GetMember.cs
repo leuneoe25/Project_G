@@ -22,6 +22,7 @@ public class GetMember : MonoBehaviour
             GoodsSystem.Instance.SetSP(-1000);
             ColleagueSystem.Instance.AddColleague(name, GoodsSystem.Instance.GSetCouncilLv(), new int[3] { 0, 0, 0 }, (ColleagueClub)kk);
             kk = Random.Range(0, 9);
+            inputField.text = "";
             gameObject.SetActive(false);
         }
     }

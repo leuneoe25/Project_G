@@ -17,7 +17,7 @@ public class KendoSkill : MonoBehaviour
             Vector3 KenkiPos = new Vector3(kendo.transform.position.x, kendo.transform.position.y - 0.5f, kendo.transform.position.z);
             GameObject Obj = Instantiate(kenki, KenkiPos, Quaternion.identity);
             Kenki Ki = Obj.GetComponent<Kenki>();
-
+            Obj.name = gameObject.name;
             if (kendo.transform.position.x > position.x)
             {
                 Ki.left();

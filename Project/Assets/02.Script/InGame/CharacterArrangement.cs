@@ -150,6 +150,7 @@ public class CharacterArrangement : MonoBehaviour
             if (null == moveManager.GetComponent<MovePosition>().selected)
             {
                 Friends[index] = Instantiate(objects[characterNumber[index]], mainCamera.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+                Friends[index].name = CharacterList[index].name;
                 GameObject C = NullCameraList.Dequeue();
                 //Char.name = "Ä³¸¯ÅÍ";
                 C.SetActive(true);

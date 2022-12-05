@@ -31,7 +31,7 @@ public class CommonLvUp : MonoBehaviour
     {
         if (!LvMax[0])
         {
-            if (GoodsSystem.Instance.GetSP() > price[Lv[0]])
+            if (GoodsSystem.Instance.GetSP() >= price[Lv[0]])
             {
                 GoodsSystem.Instance.SetSP(-1 * price[Lv[0]]);
                 Lv[0]++;
@@ -52,7 +52,7 @@ public class CommonLvUp : MonoBehaviour
     {
         if (!LvMax[1])
         {
-            if (GoodsSystem.Instance.GetSP() > price[Lv[1]])
+            if (GoodsSystem.Instance.GetSP() >= price[Lv[1]])
             {
 
                 GoodsSystem.Instance.SetSP(-1 * price[Lv[1]]);
@@ -75,7 +75,7 @@ public class CommonLvUp : MonoBehaviour
     {
         if (!LvMax[2])
         {
-            if (GoodsSystem.Instance.GetSP() > price[Lv[2]])
+            if (GoodsSystem.Instance.GetSP() >= price[Lv[2]])
             {
                 GoodsSystem.Instance.SetSP(-1 * price[Lv[2]]);
                 Lv[2]++;

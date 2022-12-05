@@ -29,7 +29,7 @@ public class FriendGetTime : MonoBehaviour
     
     public void LoadNext()
     {
-        if(GoodsSystem.Instance.GetSP() > cost)
+        if(GoodsSystem.Instance.GetSP() >= cost)
         {
             Object.SetActive(false);
             GetFriendObject.SetActive(true);
