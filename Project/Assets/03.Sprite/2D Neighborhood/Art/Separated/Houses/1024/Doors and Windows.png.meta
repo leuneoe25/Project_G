@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -929,43 +928,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Doors and Windows_24: -538997363
-      Doors and Windows_32: 1706386481
-      Doors and Windows_30: -1746370708
-      Doors and Windows_8: -882137900
-      Doors and Windows_20: -1358688849
-      Doors and Windows_35: 1704288451
-      Doors and Windows_2: 937581965
-      Doors and Windows_6: 801968016
-      Doors and Windows_22: -296507986
-      Doors and Windows_5: -540950120
-      Doors and Windows_16: 1565655146
-      Doors and Windows_11: 193745664
-      Doors and Windows_12: 537925358
-      Doors and Windows_13: 1018652668
-      Doors and Windows_25: 1968875870
-      Doors and Windows_27: -1801644022
-      Doors and Windows_7: 1606286506
-      Doors and Windows_15: -914273444
-      Doors and Windows_18: 1358571523
-      Doors and Windows_23: 275606718
-      Doors and Windows_26: -1561492830
-      Doors and Windows_31: -466655469
-      Doors and Windows_1: -1009352221
-      Doors and Windows_0: 1567796529
-      Doors and Windows_9: 2086508475
-      Doors and Windows_28: -1664536200
-      Doors and Windows_14: 1032965013
-      Doors and Windows_21: 1343193215
-      Doors and Windows_33: 7932178
-      Doors and Windows_10: 1269058550
-      Doors and Windows_34: 173393982
-      Doors and Windows_3: -686436756
-      Doors and Windows_19: -961698811
-      Doors and Windows_4: -1943827436
-      Doors and Windows_17: 255025465
-      Doors and Windows_29: -240400730
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

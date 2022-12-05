@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -467,21 +466,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Chairs_1: -1356694592
-      Chairs_6: 552150504
-      Chairs_9: -1121751149
-      Chairs_8: 721962131
-      Chairs_5: -706272459
-      Chairs_12: -763600466
-      Chairs_0: 849086543
-      Chairs_3: 887523563
-      Chairs_2: 1776712054
-      Chairs_11: -709632740
-      Chairs_7: -726925090
-      Chairs_4: 177718228
-      Chairs_13: -1237892240
-      Chairs_10: 1431437191
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

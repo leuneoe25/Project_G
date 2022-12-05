@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -530,55 +529,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Sofas_6: -1604214628
-      Sofas_4: 499740861
-      Sofas_15: 723875442
-      Sofas_46: -869433701
-      Sofas_22: -1732340614
-      Sofas_19: -1078916613
-      Sofas_25: -1175816153
-      Sofas_1: -701014074
-      Sofas_32: 1183374321
-      Sofas_23: -240017406
-      Sofas_35: -1040069152
-      Sofas_24: -1970063392
-      Sofas_33: 1446033218
-      Sofas_30: -1375497466
-      Sofas_47: 1925820473
-      Sofas_11: -437935831
-      Sofas_21: 887407893
-      Sofas_37: -1041566124
-      Sofas_8: -827472964
-      Sofas_2: -115258654
-      Sofas_12: 2143661393
-      Sofas_7: -1855069185
-      Sofas_36: 533744584
-      Sofas_3: 45836898
-      Sofas_41: -274892368
-      Sofas_10: -1625772745
-      Sofas_39: -1616858996
-      Sofas_16: -947892446
-      Sofas_44: 1865795039
-      Sofas_34: -1972348377
-      Sofas_13: -757909892
-      Sofas_45: 54226620
-      Sofas_26: -1742619398
-      Sofas_0: 1317895516
-      Sofas_29: 335590004
-      Sofas_5: 657973851
-      Sofas_20: -1927380310
-      Sofas_14: -1739447154
-      Sofas_28: -715020511
-      Sofas_9: -61718263
-      Sofas_38: -105693712
-      Sofas_17: 1572713026
-      Sofas_27: 105521714
-      Sofas_43: -2126570701
-      Sofas_18: -1186796243
-      Sofas_31: 1604316600
-      Sofas_40: 1222634505
-      Sofas_42: -1143835596
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

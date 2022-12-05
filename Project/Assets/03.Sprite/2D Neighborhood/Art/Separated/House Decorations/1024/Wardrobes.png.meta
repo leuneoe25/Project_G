@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -467,21 +466,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wardrobes_5: 134251411
-      Wardrobes_4: -689987791
-      Wardrobes_3: 1010042624
-      Wardrobes_9: 1234348668
-      Wardrobes_6: 1983359701
-      Wardrobes_7: 852996277
-      Wardrobes_1: -2075669101
-      Wardrobes_11: -1653907545
-      Wardrobes_0: 1899115570
-      Wardrobes_8: -501057073
-      Wardrobes_13: -693395264
-      Wardrobes_10: 949443392
-      Wardrobes_12: 1527913213
-      Wardrobes_2: -691113583
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -362,16 +361,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Fence_1: 1054155977
-      Fence_6: -1117446959
-      Fence_4: -913076262
-      Fence_2: 76710396
-      Fence_7: 457985235
-      Fence_0: 1784399032
-      Fence_5: -293919465
-      Fence_3: 52489299
-      Fence_8: -1131270001
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

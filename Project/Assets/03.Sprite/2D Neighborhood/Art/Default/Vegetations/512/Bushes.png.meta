@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -362,16 +361,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Bushes_5: -824218458
-      Bushes_6: -1742913457
-      Bushes_1: 808672948
-      Bushes_8: -1850925058
-      Bushes_7: -1513175496
-      Bushes_3: -768054021
-      Bushes_2: 1869122459
-      Bushes_0: 478582369
-      Bushes_4: -1432376761
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

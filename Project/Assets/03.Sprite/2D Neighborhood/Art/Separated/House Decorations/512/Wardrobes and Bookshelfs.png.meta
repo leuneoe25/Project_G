@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +68,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -81,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -635,29 +634,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wardrobes and Bookshelfs_17: -1911351256
-      Wardrobes and Bookshelfs_11: 1038308795
-      Wardrobes and Bookshelfs_14: 548753038
-      Wardrobes and Bookshelfs_12: -246441871
-      Wardrobes and Bookshelfs_1: 1453982250
-      Wardrobes and Bookshelfs_3: -507723479
-      Wardrobes and Bookshelfs_9: 36185502
-      Wardrobes and Bookshelfs_2: -1380085920
-      Wardrobes and Bookshelfs_7: 1483996434
-      Wardrobes and Bookshelfs_15: -1547381566
-      Wardrobes and Bookshelfs_6: 741780756
-      Wardrobes and Bookshelfs_18: 744963277
-      Wardrobes and Bookshelfs_20: -491602070
-      Wardrobes and Bookshelfs_13: -1091908379
-      Wardrobes and Bookshelfs_8: -1428275448
-      Wardrobes and Bookshelfs_10: 518661935
-      Wardrobes and Bookshelfs_19: -2062444606
-      Wardrobes and Bookshelfs_21: -1411328880
-      Wardrobes and Bookshelfs_4: -1931400511
-      Wardrobes and Bookshelfs_5: -1835445397
-      Wardrobes and Bookshelfs_0: 370169676
-      Wardrobes and Bookshelfs_16: 1710291486
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

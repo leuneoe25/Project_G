@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,6 +44,7 @@ public class ButtonSaver : MonoBehaviour
         World.transform.GetChild(0).GetComponent<Text>().text = "월드 " + (num + 1);
         World.transform.GetChild(1).GetComponent<Text>().text = buttons[num].GetComponentInChildren<Text>().text + " 수호";
         World.transform.GetChild(2).GetComponent<MapImage>().ImageChange(num);
+
         party.SetParty();
 
         UI.SetActive(true);

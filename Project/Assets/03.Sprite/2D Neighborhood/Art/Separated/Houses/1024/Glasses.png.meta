@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -719,33 +718,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Glasses_12: 1793836329
-      Glasses_5: 2053344373
-      Glasses_14: 2086338045
-      Glasses_11: -99484833
-      Glasses_21: -1665821563
-      Glasses_10: 43786886
-      Glasses_15: 707337515
-      Glasses_9: 144390290
-      Glasses_8: -2097996364
-      Glasses_18: -1460097464
-      Glasses_6: 1600835625
-      Glasses_20: 634653744
-      Glasses_19: -53819688
-      Glasses_3: -830118707
-      Glasses_13: 1629454075
-      Glasses_4: 459866810
-      Glasses_23: -2123860748
-      Glasses_1: 1790935926
-      Glasses_0: -102394292
-      Glasses_17: 2000299880
-      Glasses_25: -1957685803
-      Glasses_22: 704306792
-      Glasses_7: 731211666
-      Glasses_24: -1526830955
-      Glasses_2: -381274729
-      Glasses_16: 1895258477
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

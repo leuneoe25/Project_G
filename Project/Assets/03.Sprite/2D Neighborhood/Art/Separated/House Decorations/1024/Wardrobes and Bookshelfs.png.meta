@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -635,29 +634,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wardrobes and Bookshelfs_17: 1486326298
-      Wardrobes and Bookshelfs_11: -1162863862
-      Wardrobes and Bookshelfs_14: 352714552
-      Wardrobes and Bookshelfs_12: 2069122957
-      Wardrobes and Bookshelfs_1: 1866657623
-      Wardrobes and Bookshelfs_3: -992980113
-      Wardrobes and Bookshelfs_9: -227461576
-      Wardrobes and Bookshelfs_2: -892083714
-      Wardrobes and Bookshelfs_7: -1330185734
-      Wardrobes and Bookshelfs_15: -6704769
-      Wardrobes and Bookshelfs_6: -1121916949
-      Wardrobes and Bookshelfs_18: -377413899
-      Wardrobes and Bookshelfs_20: 842348832
-      Wardrobes and Bookshelfs_13: 1756294398
-      Wardrobes and Bookshelfs_8: 1423595005
-      Wardrobes and Bookshelfs_10: 1659112590
-      Wardrobes and Bookshelfs_19: 1331209761
-      Wardrobes and Bookshelfs_21: 200869023
-      Wardrobes and Bookshelfs_4: 1702579675
-      Wardrobes and Bookshelfs_5: -327272221
-      Wardrobes and Bookshelfs_0: 1023210402
-      Wardrobes and Bookshelfs_16: 24001502
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

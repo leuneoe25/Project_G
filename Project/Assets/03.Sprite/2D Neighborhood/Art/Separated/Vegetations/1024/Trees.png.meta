@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -782,36 +781,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Trees_12: -1606167578
-      Trees_2: -1267337323
-      Trees_21: -314846906
-      Trees_23: -165857114
-      Trees_1: 953495071
-      Trees_6: -2045913932
-      Trees_4: 2061448537
-      Trees_15: -1096886793
-      Trees_25: -1085030495
-      Trees_13: -858754573
-      Trees_8: -933070624
-      Trees_0: 139351490
-      Trees_3: -1746189038
-      Trees_27: 1567676354
-      Trees_28: -929989345
-      Trees_16: 1544254383
-      Trees_18: 770136850
-      Trees_17: -1435221848
-      Trees_5: -1092045567
-      Trees_7: 2054338338
-      Trees_20: -1714487047
-      Trees_9: -1698327003
-      Trees_11: -42624560
-      Trees_10: 356286644
-      Trees_19: 974161459
-      Trees_22: 1024118255
-      Trees_24: 1199892625
-      Trees_26: 120604149
-      Trees_14: 1163672113
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

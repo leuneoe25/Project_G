@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -320,14 +319,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      House 5 Front Body Parts_5: 1922136207
-      House 5 Front Body Parts_4: 1138352298
-      House 5 Front Body Parts_1: 1271698735
-      House 5 Front Body Parts_3: -1566583085
-      House 5 Front Body Parts_2: 890828465
-      House 5 Front Body Parts_6: 424731469
-      House 5 Front Body Parts_0: 373178236
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +68,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -81,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -572,26 +571,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Ovens and Washing Machines_0: -1821053058
-      Ovens and Washing Machines_14: 141502780
-      Ovens and Washing Machines_4: -1602704612
-      Ovens and Washing Machines_1: 749798377
-      Ovens and Washing Machines_18: -1498159265
-      Ovens and Washing Machines_7: 416993943
-      Ovens and Washing Machines_2: -631447385
-      Ovens and Washing Machines_10: 653593456
-      Ovens and Washing Machines_5: 1454570657
-      Ovens and Washing Machines_12: -1020705134
-      Ovens and Washing Machines_16: 498614025
-      Ovens and Washing Machines_11: -1372292704
-      Ovens and Washing Machines_17: 1977942804
-      Ovens and Washing Machines_9: 9512331
-      Ovens and Washing Machines_8: 1368096554
-      Ovens and Washing Machines_3: 329247742
-      Ovens and Washing Machines_13: 889972280
-      Ovens and Washing Machines_6: -226682137
-      Ovens and Washing Machines_15: 1776485412
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

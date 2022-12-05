@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -404,18 +403,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      House 1 Side Body Parts_2: 1843409637
-      House 1 Side Body Parts_3: -278099706
-      House 1 Side Body Parts_8: -1039270936
-      House 1 Side Body Parts_7: 2084734391
-      House 1 Side Body Parts_6: -116927670
-      House 1 Side Body Parts_1: -678418977
-      House 1 Side Body Parts_4: 559055796
-      House 1 Side Body Parts_5: 733585242
-      House 1 Side Body Parts_0: -1420298490
-      House 1 Side Body Parts_10: 1048153818
-      House 1 Side Body Parts_9: -911171664
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

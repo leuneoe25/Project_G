@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -320,14 +319,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wardrobes and Bookshelfs_1: 1553450708
-      Wardrobes and Bookshelfs_3: 664777003
-      Wardrobes and Bookshelfs_2: 1409982032
-      Wardrobes and Bookshelfs_6: 216965366
-      Wardrobes and Bookshelfs_4: 241003101
-      Wardrobes and Bookshelfs_5: 1693354532
-      Wardrobes and Bookshelfs_0: -40215668
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

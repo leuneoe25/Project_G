@@ -28,6 +28,9 @@ EditorBuildSettings:
     guid: 61ef9a6a4cef3974495df223adb71a9f
   - enabled: 1
     path: Assets/01.Scenes/GameMenu/Colleague.unity
+    guid: 3a2e173ba06682b4aad565884285c506
+  - enabled: 1
+    path: Assets/01.Scenes/GameMenu/Colleague2.unity
     guid: c5fc5a7545cdf8646a7d26dbe7179e4a
   - enabled: 1
     path: Assets/01.Scenes/GameMenu/StudentCouncil.unity

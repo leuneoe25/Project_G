@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +68,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -81,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -929,43 +928,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Doors and Windows_24: 2028548673
-      Doors and Windows_32: -1034748125
-      Doors and Windows_30: 872221939
-      Doors and Windows_8: 1065342875
-      Doors and Windows_20: 1281290648
-      Doors and Windows_35: -1252967999
-      Doors and Windows_2: 1794624840
-      Doors and Windows_6: 1622806391
-      Doors and Windows_22: 548911433
-      Doors and Windows_5: 337885509
-      Doors and Windows_16: -1406436537
-      Doors and Windows_11: -748393977
-      Doors and Windows_12: -617755884
-      Doors and Windows_13: -2066155238
-      Doors and Windows_25: -1287158541
-      Doors and Windows_27: 670372482
-      Doors and Windows_7: 295650789
-      Doors and Windows_15: 1675714523
-      Doors and Windows_18: 838407347
-      Doors and Windows_23: -528846427
-      Doors and Windows_26: -1534766188
-      Doors and Windows_31: -2039941452
-      Doors and Windows_1: -1366687109
-      Doors and Windows_0: 1681617310
-      Doors and Windows_9: -1853381203
-      Doors and Windows_28: -755932147
-      Doors and Windows_14: -359662572
-      Doors and Windows_21: 1382460622
-      Doors and Windows_33: 525857096
-      Doors and Windows_10: -681019331
-      Doors and Windows_34: 398266616
-      Doors and Windows_3: -2087463102
-      Doors and Windows_19: 1997613640
-      Doors and Windows_4: -2121589936
-      Doors and Windows_17: -2093608125
-      Doors and Windows_29: 1234234998
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

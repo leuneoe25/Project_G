@@ -4825,7 +4825,7 @@ MonoBehaviour:
   - {fileID: -3941285087793611580, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
   - {fileID: 4750651203034271755, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
   - {fileID: 1216698196264918829, guid: b8864031560df924ab6826a9863b7bd8, type: 3}
-  nullImage: {fileID: 0}
+  nullImage: {fileID: 21300000, guid: 2bb4e96f5d0b02c468932d665a015c54, type: 3}
   partyNumber: {fileID: 1459249803}
 --- !u!1 &1337081309
 GameObject:
