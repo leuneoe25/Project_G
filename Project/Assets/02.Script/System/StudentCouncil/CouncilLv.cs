@@ -14,46 +14,8 @@ public class CouncilLv : MonoBehaviour
     public int councilLevel = 1;
     bool[] check = new bool[3];
     bool max;
-    
+    string[] txt = new string[3] { "목재", "유리", "철" };
 
-
-    void CouncilLvUp()
-    {
-        if(!max)
-        {
-            for (int i = 0; i < 3; ++i)
-            {
-                //if(singleton.BaseEle[i] > NeedsCouncil[councilLevel][i])
-                //{
-                //check[i] = true;
-                //}
-            }
-            //if(check[0] && check[1] && check[2])
-            //{
-            //for(int i = 0; i < 3; ++i)
-            //{
-            //singleton.BaseEle[i] -= NeedsCouncil[coumcilLevel][i];
-            //}
-            //councilLevel++;
-            SetText();
-            //}
-            Debug.Log("LvUp");
-        }
-    }
-
-    void SetText()
-    {
-        if(councilLevel == maxLv)
-        {
-            ButtonText.text = "MAX";
-            max = true;
-        }
-        text.text = councilLevel.ToString();
-        for(int i = 0; i < 3; ++i)
-        {
-            //NeedsEle[i].text = "목재" + singleton.BaseEle[i] + "/" NeedsCouncil[councilLevel][i]
-        }
-    }
 
     void Start()
     {
@@ -63,6 +25,40 @@ public class CouncilLv : MonoBehaviour
 
     void Update()
     {
-        
+
+    }
+    void CouncilLvUp()
+    {
+        if (!max)
+        {
+            for (int i = 0; i < 3; ++i)
+            {
+                if (GoodsSystem.Instance.GetBuildingGoods(i) > NeedsCouncil[councilLevel, i])
+                {
+                    check[i] = true;
+                }
+            }
+            if (check[0] && check[1] && check[2])
+            {
+                GoodsSystem.Instance.SetBuildingGoods((-1 * NeedsCouncil[councilLevel, 0]), (-1 * NeedsCouncil[councilLevel, 1]), (-1 * NeedsCouncil[councilLevel, 2]));
+                councilLevel++;
+                SetText();
+                Debug.Log("LvUp");
+            }
+        }
+    }
+    void SetText()
+    {
+        if (councilLevel == maxLv)
+        {
+            ButtonText.text = "MAX";
+            max = true;
+        }
+        text.text = councilLevel.ToString();
+        for (int i = 0; i < 3; ++i)
+        {
+            NeedsEle[i].text = txt[i] + GoodsSystem.Instance.GetBuildingGoods(i) + "/" + NeedsCouncil[councilLevel, i];
+        }
+
     }
 }
