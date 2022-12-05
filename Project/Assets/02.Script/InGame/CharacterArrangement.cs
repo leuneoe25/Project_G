@@ -5,6 +5,7 @@ using Cinemachine;
 using UnityEngine.EventSystems;
 using System.ComponentModel;
 using UnityEngine.UI;
+using UnityEditor.Rendering;
 
 public class CharacterArrangement : MonoBehaviour
 {
@@ -34,9 +35,12 @@ public class CharacterArrangement : MonoBehaviour
 
     [SerializeField] private GameObject effectSystem;
     [SerializeField] private Text SetedText;
+    [SerializeField] private CostControl Cost;
+    private GameObject[] Friends;
 
     void Start()
     {
+        Friends = new GameObject[5];
         setedChar.text = "배치한 캐릭터 : " + setChar;
 
         partyIndex = PlayerPrefs.GetInt("PartyNum");
@@ -140,21 +144,25 @@ public class CharacterArrangement : MonoBehaviour
             setedChar.text = "배치한 캐릭터 : " + setChar;
             if (null == moveManager.GetComponent<MovePosition>().selected)
             {
-                GameObject Char = Instantiate(objects[characterNumber[index]], mainCamera.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+                Friends[index] = Instantiate(objects[characterNumber[index]], mainCamera.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
                 GameObject C = NullCameraList.Dequeue();
                 //Char.name = "캐릭터";
                 C.SetActive(true);
-                C.transform.position = Char.transform.position;
-                C.name = Char.name;
-                C.GetComponent<CinemachineVirtualCamera>().Follow = Char.transform;
-                moveManager.GetComponent<MovePosition>().SetPosition(Char);
+                C.transform.position = Friends[index].transform.position;
+                C.name = Friends[index].name;
+                C.GetComponent<CinemachineVirtualCamera>().Follow = Friends[index].transform;
+                moveManager.GetComponent<MovePosition>().SetPosition(Friends[index]);
                 isArrangement = true;
 
             }
         }
         else
         {
-            effectSystem.GetComponent<EffectSystem>().Guide(SetedText, "이미 배치한 동료입니다", 1);
+            if (Cost.UseCost(3))
+            {
+                //각성 사용
+            }
+            else effectSystem.GetComponent<EffectSystem>().Guide(SetedText, "코스트가 부족합니다.", 1);
         }
     }
 }
