@@ -150,39 +150,52 @@ public class ColleagueSystem : MonoBehaviour
 
     void Start()
     {
-        AddColleague("사이라", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
-        AddColleague("다이라", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Boxing);
         DeckMap.Add(0, new List<Colleague>());
         for (int i = DeckMap[0].Count; i < 5; i++)
         {
             DeckMap[0].Add(null);
         }
-        Add(0,1,colleagues[0]);
-        Add(0,3,colleagues[1]);
-
-
-
-
         DeckMap.Add(1, new List<Colleague>());
+        for (int i = DeckMap[1].Count; i < 5; i++)
+        {
+            DeckMap[1].Add(null);
+        }
+
         DeckMap.Add(2, new List<Colleague>());
+        for (int i = DeckMap[2].Count; i < 5; i++)
+        {
+            DeckMap[2].Add(null);
+        }
         DeckMap.Add(3, new List<Colleague>());
+        for (int i = DeckMap[3].Count; i < 5; i++)
+        {
+            DeckMap[3].Add(null);
+        }
         DeckMap.Add(4, new List<Colleague>());
+        for (int i = DeckMap[4].Count; i < 5; i++)
+        {
+            DeckMap[4].Add(null);
+        }
+        AddColleague("사이라", 3, new int[3] { 0, 0, 0 }, ColleagueClub.Archer);
+        AddColleague("다이라", 2, new int[3] { 0, 0, 0 }, ColleagueClub.Boxing);
+        Add(0, 1, colleagues[0]);
+        Add(0, 3, colleagues[1]);
     }
 
     private void AddColleague(string name, int rank, int[] _training, ColleagueClub club)
     {
-        Colleague Character = new Colleague(name, rank,_training, club);
+        Colleague Character = new Colleague(name, rank, _training, club);
         colleagues.Add(Character);
     }
 
-    public void Add(int DeckNum, int index,Colleague colleague)
+    public void Add(int DeckNum, int index, Colleague colleague)
     {
         if (DeckMap[DeckNum].Count <= 5)
         {
             DeckMap[DeckNum][index] = colleague;
         }
     }
-    public void Swap(int DeckNum, int a,int y)
+    public void Swap(int DeckNum, int a, int y)
     {
         Colleague colleague = DeckMap[DeckNum][a];
         DeckMap[DeckNum][a] = DeckMap[DeckNum][y];

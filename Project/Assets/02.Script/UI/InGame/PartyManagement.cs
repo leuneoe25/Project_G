@@ -11,10 +11,10 @@ public class PartyManagement : MonoBehaviour
     [SerializeField] private Text partyNumber;
     List<Colleague> list;
     private int index;
-    public int Index
-    {
-        get { return index; }
-    }
+    private bool nullParty;
+    public int Index { get { return index; } }
+    public bool NullParty { get { return nullParty; } }
+
     private void Start()
     {
         index = 0;
@@ -23,10 +23,14 @@ public class PartyManagement : MonoBehaviour
     {
         partyNumber.text = "ÆÄÆ¼ " + (index + 1);
         list = ColleagueSystem.Instance.GetDeck(index);
+        nullParty = true;
         for (int i = 0; i < list.Count; i++)
         {
             if (list[i] != null)
+            {
                 NowParty[i].sprite = colleagues[(int)list[i].club];
+                nullParty = false;
+            }
             else
                 NowParty[i].sprite = nullImage;
         }

@@ -63,6 +63,7 @@ public class ButtonSaver : MonoBehaviour
     }
     private void EnterStageButtonFunc()
     {
+        if (party.NullParty) return;
         PlayerPrefs.SetInt("PartyNum", party.Index);
         scene.LoadGameScene();
     }
