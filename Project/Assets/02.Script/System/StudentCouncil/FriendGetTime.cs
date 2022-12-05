@@ -19,9 +19,14 @@ public class FriendGetTime : MonoBehaviour
 
     private void TextSet()
     {
-        text[0].text = TextText[0];
+        text[0].text = TextText[0] + GoodsSystem.Instance.GSetCouncilLv().ToString() + "µî±Þ";
         text[1].text = TextText[1] + ColleagueSystem.Instance.Getcolleagues().Count + " / 18";
         text[2].text = TextText[2] + cost.ToString();
+    }
+
+    public void GetPlayer()
+    {
+        Object.SetActive(false);
     }
 
     public void PushButton()

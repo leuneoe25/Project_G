@@ -12,7 +12,7 @@ public class Arr
 
 public class CouncilLv : MonoBehaviour
 {
-    int maxLv = 4;
+    int maxLv = 3;
     [SerializeField] Text ButtonText;
     [SerializeField] Text text;
     [SerializeField] Text[] NeedsEle;
