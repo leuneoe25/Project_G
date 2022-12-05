@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 6804920251256796591}
   - component: {fileID: 1081264805031394145}
   - component: {fileID: 4453003263015535143}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Science
   m_TagString: Untagged
   m_Icon: {fileID: 0}

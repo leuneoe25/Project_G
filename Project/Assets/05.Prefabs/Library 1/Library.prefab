@@ -1524,7 +1524,7 @@ GameObject:
   - component: {fileID: 3243946900998403517}
   - component: {fileID: 8044314903400181400}
   - component: {fileID: 5488725141865760187}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Library
   m_TagString: Player
   m_Icon: {fileID: 0}

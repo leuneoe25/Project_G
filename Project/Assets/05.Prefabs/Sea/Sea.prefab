@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 3121725415423086118}
   - component: {fileID: 66145455255161058}
   - component: {fileID: 3184009282025840763}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sea
   m_TagString: Player
   m_Icon: {fileID: 0}

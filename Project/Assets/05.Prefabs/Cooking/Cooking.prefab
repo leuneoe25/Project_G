@@ -956,7 +956,7 @@ GameObject:
   - component: {fileID: 4450237655694230693}
   - component: {fileID: 2033785577460021551}
   - component: {fileID: 7460186629521667150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cooking
   m_TagString: Player
   m_Icon: {fileID: 0}
