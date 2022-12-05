@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class ColleagueOrganization : MonoBehaviour
 {
+    [SerializeField] private Sprite[] image;
     [SerializeField] private EffectSystem effect;
     [SerializeField] private Text BackText;
     [SerializeField] private Text Guide;
@@ -81,6 +82,7 @@ public class ColleagueOrganization : MonoBehaviour
             if (ColleagueSystem.Instance.GetDeck(DeckNum).Count <= i)
             {
                 DeckList[i].transform.GetChild(1).GetComponent<Text>().text = "+";
+                DeckList[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
                 continue;
             }
             if (ColleagueSystem.Instance.GetDeck(DeckNum)[i] != null)
@@ -89,6 +91,7 @@ public class ColleagueOrganization : MonoBehaviour
                 
                 
                 DeckList[i].transform.GetChild(1).GetComponent<Text>().text = ColleagueSystem.Instance.GetDeck(DeckNum)[i].name;
+                DeckList[i].transform.GetChild(0).GetComponent<Image>().sprite = image[(int)ColleagueSystem.Instance.GetDeck(DeckNum)[i].club];
                 //DeckInfo[i].gameObject.SetActive(true);
                 DeckClear[i].gameObject.SetActive(true);
                 DeckClear[i].onClick.RemoveAllListeners();
@@ -98,6 +101,7 @@ public class ColleagueOrganization : MonoBehaviour
             else
             {
                 DeckList[i].transform.GetChild(1).GetComponent<Text>().text = "+";
+                DeckList[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
             }
         }
     }
@@ -297,6 +301,7 @@ public class ColleagueOrganization : MonoBehaviour
     private void SetListCharacter(int Deckindex,int index, Colleague Character)
     {
         ColleagueListButton[Deckindex].transform.GetChild(1).GetComponent<Text>().text = Character.name;
+        ColleagueListButton[Deckindex].transform.GetChild(0).GetComponent<Image>().sprite = image[(int)Character.club];
         ColleagueListButton[Deckindex].onClick.RemoveAllListeners();
         ColleagueListButton[Deckindex].onClick.AddListener(() => AddDeckCharacter(index, Character));
     }

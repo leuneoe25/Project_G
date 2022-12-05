@@ -182,7 +182,7 @@ public class ColleagueSystem : MonoBehaviour
         Add(0, 3, colleagues[1]);
     }
 
-    private void AddColleague(string name, int rank, int[] _training, ColleagueClub club)
+    public void AddColleague(string name, int rank, int[] _training, ColleagueClub club)
     {
         Colleague Character = new Colleague(name, rank, _training, club);
         colleagues.Add(Character);

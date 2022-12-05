@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class ColleagueList : MonoBehaviour
 {
+    [SerializeField] private Sprite[] image;
     [SerializeField] private Button BackButton;
     [SerializeField] private Text BackText;
     [SerializeField] private SceneManagement scene;
@@ -26,6 +27,7 @@ public class ColleagueList : MonoBehaviour
     [SerializeField] private GameObject colleagueInfoUI;
     [SerializeField] private GameObject rank;
     [SerializeField] private Text name;
+    [SerializeField] private Image charimage;
     [SerializeField] private GameObject Type;
     [SerializeField] private Sprite[] icon;
     [Header("Stat")]
@@ -195,6 +197,7 @@ public class ColleagueList : MonoBehaviour
     {
         
         colleagueList[listIndex].transform.GetChild(1).GetComponent<Text>().text = colleagues[colleaguesIndex].name;
+        colleagueList[listIndex].transform.GetChild(0).GetComponent<Image>().sprite = image[(int)colleagues[colleaguesIndex].club];
         colleagueList[listIndex].GetComponent<Button>().onClick.RemoveAllListeners();
         colleagueList[listIndex].GetComponent<Button>().onClick.AddListener(() => SetColleagueInfo(colleagues[colleaguesIndex]));
         RankUpUI.SetActive(false);
@@ -217,6 +220,7 @@ public class ColleagueList : MonoBehaviour
             }
         }
         name.text = Character.name;
+        charimage.sprite = image[(int)Character.club];
         //æ∆¿Ãƒ‹
         //Type.transform.GetChild(0).GetComponent<Image>().sprite = icon[(int)Character.type];
         Type.transform.GetChild(1).GetComponent<Text>().text = Character.type.ToString();
