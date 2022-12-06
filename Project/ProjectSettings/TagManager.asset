@@ -15,6 +15,7 @@ TagManager:
   - Mine
   - Cola
   - Mentos
+  - Door
   layers:
   - Default
   - TransparentFX

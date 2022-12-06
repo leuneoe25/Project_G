@@ -36,5 +36,10 @@ public class MonsterMove : MonsterState<Monster>
                 target.ChangeState(MonsterState.Attack);
             }
         }
+        else if(target.collidedDoor)
+        {
+            target.MonsterAttack++;
+            target.ChangeState(MonsterState.Attack);
+        }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Book : MonoBehaviour
 {
-    float time = 0.01f;
+    float time = 0.03f;
     public int SleepTime = 3;
     private void OnTriggerEnter2D(Collider2D collision)
     {

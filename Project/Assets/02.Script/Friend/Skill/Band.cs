@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Band : MonoBehaviour
 {
-    float time = 4;
+    float time = 5;
     float time2 = 1;
     private bool SkillEnded;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +18,7 @@ public class Band : MonoBehaviour
             }
             else
             {
-                friend.skillOn += 0.2f;
+                friend.skillOn += 1f;
             }
         }
     }
@@ -34,7 +34,7 @@ public class Band : MonoBehaviour
             }
             else
             {
-                friend.skillOn -= 0.2f;
+                friend.skillOn -= 1f;
             }
         }
     }

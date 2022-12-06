@@ -25,6 +25,8 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
     public bool CollideCharacter = false;
     //Friend friend = new Friend();
     public Vector3 Target = new Vector3();
+    public int MonsterAttack = 0;
+    public bool collidedDoor;
 
     #region FSM
     private MonsterState<Monster>[] states = new MonsterState<Monster>[]
@@ -56,11 +58,23 @@ public class Monster : MonoBehaviour, IAttackAble, IGetDamagedAble
             DetectPlayer = collision.gameObject;
             CollideCharacter = true;
         }
+        if(collision.gameObject.CompareTag("Door"))
+        {
+            collidedDoor = true;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-
+        if(collision.gameObject == targetPoint)
+        {
+            DoorAttacked door = collision.GetComponent<DoorAttacked>();
+            if(MonsterAttack > 0)
+            {
+                MonsterAttack--;
+                door.SetHp(ATK);
+            }
+        }
         if (collision.CompareTag("BoxerSkill"))
         {
             Body body = collision.GetComponent<Body>();

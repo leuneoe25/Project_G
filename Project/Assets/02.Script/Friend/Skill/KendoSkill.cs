@@ -27,6 +27,10 @@ public class KendoSkill : MonoBehaviour
                 Ki.Right();
             }
         }
+        else
+        {
+            GameObject.Find("CostManager").GetComponent<CostControl>().GSCost(3);
+        }
     }
 
     void Start()

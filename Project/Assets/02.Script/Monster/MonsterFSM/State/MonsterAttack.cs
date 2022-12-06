@@ -7,18 +7,23 @@ public class MonsterAttack : MonsterState<Monster>
     float time = 3;
     public override void Enter(Monster target)
     {
+        Friend friend;
+        Player player;
+        if (!target.collidedDoor)
+        {
+
+            friend = target.DetectPlayer.GetComponent<Friend>();
+            if (friend == null)
+            {
+                player = target.DetectPlayer.GetComponent<Player>();
+            }
+            else
+            {
+                friend.SetHP(target.ATK);
+            }
+        }
         target.animator.SetInteger("State", 1);
         time = 3;
-        Friend friend = target.DetectPlayer.GetComponent<Friend>();
-        Player player;
-        if(friend == null)
-        {
-            player = target.DetectPlayer.GetComponent<Player>();
-        }
-        else
-        {
-            friend.SetHP(target.ATK);
-        }
     }
     public override void Exit(Monster target)
     {
@@ -29,6 +34,11 @@ public class MonsterAttack : MonsterState<Monster>
         
         time -= Time.deltaTime;
         if(time <= 0)
-        target.ChangeState(MonsterState.Run);
+        {
+            target.ChangeState(MonsterState.Run);
+            target.CollideCharacter = false;
+            DoorAttacked door = target.targetPoint.GetComponent<DoorAttacked>();
+            door.SetHp(target.ATK);
+        }
     }
 }

@@ -5,7 +5,7 @@ using Cinemachine;
 using UnityEngine.EventSystems;
 using System.ComponentModel;
 using UnityEngine.UI;
-using UnityEditor.Rendering;
+//using UnityEditor.Rendering;
 
 public class CharacterArrangement : MonoBehaviour
 {
